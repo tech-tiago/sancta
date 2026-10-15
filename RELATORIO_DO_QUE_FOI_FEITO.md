@@ -14,7 +14,7 @@ O app "Paróquia Nossa Sra. da Saúde" foi analisado por completo e **reconstru�
 | Painel administrativo (Filament 5) com 25 cadastros, dashboard e configurações | ✅ 43 telas testadas no navegador |
 | Site público (apresentação, Bíblia, mapa de igrejas, planos Pix/cartão, conta) | ✅ Testado no navegador nos temas claro e escuro |
 | App Flutter reconstruído (login novo, 4 temas, Bíblia, orações, jornadas, igrejas, assinatura) | ✅ `flutter analyze` sem problemas, 302 testes passando |
-| Segurança e testes automatizados | ✅ 244 testes / 5.173 asserções no backend — todos passando; dois pentests (seção 13); `composer audit` sem vulnerabilidades |
+| Segurança e testes automatizados | ✅ 245 testes / 5.177 asserções no backend — todos passando; dois pentests (seção 13); `composer audit` sem vulnerabilidades |
 | Relatórios e documentação | ✅ Este arquivo, `SOBRE_O_PROJETO.md`, `README.md`, `docs/` |
 
 ---
@@ -270,3 +270,20 @@ O cliente aprovou uma nova identidade ("Opção A: Portal" — referências em `
 **Decisões tomadas (podem ser revistas):** 5 abas (o mockup tinha 4; Igrejas foi mantida); "Presentear" só no site (política do Google Play); cruz do Portal acima da linha de base, como nas imagens aprovadas; versões monocromáticas com a porta aberta; ícone "Escuro" no token Tinta; splash nativo estático (todo o movimento no Flutter); o comprador pode resgatar o próprio presente.
 
 **Pendências que dependem do cliente:** IDs dos canais do YouTube e (opcional) chave da YouTube Data API em Integrações; SMTP real antes de abrir ao público; credenciais reais para validar FCM, Google Play Billing (tag `trial` na oferta), Mercado Pago de produção, login com Google e Gemini; ícones do iOS (exigem Mac — masters em `brand/app-icon/png/`); `php artisan migrate` no MySQL local quando ele voltar a rodar (há migrations novas); revisar o limite por pessoa dos cupons existentes (agora 1 por padrão); links `sancta://` vindos de fora do app (e-mail/site) não abrem o app — se desejado, implementar App Links verificados.
+
+## 14. Hospedagem em VPS Oracle Cloud com Ubuntu (15/10/2026)
+
+O cliente vai hospedar o Sancta numa VPS da Oracle (2 CPUs, 12 GB, Ubuntu). O projeto já rodava em VPS sem mudança de código; o que faltava era montar e proteger o servidor. Foi criado o repositório privado `tech-tiago/sancta` (sem segredos: `.env`, `key.properties`, `local.properties` e `google-services.json` ficam fora) e a pasta [`deploy/oracle-ubuntu/`](deploy/oracle-ubuntu/):
+
+| Arquivo | Função |
+|---|---|
+| `instalar.sh` | Instalação completa e repetível: Nginx, PHP 8.3, MySQL 8, Composer (instalador com assinatura conferida), portas 80/443 no iptables da Oracle, SSH só com chave, fail2ban, atualizações automáticas, usuário `sancta`, deploy key somente leitura (chaves do GitHub obtidas por HTTPS), banco com senha sorteada, `.env` de produção com caminho do painel sorteado, migrations, dados iniciais, caches, HTTPS com Let's Encrypt, cron e verificação final |
+| `atualizar.sh` → `sudo sancta-atualizar` | Publica o `main` com manutenção de poucos segundos, migrations, caches e recarga do PHP-FPM; avisa variáveis novas do `.env.example` |
+| `backup.sh` | Backup diário (banco, uploads e `.env`) por 14 dias em `/var/backups/sancta` |
+| `nginx-sancta.conf`, `php-fpm-sancta.conf`, `php-sancta.ini`, `mysql-sancta.cnf` | Só o `index.php` executa PHP, arquivos ocultos bloqueados, uploads de até 64 MB, OPcache, pool próprio com até 24 processos, MySQL só em `127.0.0.1` |
+
+Os scripts que rodam como root ficam em `/usr/local/sbin`, fora da pasta do código (que pertence ao usuário do PHP), para que uma invasão do site não vire acesso de root.
+
+**Bug encontrado e corrigido:** o painel aceita áudios de até 50 MB, mas o Livewire barrava qualquer envio acima de 12 MB antes da validação do campo. Criado `backend/config/livewire.php` (limite de 50 MB, 10 minutos para o envio) e o teste `UploadLimitTest`, que falha se algum campo do painel passar a aceitar mais do que o Livewire.
+
+**Verificado:** caminho de produção simulado numa cópia limpa do backend (Composer sem pacotes de desenvolvimento, `.env` de produção, migrations, dados iniciais sem Faker, `optimize`, `filament:optimize`, agendador): site, API e painel com 200; `/painel` antigo e `/.env` com 404; domínio estranho com 400. Backend com **245 testes / 5.177 asserções** verdes e Pint limpo; sintaxe dos scripts conferida com `bash -n`.

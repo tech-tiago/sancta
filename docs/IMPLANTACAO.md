@@ -8,6 +8,10 @@ Este guia leva o Sancta do ambiente local para produção. Siga na ordem.
 
 **Requisitos:** PHP 8.2+ (extensões: pdo_mysql, mbstring, openssl, intl, gd, curl, fileinfo, sodium), MySQL 8 (InnoDB, utf8mb4), HTTPS com certificado válido, acesso a cron. Funciona em VPS ou hospedagem compartilhada com SSH (ex.: Hostinger, Locaweb, DigitalOcean + Forge).
 
+> **VPS com Ubuntu (ex.: Oracle Cloud)?** Os passos abaixo estão automatizados: veja [VPS Oracle Cloud com Ubuntu](#vps-oracle-cloud-com-ubuntu--instalação-automática).
+
+Uploads: o painel aceita áudios de até 50 MB. Na hospedagem, o servidor web e o PHP precisam aceitar pelo menos isso (`client_max_body_size` no Nginx, `upload_max_filesize` e `post_max_size` no PHP; o instalador da VPS usa 64 MB).
+
 1. Envie a pasta `backend/` e aponte o **document root** do domínio para `backend/public` (nunca para a raiz do projeto).
 2. Instale dependências sem pacotes de desenvolvimento:
    ```bash
@@ -48,6 +52,63 @@ Este guia leva o Sancta do ambiente local para produção. Siga na ordem.
    Ele busca notícias (15 min), importa a liturgia (diariamente), expira assinaturas e envia lembretes (de hora em hora), envia push agendados (cada minuto) e faz limpezas.
 7. Permissões: `storage/` e `bootstrap/cache/` graváveis pelo servidor web; `.env` com permissão 600.
 8. Backups diários do MySQL e da pasta `storage/app` (uploads).
+
+### VPS Oracle Cloud com Ubuntu — instalação automática
+
+A pasta [`deploy/oracle-ubuntu/`](../deploy/oracle-ubuntu/) faz os passos 1 a 8 acima numa VPS Ubuntu 22.04 ou 24.04, x86 ou ARM (Ampere). Uma VPS de 2 CPUs e 12 GB atende o lançamento com folga.
+
+**1. No console da Oracle (uma vez)**
+- **IP fixo:** Networking → IP Management → Reserved public IPs → reserve um IP e associe à VPS.
+- **Portas:** na VCN da VPS → Security Lists (ou no NSG da instância) → Add Ingress Rules: origem `0.0.0.0/0`, TCP, portas `80` e `443`.
+- **Conta:** numa conta só "Always Free", a Oracle pode recolher máquinas que ficam ociosas por 7 dias. Passe a conta para **Pay As You Go** (o que é gratuito continua gratuito) e crie um alerta em Billing → Budgets.
+- **E-mail:** a Oracle bloqueia a porta 25. Use um provedor SMTP pela porta 587 (Brevo, Amazon SES, Mailgun) e configure na aba E-mail do painel.
+
+**2. No provedor do domínio:** crie um registro `A` do domínio apontando para o IP reservado (e outro para `www`, se quiser atender também o `www`).
+
+**3. No seu computador**, de dentro da pasta do projeto, copie o instalador para a VPS e entre nela (troque o caminho da chave e o IP):
+```powershell
+scp -i C:\caminho\chave-oracle.key -r deploy\oracle-ubuntu ubuntu@IP-DA-VPS:~/
+```
+```powershell
+ssh -i C:\caminho\chave-oracle.key ubuntu@IP-DA-VPS
+```
+
+**4. Na VPS**, rode o instalador:
+```bash
+sudo bash ~/oracle-ubuntu/instalar.sh
+```
+- Ele pergunta o domínio, se deve atender o `www`, o e-mail para avisos do certificado HTTPS, o e-mail do super administrador e o repositório.
+- No meio, mostra uma **deploy key**: cadastre em GitHub → repositório `sancta` → Settings → Deploy keys → Add deploy key, com **Allow write access desmarcado**, e tecle Enter. O servidor só consegue ler o repositório.
+- **Anote a senha do super administrador** que aparece na etapa "Dados iniciais": ela é mostrada uma única vez.
+- No fim aparecem o endereço do site e o do painel. O caminho do painel é sorteado (ex.: `/gestao-3f9a1c`) e fica em `SANCTA_ADMIN_PATH`, no `.env`.
+- Ao emitir o certificado, o instalador aceita os termos de uso do Let's Encrypt em seu nome. Se o domínio ainda não apontar para a VPS, ele avisa e mostra o comando `certbot` para rodar depois.
+- Pode rodar de novo sem medo: cada etapa pula o que já foi feito.
+
+**O que fica configurado na VPS**
+- Código em `/var/www/sancta`, do usuário `sancta`. O PHP-FPM roda como esse usuário, num pool próprio (até 24 processos, OPcache ligado). O Nginx só executa o `index.php`, recusa arquivos ocultos e aceita uploads de até 64 MB.
+- MySQL 8 ouvindo só em `127.0.0.1`, com banco e usuário próprios e senha sorteada (gravada só no `.env`, com permissão 600).
+- `.env` de produção: `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL` com `https://`, pagamentos simulados desligados, `LOG_LEVEL=warning`.
+- Firewall da máquina com as portas 80 e 443 liberadas no iptables. As imagens Ubuntu da Oracle bloqueiam tudo além do SSH, e a Oracle desaconselha o `ufw` nelas.
+- SSH só com chave e sem login de root, fail2ban, atualizações automáticas de segurança, 2 GB de memória de troca e fuso `America/Sao_Paulo`.
+- Cron do agendador (`schedule:run` a cada minuto) e do backup diário. Não há fila de jobs para manter: nada no Sancta depende de `queue:work`.
+
+**Atualizar o servidor** depois de enviar mudanças ao `main` no GitHub:
+```bash
+sudo sancta-atualizar
+```
+Põe o site em manutenção por alguns segundos, baixa o código, instala as dependências, roda as migrations, recria os caches e recarrega o PHP. Se algo falhar, o site fica em manutenção e a mensagem diz como seguir. No fim, ele avisa se o `.env.example` ganhou variáveis que o `.env` de produção (`/var/www/sancta/backend/.env`) ainda não tem; essas você copia à mão.
+
+**Backups:** todo dia às 04:15 o banco, os arquivos enviados pelo painel e o `.env` (com a `APP_KEY`) vão para `/var/backups/sancta`, e ficam 14 dias. Um backup que só existe dentro da VPS se perde junto com ela: copie para fora com frequência, por exemplo do seu computador:
+```powershell
+scp -i C:\caminho\chave-oracle.key "ubuntu@IP-DA-VPS:/var/backups/sancta/*" D:\backups-sancta\
+```
+Guarde essas cópias com cuidado: com o `.env` dá para ler as credenciais salvas no painel. Para restaurar na VPS:
+```bash
+gunzip -c banco-AAAA-MM-DD.sql.gz | sudo mysql sancta
+```
+```bash
+sudo tar -xzf arquivos-AAAA-MM-DD.tar.gz -C /var/www/sancta/backend
+```
 
 ### Primeiro acesso ao painel
 - Entre em `https://seudominio/SANCTA_ADMIN_PATH` com o super administrador.

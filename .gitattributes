@@ -1,0 +1,3 @@
+# Scripts e configurações do servidor sempre com quebra de linha Unix (o bash e o Nginx da VPS exigem).
+*.sh text eol=lf
+deploy/** text eol=lf

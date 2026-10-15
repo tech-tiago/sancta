@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Sancta Gestão — acabamento visual do painel (Filament), sem compilação
+   --------------------------------------------------------------------------
+   Carregado pelo AdminPanelProvider (render hook HEAD_END) depois do tema do Filament.
+   As cores de interface vêm do próprio Filament (primária = Azul Manto #1F3D9C,
+   cinzas derivados da Tinta suave, aviso = Ouro). Aqui só entram fundos e a tela de login.
+   Tokens: Azul Manto #1F3D9C · Noite #132760 · Tinta #0E1A3A · Ouro #E3B65B · Pergaminho #FBF6EC.
+   ========================================================================== */
+
+/* Fundo Pergaminho no tema claro (cartões do Filament seguem brancos, como no site) */
+:root:not(.dark) .fi-body { background-color: #FBF6EC; }
+.dark .fi-body { background-color: #0E1A3A; }
+
+/* ---------- Telas de acesso (login, recuperar senha, 2FA) ---------- */
+.fi-simple-layout {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: radial-gradient(900px 520px at 85% -10%, rgba(157, 178, 255, .22), rgba(157, 178, 255, 0) 60%), #1F3D9C;
+}
+.dark .fi-simple-layout { background: radial-gradient(900px 520px at 85% -10%, rgba(157, 178, 255, .14), rgba(157, 178, 255, 0) 60%), #132760; }
+
+/* O Portal: arco grande e discreto ao fundo (a marca como moldura) */
+.fi-simple-layout::before {
+  content: ""; position: absolute; z-index: -1; right: -8vw; bottom: -6vh;
+  width: min(640px, 70vw); aspect-ratio: 486 / 600;
+  border: clamp(48px, 7vw, 100px) solid rgba(251, 246, 236, .06); border-bottom: 0; border-radius: 999px 999px 0 0;
+}
+.fi-simple-layout::after {
+  content: ""; position: absolute; z-index: -1; left: -10vw; top: 12vh;
+  width: min(360px, 40vw); aspect-ratio: 486 / 600;
+  border: clamp(30px, 4vw, 56px) solid rgba(251, 246, 236, .035); border-bottom: 0; border-radius: 999px 999px 0 0;
+}
+
+.fi-simple-main {
+  border-radius: 28px;
+  box-shadow: 0 1px 2px rgba(14, 26, 58, .08), 0 40px 80px -32px rgba(5, 10, 30, .65);
+}
+.dark .fi-simple-main { background-color: #0E1A3A; box-shadow: 0 0 0 1px rgba(200, 213, 255, .12), 0 40px 80px -32px rgba(0, 0, 0, .7); }
+.fi-simple-header .fi-logo { margin-bottom: 1.5rem; }
+.fi-simple-header-heading { letter-spacing: -.02em; }
+
+/* Botões e campos com a forma da marca (pílula no botão principal) */
+.fi-simple-main .fi-btn { border-radius: 999px; }

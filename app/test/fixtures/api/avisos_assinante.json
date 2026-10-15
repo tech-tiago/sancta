@@ -1,0 +1,37 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/announcements",
+        "status": 200
+    },
+    "body": [
+        {
+            "id": 1,
+            "title": "Bem-vindo ao novo Sancta! ✨",
+            "body": "Nosso app foi totalmente renovado: orações guiadas, jornadas, novenas, Bíblia com anotações e muito mais. Comece hoje a Novena de Nossa Senhora Aparecida!",
+            "image_url": null,
+            "kind": "popup",
+            "category": "update",
+            "cta_label": "Começar a novena",
+            "cta_url": "sancta://jornada/novena-nossa-senhora-aparecida",
+            "frequency": "once",
+            "dismissible": true,
+            "priority": 10,
+            "updated_at": "2026-10-04T08:30:00-03:00"
+        },
+        {
+            "id": 2,
+            "title": "Novena de Aparecida",
+            "body": "Reze conosco até o dia 12.",
+            "image_url": null,
+            "kind": "banner",
+            "category": "event",
+            "cta_label": "Rezar a novena",
+            "cta_url": "sancta://jornada/novena-nossa-senhora-aparecida",
+            "frequency": "daily",
+            "dismissible": true,
+            "priority": 5,
+            "updated_at": "2026-10-04T08:30:00-03:00"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/bible/explain",
+        "status": 200
+    },
+    "body": {
+        "reference": "Jo 3,3",
+        "explanation": "Jesus explica a Nicodemos que é preciso nascer de novo, pela água e pelo Espírito.",
+        "disclaimer": "Gerado por IA a partir da tradição católica. Para aprofundar, consulte o Catecismo e um sacerdote."
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone pequeno de notificação: Portal (arco + cruz) em branco; o sistema aplica a cor de destaque. Gerado por brand/source/build-brand.js — não edite à mão. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M4 22V10A8 8 0 0 1 20 10V22H16V9.5A4 4 0 0 0 8 9.5V22ZM11 9H13V11H15V13H13V19H11V13H9V11H11Z" />
+</vector>

@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/prayers/{slug}/favorite",
+        "status": 200
+    },
+    "body": {
+        "is_favorite": true
+    }
+}

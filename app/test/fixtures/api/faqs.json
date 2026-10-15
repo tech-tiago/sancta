@@ -1,0 +1,41 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/faqs",
+        "status": 200
+    },
+    "body": [
+        {
+            "question": "O Sancta é gratuito?",
+            "answer": "Sim. Bíblia, liturgia diária, orações essenciais, mapa de igrejas e notícias são gratuitos. O Sancta+ libera orações guiadas, jornadas completas, reflexões diárias, explicações de versículos com IA e eventos exclusivos."
+        },
+        {
+            "question": "Como assino o Sancta+?",
+            "answer": "No aplicativo, toque em \"Sancta+\" e escolha um plano (cobrança pelo Google Play). No site, você também pode assinar com Pix ou cartão de crédito em até 12x e usar a mesma conta no app."
+        },
+        {
+            "question": "Posso cancelar quando quiser?",
+            "answer": "Sim. Assinaturas feitas pelo Google Play são canceladas em Play Store → Pagamentos e assinaturas. Planos pagos no site não renovam automaticamente: você usa até o fim do período contratado."
+        },
+        {
+            "question": "Existe período de teste?",
+            "answer": "O plano anual inclui 7 dias grátis no aplicativo. Se cancelar antes do fim do teste, nada é cobrado."
+        },
+        {
+            "question": "Como cadastro a minha igreja?",
+            "answer": "No app (Igrejas → Sugerir igreja) ou no site (Igrejas → Cadastrar). Nossa equipe confere as informações e publica no mapa."
+        },
+        {
+            "question": "Encontrei um horário de missa errado. O que faço?",
+            "answer": "Abra a igreja no mapa e toque em \"Corrigir informação\". A correção é revisada pela equipe antes de ser publicada."
+        },
+        {
+            "question": "Meus dados estão seguros?",
+            "answer": "Sim. Usamos conexão criptografada (HTTPS), senhas protegidas com hash, pagamentos processados por provedores certificados (Google Play e Mercado Pago) — não armazenamos dados de cartão."
+        },
+        {
+            "question": "Como excluo minha conta?",
+            "answer": "No app: Perfil → Configurações → Excluir conta. Ou pelo site em \"Excluir conta\". A exclusão remove seus dados pessoais em até 30 dias."
+        }
+    ]
+}

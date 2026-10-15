@@ -1,0 +1,26 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me/favorite-prayers",
+        "status": 200
+    },
+    "body": [
+        {
+            "id": 14,
+            "slug": "oracao-da-manha",
+            "title": "Oração da manhã",
+            "subtitle": "Ofereça o seu dia a Deus",
+            "category": {
+                "slug": "manha-e-noite",
+                "name": "Manhã e noite",
+                "color": "#E8B04B"
+            },
+            "cover_url": null,
+            "duration_minutes": 2,
+            "has_audio": false,
+            "is_premium": false,
+            "is_featured": true,
+            "locked": false
+        }
+    ]
+}

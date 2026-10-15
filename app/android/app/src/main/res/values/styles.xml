@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Abertura do app (dono: Motion — docs/design/MOTION.md). Iguais no tema claro e no escuro: não há
+  values-night (a abertura é sempre Azul Manto; tema-base escuro para a janela não ser tratada como
+  "clara" pelo modo escuro forçado do sistema).
+
+  LaunchTheme: janela de abertura até o primeiro quadro do Flutter (Android < 12; no 12+ ver values-v31).
+  NormalTheme: fundo da janela por trás do Flutter — Azul Manto, para nunca aparecer um quadro branco
+  entre o splash e a abertura animada (que começa no mesmo Azul Manto).
+-->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:statusBarColor">@color/sancta_splash_background</item>
+        <item name="android:navigationBarColor">@color/sancta_splash_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/sancta_splash_background</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+# Segredos e arquivos locais (NUNCA versionar)
+.env
+.env.*
+!.env.example
+key.properties
+local.properties
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+*.service-account.json
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/

@@ -1,0 +1,282 @@
+{
+  "titulo": "Oração Eucarística Sobre a Reconciliação I",
+  "blocos": [
+    {
+      "tipo": "icones",
+      "icones": ["de_pe", "maos_postas"]
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "O Senhor esteja convosco."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "Ele está no meio de nós."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Corações ao alto."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "O nosso coração está em Deus."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Demos graças ao Senhor, nosso Deus."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "É nosso dever e nossa salvação."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Na verdade, é digno e justo dar-vos graças sempre, Senhor, Pai santo, Deus eterno e todo- poderoso. Constantemente nos chamais a uma vida mais plena e, porque sois rico in misericórdia, sempre ofereceis o perdão e convidais os pecadores a confiar somente na vossa bondade."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "E a nós, que tantas vezes quebramos a vossa aliança, nunca nos rejeitastes, mas, por Jesus, vosso Filho, nosso Redentor, unistes convosco a família humana com um vínculo novo de caridade, tão estreito e forte, que nada poderá romper."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Também hoje, ofereceis tempo de graça e reconciliação ao vosso povo e um novo alento para que, em Cristo, se converta a vós, enquanto, sempre mais dócil ao Espírito Santo, se coloca ao serviço de todos."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Por isso, cheios de admiração, exaltamos a força do vosso amor e, proclamando nossa alegria pela salvação, nos unimos às multidões dos céus, cantando (dizendo) sem cessar:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_joelhos"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ou"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe", "maos_postas"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O sacerdote, de braços abertos, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP",
+      "texto": "Na verdade, ó Pai, vós sois Santo e, desde a origem do mundo, tudo fazeis para sermos santos como vós sois Santo."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos e, estendendo-as sobre as oferendas, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CC",
+      "texto": "Olhai as oferendas do vosso povo e derramai sobre elas a força do vosso Espírito, para que se tornem"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "o Corpo ✠ e o Sangue do vosso amado Filho, Jesus Cristo, no qual também nós somos vossos filhos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Enviai o vosso Espírito Santo!"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Quando outrora estávamos perdidos e incapazes de vos encontrar, vós nos amastes com imenso amor, pois vosso Filho, o único Justo, entregou-se à morte, não rejeitando ser pregado no lenho da cruz. Antes, porém, de seus braços abertos traçarem entre o céu e a terra o sinal permanente da vossa aliança, Jesus quis celebrar a Páscoa com seus discípulos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.\nCeando com eles,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "inclina-se levemente"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.\n\nEm seguida diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Do mesmo modo, no fim da Ceia, Jesus, sabendo que ia reconciliar em si todas as coisas pelo sangue a ser derramado na cruz,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "tomou o cálice repleto do fruto da videira, deu-vos graças novamente e o entregou a seus discípulos, dizendo:"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "inclina-se levemente"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.\n\nEm seguida, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ou"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé e do amor!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ou"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé para a salvação do mundo!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição."
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ou"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_joelhos"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A seguir o sacerdote, de braços abertos, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CC",
+      "texto": "Fazendo, pois, memória de vosso Filho, Jesus Cristo, nossa Páscoa e certeza da paz definitiva, celebramos sua morte e ressurreição e, aguardando o dia feliz de sua vinda gloriosa, nós vos oferecemos, Deus fiel e misericordioso, a vítima que nos reconcilia convosco."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Aceitai, ó Senhor, a nossa oferta!"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Olhai, com amor, Pai misericordioso, aqueles que unis a vós pelo sacrifício do vosso Filho, e concedei que, pela força do Espírito Santo, os que participam do único pão e do mesmo cálice sejam congregados em Cristo num só corpo, no qual todas as divisões sejam superadas."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "O Espírito nos una num só corpo!"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "1C",
+      "texto": "Conservai-nos sempre em comunhão de fé e amor unidos ao Papa N. e ao Bispo N.. Ajudai-nos a esperar juntos a vinda do vosso reino, até o dia em que, diante de vós, formos santos entre os Santos na morada celeste, ao lado da Virgem Maria, Mãe de Deus, dos Apóstolos e todos os Santos e com nossos irmãos e irmãs já falecidos que confiamos à vossa misericórdia. Enfim, libertos das feridas do pecado e plenamente transformados em novas criaturas, felizes cantaremos a ação de graças"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "une as mãos"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "do vosso Cristo que vive para sempre."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ergue a patena com a hóstia e o cálice, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP ou CC",
+      "texto": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Amém."
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Segue-se o Rito da Comunhão."
+    }
+  ]
+}

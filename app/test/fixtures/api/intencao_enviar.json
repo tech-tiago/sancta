@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/intentions",
+        "status": 201
+    },
+    "body": {
+        "message": "Sua intenção foi enviada e aparecerá após revisão. Estamos rezando com você. 🙏"
+    }
+}

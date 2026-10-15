@@ -1,0 +1,99 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/plans",
+        "status": 200
+    },
+    "body": [
+        {
+            "slug": "anual",
+            "name": "Anual",
+            "description": "O melhor valor — 7 dias grátis para experimentar.",
+            "interval": "year",
+            "interval_count": 1,
+            "period_label": "por ano",
+            "price_cents": 14990,
+            "price_formatted": "R$ 149,90",
+            "compare_at_price_cents": 23880,
+            "compare_at_price_formatted": "R$ 238,80",
+            "monthly_equivalent_cents": 1249,
+            "monthly_equivalent_formatted": "R$ 12,49",
+            "savings_percent": 37,
+            "trial_days": 7,
+            "max_installments": 12,
+            "badge": "Mais popular",
+            "is_featured": true,
+            "features": [
+                "Todas as orações guiadas e em áudio",
+                "Jornadas, novenas e planos de leitura completos",
+                "Reflexão diária do Evangelho",
+                "Explicação de versículos com IA",
+                "Eventos e retiros exclusivos"
+            ],
+            "google_play": {
+                "product_id": "sancta_plus",
+                "base_plan_id": "anual"
+            }
+        },
+        {
+            "slug": "semestral",
+            "name": "Semestral",
+            "description": "Seis meses para criar um hábito de oração.",
+            "interval": "month",
+            "interval_count": 6,
+            "period_label": "a cada 6 meses",
+            "price_cents": 8990,
+            "price_formatted": "R$ 89,90",
+            "compare_at_price_cents": 11940,
+            "compare_at_price_formatted": "R$ 119,40",
+            "monthly_equivalent_cents": 1498,
+            "monthly_equivalent_formatted": "R$ 14,98",
+            "savings_percent": 24,
+            "trial_days": 0,
+            "max_installments": 6,
+            "badge": "Economize 24%",
+            "is_featured": false,
+            "features": [
+                "Todas as orações guiadas e em áudio",
+                "Jornadas, novenas e planos de leitura completos",
+                "Reflexão diária do Evangelho",
+                "Explicação de versículos com IA",
+                "Eventos e retiros exclusivos"
+            ],
+            "google_play": {
+                "product_id": "sancta_plus",
+                "base_plan_id": "semestral"
+            }
+        },
+        {
+            "slug": "mensal",
+            "name": "Mensal",
+            "description": "Flexível: cancele quando quiser.",
+            "interval": "month",
+            "interval_count": 1,
+            "period_label": "por mês",
+            "price_cents": 1990,
+            "price_formatted": "R$ 19,90",
+            "compare_at_price_cents": null,
+            "compare_at_price_formatted": null,
+            "monthly_equivalent_cents": 1990,
+            "monthly_equivalent_formatted": "R$ 19,90",
+            "savings_percent": null,
+            "trial_days": 0,
+            "max_installments": 1,
+            "badge": null,
+            "is_featured": false,
+            "features": [
+                "Todas as orações guiadas e em áudio",
+                "Jornadas, novenas e planos de leitura completos",
+                "Reflexão diária do Evangelho",
+                "Explicação de versículos com IA",
+                "Eventos e retiros exclusivos"
+            ],
+            "google_play": {
+                "product_id": "sancta_plus",
+                "base_plan_id": "mensal"
+            }
+        }
+    ]
+}

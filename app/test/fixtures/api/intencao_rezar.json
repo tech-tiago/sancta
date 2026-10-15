@@ -1,0 +1,11 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/intentions/{uuid}/pray",
+        "status": 200
+    },
+    "body": {
+        "prayers_count": 4,
+        "prayed": true
+    }
+}

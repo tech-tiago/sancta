@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sancta — marca Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../backend/public/images/brand/favicon.svg">
+  <link rel="stylesheet" href="../backend/public/fonts/figtree.css">
+  <style>
+    /* Vitrine estática da marca. Abra servindo a raiz do projeto (ex.: php -S 127.0.0.1:8010 -t .)
+       e acesse /brand/index.html — os caminhos relativos usam também backend/ e app/. */
+    @font-face { font-family: 'EB Garamond'; font-weight: 400; src: url('../app/assets/fonts/EBGaramond-Regular.ttf') format('truetype'); font-display: swap; }
+    :root {
+      --azul: #1F3D9C; --noite: #132760; --tinta: #0E1A3A; --ouro: #E3B65B; --pergaminho: #FBF6EC;
+      --nevoa: #C8D5FF; --suave: #5A6487; --veu: #E8ECF8; --linha: #E4DDCD;
+      --gutter: clamp(16px, 5vw, 72px);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--pergaminho); color: var(--tinta); font: 400 16px/1.55 'Figtree', system-ui, sans-serif; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--azul); }
+    header.hero { background: var(--azul); color: var(--pergaminho); padding: 28px var(--gutter) 72px; }
+    .topo { display: flex; justify-content: space-between; gap: 16px; font-weight: 500; font-size: 15px; color: var(--nevoa); }
+    .topo strong { color: var(--pergaminho); font-weight: 600; }
+    .hero .lockup { width: min(720px, 100%); margin: 72px auto 0; }
+    section { padding: 64px var(--gutter); border-top: 1px solid var(--linha); }
+    section.claro { background: #fff; }
+    section.azul { background: var(--azul); color: var(--pergaminho); }
+    section.azul .sub { color: var(--nevoa); }
+    h2 { font: 700 32px/1.15 'Figtree', sans-serif; margin: 0 0 6px; letter-spacing: -0.01em; }
+    h3 { font: 600 18px/1.3 'Figtree', sans-serif; margin: 28px 0 12px; }
+    .sub { color: var(--suave); margin: 0 0 28px; max-width: 70ch; }
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    .cartao { border-radius: 18px; padding: 24px; display: flex; flex-direction: column; gap: 14px; justify-content: space-between; min-height: 220px; }
+    .cartao .arte { flex: 1; display: grid; place-items: center; }
+    .cartao .arte img { max-height: 120px; width: auto; }
+    .rotulo { font-size: 13px; font-weight: 500; }
+    .rotulo code { font-size: 12px; opacity: .8; }
+    .bg-azul { background: var(--azul); color: var(--pergaminho); }
+    .bg-noite { background: var(--noite); color: var(--pergaminho); }
+    .bg-tinta { background: var(--tinta); color: var(--pergaminho); }
+    .bg-pergaminho { background: var(--pergaminho); border: 1px solid var(--linha); }
+    .bg-branco { background: #fff; border: 1px solid var(--linha); }
+    .faixa { border-radius: 18px; padding: 36px; margin-bottom: 16px; }
+    .faixa img { width: min(560px, 100%); }
+    .icones { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; }
+    .icone { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; }
+    .icone img { border-radius: 22.37%; }
+    .icone img.redondo { border-radius: 50%; }
+    .icone img.cheio { border-radius: 0; }
+    .pixel { image-rendering: pixelated; }
+    /* ícone adaptativo: a máscara mostra só os 72 dp centrais da tela de 108 dp */
+    .adapt { width: 120px; height: 120px; overflow: hidden; display: block; position: relative; }
+    .adapt img { width: 180px; height: 180px; max-width: none; position: absolute; left: -30px; top: -30px; border-radius: 0; }
+    .cores { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+    .cor { border-radius: 16px; padding: 18px; min-height: 140px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 13px; }
+    .cor b { font-size: 16px; font-weight: 600; }
+    .tipo { display: grid; gap: 12px; }
+    .tipo p { margin: 0; }
+    .ceus { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .arco { border-radius: 999px 999px 0 0; overflow: hidden; }
+    .arco img { width: 100%; }
+    .retratos { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+    .retratos .arco { width: 110px; border-radius: 55px 55px 12px 12px; }
+    .posturas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .chip { display: inline-flex; align-items: center; gap: 8px; background: var(--veu); color: var(--azul); border-radius: 999px; padding: 8px 14px 8px 10px; font-weight: 500; }
+    .chip img { width: 22px; height: 22px; }
+    .duas { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+    .moldura { border-radius: 14px; overflow: hidden; border: 1px solid var(--linha); background: #fff; }
+    ul.arquivos { columns: 2 320px; padding-left: 18px; font-size: 14px; }
+    ul.arquivos li { break-inside: avoid; margin-bottom: 4px; }
+    footer { padding: 40px var(--gutter); color: var(--suave); font-size: 14px; }
+    @media (max-width: 560px) { h2 { font-size: 26px; } .faixa { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="topo"><strong>Sancta · marca Portal</strong><span>Identidade visual, outubro de 2026</span></div>
+    <img class="lockup" src="logo/sancta-lockup-slogan-pergaminho.svg" alt="Sancta — Sua jornada de fé, todos os dias.">
+  </header>
+
+  <section>
+    <h2>A ideia</h2>
+    <p class="sub">Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo é a porta de um santuário, com a cruz como a luz lá dentro. O arco nasce do "n" da Figtree Bold — mesma haste, mesma curva — por isso o símbolo mora dentro do próprio nome.</p>
+    <div class="moldura"><img src="docs/construcao-portal.png" alt="Construção do Portal a partir do n da Figtree Bold"></div>
+  </section>
+
+  <section class="claro">
+    <h2>Símbolo</h2>
+    <p class="sub">Portal na proporção da letra (486 × 512 unidades). Mono: arco e cruz na mesma cor.</p>
+    <div class="grid">
+      <div class="cartao bg-azul"><div class="arte"><img src="symbol/portal-pergaminho.svg" alt="Portal Pergaminho"></div><span class="rotulo">Pergaminho + Ouro <code>portal-pergaminho.svg</code></span></div>
+      <div class="cartao bg-pergaminho"><div class="arte"><img src="symbol/portal-azul.svg" alt="Portal Azul Manto"></div><span class="rotulo">Azul Manto + Ouro <code>portal-azul.svg</code></span></div>
+      <div class="cartao bg-noite"><div class="arte"><img src="symbol/portal-mono-branco.svg" alt="Portal branco"></div><span class="rotulo">Mono branco <code>portal-mono-branco.svg</code></span></div>
+      <div class="cartao bg-branco"><div class="arte"><img src="symbol/portal-mono-tinta.svg" alt="Portal Tinta"></div><span class="rotulo">Mono Tinta <code>portal-mono-tinta.svg</code></span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Logotipo</h2>
+    <p class="sub">"Sa" + Portal + "cta" em Figtree Bold convertida em curvas, com ajuste óptico de espaçamento. Área de proteção = altura do Portal.</p>
+    <div class="faixa bg-azul"><img src="logo/sancta-wordmark-pergaminho.svg" alt="Wordmark Pergaminho"></div>
+    <div class="faixa bg-branco"><img src="logo/sancta-wordmark-azul.svg" alt="Wordmark Azul Manto"></div>
+    <div class="duas">
+      <div class="faixa bg-tinta"><img src="logo/sancta-wordmark-mono-branco.svg" alt="Wordmark mono branco"></div>
+      <div class="faixa bg-pergaminho"><img src="logo/sancta-wordmark-mono-tinta.svg" alt="Wordmark mono Tinta"></div>
+    </div>
+    <h3>Com slogan</h3>
+    <div class="duas">
+      <div class="faixa bg-azul"><img src="logo/sancta-lockup-slogan-pergaminho.svg" alt="Lockup com slogan, Pergaminho"></div>
+      <div class="faixa bg-branco"><img src="logo/sancta-lockup-slogan-azul.svg" alt="Lockup com slogan, Azul Manto"></div>
+    </div>
+    <h3>Painel — Sancta Gestão</h3>
+    <div class="duas">
+      <div class="faixa bg-branco"><img src="logo/sancta-gestao-claro.svg" alt="Sancta Gestão, tema claro"></div>
+      <div class="faixa bg-tinta"><img src="logo/sancta-gestao-escuro.svg" alt="Sancta Gestão, tema escuro"></div>
+    </div>
+    <h3>Área de proteção</h3>
+    <div class="moldura"><img src="docs/area-protecao.png" alt="Área de proteção do wordmark"></div>
+  </section>
+
+  <section class="claro">
+    <h2>Ícone do app</h2>
+    <p class="sub">A mesma porta, em proporção vertical (486 × 666). Masters de 1024 px em quadrado cheio: a plataforma aplica a máscara.</p>
+    <div class="icones">
+      <div class="icone"><img src="app-icon/png/icone-padrao-1024.png" width="180" height="180" alt="Ícone padrão">Padrão</div>
+      <div class="icone"><img src="app-icon/png/icone-escuro-1024.png" width="180" height="180" alt="Ícone escuro">Escuro</div>
+      <div class="icone"><img src="app-icon/png/icone-tingido-1024.png" width="180" height="180" alt="Ícone tingido">Tingido</div>
+    </div>
+    <h3>Do App Store à tela de ajustes</h3>
+    <div class="icones">
+      <div class="icone"><img src="app-icon/png/icone-padrao-1024.png" width="120" height="120" alt="">120 px</div>
+      <div class="icone"><img src="app-icon/png/icone-padrao-1024.png" width="60" height="60" alt="">60 px</div>
+      <div class="icone"><img src="app-icon/png/icone-padrao-1024.png" width="40" height="40" alt="">40 px</div>
+      <div class="icone"><img src="app-icon/png/icone-padrao-1024.png" width="29" height="29" alt="">29 px</div>
+      <div class="icone"><img class="cheio pixel" src="../backend/public/images/brand/favicon-48.png" width="48" height="48" alt="">favicon 48</div>
+      <div class="icone"><img class="cheio pixel" src="../backend/public/images/brand/favicon-32.png" width="32" height="32" alt="">favicon 32</div>
+      <div class="icone"><img class="cheio pixel" src="../backend/public/images/brand/favicon-16.png" width="16" height="16" alt="">favicon 16</div>
+      <div class="icone"><img class="cheio pixel" src="../backend/public/images/brand/favicon-16.png" width="96" height="96" alt="">16 px ampliado</div>
+    </div>
+    <h3>Android</h3>
+    <div class="icones">
+      <div class="icone"><span class="adapt" style="border-radius:50%"><img src="android/ic_launcher_foreground.svg" alt=""></span>Adaptativo (círculo)</div>
+      <div class="icone"><span class="adapt" style="border-radius:30%"><img src="android/ic_launcher_foreground.svg" alt=""></span>Adaptativo (squircle)</div>
+      <div class="icone"><span class="adapt" style="border-radius:50%;background:#D7E8D2"><img src="android/ic_launcher_monochrome.svg" alt=""></span>Temático (Android 13+)</div>
+      <div class="icone"><img class="cheio" style="background:#1F3D9C;padding:12px" src="android/ic_notification.svg" width="72" height="72" alt="">Notificação 24 dp</div>
+      <div class="icone"><img class="cheio pixel" style="background:#333" src="android/ic_notification.svg" width="24" height="24" alt="">24 px real</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cor</h2>
+    <p class="sub">Cinco tokens oficiais. Ouro só na cruz e em pequenos destaques.</p>
+    <div class="cores">
+      <div class="cor bg-azul"><b>Azul Manto</b>#1F3D9C · principal<br>Pergaminho sobre ele 8,84:1</div>
+      <div class="cor bg-noite"><b>Noite</b>#132760 · fundos escuros</div>
+      <div class="cor bg-tinta"><b>Tinta</b>#0E1A3A · texto<br>sobre Pergaminho 15,88:1</div>
+      <div class="cor" style="background:var(--ouro);color:var(--tinta)"><b>Ouro</b>#E3B65B · só a cruz e destaques</div>
+      <div class="cor bg-pergaminho"><b>Pergaminho</b>#FBF6EC · fundos claros</div>
+    </div>
+    <h3>Derivações</h3>
+    <div class="cores">
+      <div class="cor" style="background:var(--nevoa)"><b>Névoa</b>#C8D5FF · texto secundário sobre azul (6,54:1)</div>
+      <div class="cor" style="background:var(--suave);color:#fff"><b>Tinta suave</b>#5A6487 · texto secundário (5,40:1)</div>
+      <div class="cor" style="background:#7C849C;color:#fff"><b>Tinta apagada</b>#7C849C · ícones inativos (3,46:1)</div>
+      <div class="cor" style="background:var(--veu)"><b>Véu azul</b>#E8ECF8 · fundo de ícone</div>
+      <div class="cor" style="background:#9DB2FF"><b>Azul Luz</b>#9DB2FF · azul no tema escuro (8,35:1)</div>
+    </div>
+  </section>
+
+  <section class="claro">
+    <h2>Tipografia</h2>
+    <p class="sub">Figtree (OFL), embutida no app e no site. EB Garamond como opção de leitura "Clássica".</p>
+    <div class="tipo">
+      <p style="font:700 44px/1.1 'Figtree'">Bom dia, Ana — Bold 700</p>
+      <p style="font:600 28px/1.2 'Figtree'">Oração da manhã — SemiBold 600</p>
+      <p style="font:500 20px/1.3 'Figtree'">Rezar agora · Para hoje · Amém — Medium 500</p>
+      <p style="font:400 18px/1.6 'Figtree';max-width:70ch">Ave Maria, cheia de graça, o Senhor é convosco. Bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. — Regular 400</p>
+      <p style="font:400 20px/1.6 'EB Garamond',serif;max-width:70ch">No princípio era o Verbo, e o Verbo estava junto de Deus. — EB Garamond (Clássica)</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Céus — o arco vira moldura</h2>
+    <p class="sub">Capas padrão por horário: aurora (manhã), luz (meio do dia), entardecer e noite. Paisagem 3:2 e retrato 3:4.</p>
+    <div class="ceus">
+      <div><div class="arco"><img src="illustrations/aurora.svg" alt="Aurora"></div><p class="rotulo">Aurora</p></div>
+      <div><div class="arco"><img src="illustrations/luz.svg" alt="Luz"></div><p class="rotulo">Luz</p></div>
+      <div><div class="arco"><img src="illustrations/entardecer.svg" alt="Entardecer"></div><p class="rotulo">Entardecer</p></div>
+      <div><div class="arco"><img src="illustrations/noite.svg" alt="Noite"></div><p class="rotulo">Noite</p></div>
+    </div>
+    <div class="retratos">
+      <div class="arco"><img src="illustrations/aurora-retrato.svg" alt=""></div>
+      <div class="arco"><img src="illustrations/luz-retrato.svg" alt=""></div>
+      <div class="arco"><img src="illustrations/entardecer-retrato.svg" alt=""></div>
+      <div class="arco"><img src="illustrations/noite-retrato.svg" alt=""></div>
+    </div>
+  </section>
+
+  <section class="claro">
+    <h2>Posturas litúrgicas</h2>
+    <p class="sub">Uma cor só (o app tinge com a cor primária). PNG 256 px com os nomes de sempre + SVG.</p>
+    <div class="posturas">
+      <span class="chip"><img src="icons/posturas/de_pe.svg" alt="">De pé</span>
+      <span class="chip"><img src="icons/posturas/maos_postas.svg" alt="">Mãos postas</span>
+      <span class="chip"><img src="icons/posturas/de_joelhos.svg" alt="">De joelhos</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Aplicações</h2>
+    <h3>Compartilhamento (1200 × 630)</h3>
+    <div class="moldura" style="max-width:720px"><img src="social/og-image-1200x630.png" alt="Imagem de compartilhamento"></div>
+    <h3>Play Store</h3>
+    <div class="duas">
+      <div class="moldura"><img src="play-store/feature-graphic-1024x500.png" alt="Feature graphic"></div>
+      <div class="icone" style="align-items:flex-start"><img src="play-store/icone-512.png" width="160" height="160" alt="Ícone da Play Store">Ícone 512 × 512</div>
+    </div>
+  </section>
+
+  <section class="claro">
+    <h2>Arquivos</h2>
+    <ul class="arquivos">
+      <li><code>brand/symbol/</code> Portal (SVG + PNG 512)</li>
+      <li><code>brand/logo/</code> wordmark, lockups com slogan, Sancta Gestão</li>
+      <li><code>brand/app-icon/</code> ícones padrão, escuro, tingido (1024)</li>
+      <li><code>brand/illustrations/</code> céus em paisagem e retrato</li>
+      <li><code>brand/icons/posturas/</code> posturas litúrgicas</li>
+      <li><code>brand/play-store/</code> ícone 512 e feature graphic</li>
+      <li><code>brand/social/</code> imagem de compartilhamento</li>
+      <li><code>brand/android/</code> prévias dos vetores Android</li>
+      <li><code>brand/docs/</code> diagramas do manual</li>
+      <li><code>brand/source/</code> gerador (Node) de todos os assets</li>
+      <li><code>backend/public/images/brand/</code> logos, favicons e ícones do site</li>
+      <li><code>backend/public/fonts/</code> Figtree WOFF2 + <code>figtree.css</code></li>
+      <li><code>app/assets/brand/</code> SVGs usados pelo app</li>
+      <li><code>app/lib/core/brand/</code> primitivas Flutter</li>
+    </ul>
+    <p class="sub">Manual completo: <code>docs/design/MARCA.md</code>.</p>
+  </section>
+
+  <footer>Sancta · Sua jornada de fé, todos os dias.</footer>
+</body>
+</html>

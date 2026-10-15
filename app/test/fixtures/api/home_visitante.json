@@ -1,0 +1,248 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/home",
+        "status": 200
+    },
+    "body": {
+        "greeting": {
+            "title": "Bom dia!",
+            "subtitle": "Que hoje seja um dia de bênçãos."
+        },
+        "streak": 0,
+        "daily_verse": {
+            "reference": "1Jo 4,16",
+            "text": "Nós conhecemos e cremos no amor que Deus tem para conosco. Deus é amor, e quem permanece no amor permanece em Deus e Deus nele.",
+            "image_url": null,
+            "reflection_title": "Permanecer no amor",
+            "reflection": "Deus não é uma ideia distante: é amor que se aproxima. Hoje, permaneça nesse amor em cada gesto simples.",
+            "reflection_locked": false
+        },
+        "liturgy": {
+            "date": "2026-10-04",
+            "title": "27º Domingo do Tempo Comum",
+            "color": "Verde",
+            "color_hex": "#2E7D4F",
+            "gospel_reference": "Mt 21,33-43"
+        },
+        "saint": {
+            "name": "São Francisco de Assis",
+            "title": "Religioso",
+            "biography": "Deixou tudo para seguir Cristo pobre e crucificado. Amou a criação como obra do Pai e fundou a Ordem dos Frades Menores.",
+            "image_url": null
+        },
+        "continue_journey": null,
+        "featured_journeys": [
+            {
+                "id": 1,
+                "slug": "novena-nossa-senhora-aparecida",
+                "title": "Novena a Nossa Senhora Aparecida",
+                "type": "novena",
+                "type_label": "Novena",
+                "subtitle": "9 dias com a Padroeira do Brasil",
+                "cover_url": null,
+                "color": "#2F5DA8",
+                "is_premium": false,
+                "locked": false,
+                "steps_count": 9,
+                "completed_steps": 0
+            },
+            {
+                "id": 2,
+                "slug": "7-dias-para-comecar-a-rezar",
+                "title": "7 dias para começar a rezar",
+                "type": "challenge",
+                "type_label": "Desafio",
+                "subtitle": "Crie o hábito com 10 minutos por dia",
+                "cover_url": null,
+                "color": "#E3B65B",
+                "is_premium": false,
+                "locked": false,
+                "steps_count": 7,
+                "completed_steps": 0
+            }
+        ],
+        "period_prayers": {
+            "morning": {
+                "id": 14,
+                "slug": "oracao-da-manha",
+                "title": "Oração da manhã",
+                "subtitle": "Ofereça o seu dia a Deus",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            "afternoon": {
+                "id": 10,
+                "slug": "angelus",
+                "title": "Angelus",
+                "subtitle": "Ao meio-dia, com Maria",
+                "category": {
+                    "slug": "marianas",
+                    "name": "Marianas",
+                    "color": "#4F7CC4"
+                },
+                "cover_url": null,
+                "duration_minutes": 3,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            "night": {
+                "id": 15,
+                "slug": "oracao-da-noite",
+                "title": "Oração da noite",
+                "subtitle": "Entregue o seu descanso",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            }
+        },
+        "featured_prayers": [
+            {
+                "id": 2,
+                "slug": "pai-nosso",
+                "title": "Pai-Nosso",
+                "subtitle": "A oração que Jesus nos ensinou",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            {
+                "id": 14,
+                "slug": "oracao-da-manha",
+                "title": "Oração da manhã",
+                "subtitle": "Ofereça o seu dia a Deus",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            {
+                "id": 16,
+                "slug": "exame-de-consciencia",
+                "title": "Exame de consciência",
+                "subtitle": "Revisão orante do dia (guiada)",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 10,
+                "has_audio": false,
+                "is_premium": true,
+                "is_featured": true,
+                "locked": true
+            }
+        ],
+        "news": [
+            {
+                "id": 2,
+                "slug": "santuario-prepara-a-festa-da-padroeira",
+                "title": "Santuário prepara a festa da Padroeira",
+                "summary": "Programação vai de 3 a 12 de outubro.",
+                "image_url": null,
+                "source": "Sancta",
+                "url": null,
+                "is_featured": true,
+                "published_at": "2026-10-03T08:30:00-03:00"
+            },
+            {
+                "id": 1,
+                "slug": "papa-convoca-jornada-de-oracao-pela-paz",
+                "title": "Papa convoca jornada de oração pela paz",
+                "summary": "Encontro reunirá fiéis do mundo inteiro.",
+                "image_url": null,
+                "source": "Vatican News",
+                "url": "https://www.vaticannews.va/pt/papa/news/2026-10/jornada-oracao-paz.html",
+                "is_featured": false,
+                "published_at": "2026-10-04T05:30:00-03:00"
+            }
+        ],
+        "live_channels": [
+            {
+                "id": 2,
+                "name": "TV Aparecida",
+                "thumbnail_url": "https://i.ytimg.com/vi/LIVEvideo01/hqdefault.jpg",
+                "url": "https://www.youtube.com/watch?v=LIVEvideo01",
+                "type": "live",
+                "is_live": true
+            },
+            {
+                "id": 1,
+                "name": "TV Canção Nova",
+                "thumbnail_url": "https://api.sancta.test/storage/live/tv_cancao_nova.png",
+                "url": "https://www.youtube.com/watch?v=NuJ2gazIEs8",
+                "type": "live",
+                "is_live": false
+            },
+            {
+                "id": 3,
+                "name": "Frei Gilson",
+                "thumbnail_url": null,
+                "url": "https://www.youtube.com/playlist?list=PLWM-D0VS9_EwwQSQnBjGjp0G11vCsYTiU",
+                "type": "playlist",
+                "is_live": false
+            }
+        ],
+        "live_now": [
+            {
+                "id": 2,
+                "name": "TV Aparecida",
+                "category": "missa",
+                "is_live": true,
+                "on_schedule_now": true,
+                "title": "Santa Missa do Santuário",
+                "started_at": "2026-10-04T08:00:00-03:00",
+                "watch_url": "https://www.youtube.com/watch?v=LIVEvideo01",
+                "thumbnail_url": "https://i.ytimg.com/vi/LIVEvideo01/hqdefault.jpg",
+                "logo_url": "https://api.sancta.test/storage/live/tv_aparecida.png",
+                "topic": "sancta_live_2"
+            }
+        ],
+        "events": [
+            {
+                "slug": "retiro-online-de-outubro",
+                "title": "Retiro online de outubro",
+                "starts_at": "2026-10-07T20:00:00-03:00",
+                "location": "Online",
+                "cover_url": null,
+                "is_premium": true
+            }
+        ],
+        "is_premium": false
+    }
+}

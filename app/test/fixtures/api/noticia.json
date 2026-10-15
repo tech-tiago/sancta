@@ -1,0 +1,31 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/news/{id}",
+        "status": 200
+    },
+    "body": {
+        "id": 2,
+        "slug": "santuario-prepara-a-festa-da-padroeira",
+        "title": "Santuário prepara a festa da Padroeira",
+        "summary": "Programação vai de 3 a 12 de outubro.",
+        "image_url": null,
+        "source": "Sancta",
+        "url": null,
+        "is_featured": true,
+        "published_at": "2026-10-03T08:30:00-03:00",
+        "author": "Equipe Sancta",
+        "blocks": [
+            {
+                "type": "heading",
+                "level": 2,
+                "text": "Programação"
+            },
+            {
+                "type": "paragraph",
+                "text": "Missas, novena e procissão."
+            }
+        ],
+        "has_full_content": true
+    }
+}

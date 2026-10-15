@@ -1,0 +1,45 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me",
+        "status": 200
+    },
+    "body": {
+        "id": "01a13cab-6e21-71f4-9eb9-61c19f5d10b3",
+        "name": "Carla Dias",
+        "first_name": "Carla",
+        "email": "carla@exemplo.com",
+        "email_verified": true,
+        "avatar_url": null,
+        "has_password": true,
+        "google_linked": false,
+        "theme": "system",
+        "notification_preferences": {
+            "daily_reminder": true,
+            "reminder_time": "07:00",
+            "liturgy": true,
+            "news": false,
+            "churches": true
+        },
+        "marketing_opt_in": false,
+        "is_premium": true,
+        "subscription": {
+            "id": "01a13cab-6e2a-7231-bee7-520eb9d5144c",
+            "plan": "Anual",
+            "plan_slug": "anual",
+            "status": "trialing",
+            "status_label": "Período de teste",
+            "provider": "google_play",
+            "auto_renew": true,
+            "starts_at": "2026-10-04T08:30:00-03:00",
+            "ends_at": "2026-10-11T08:30:00-03:00",
+            "manage_url": "https://play.google.com/store/account/subscriptions?package=com.maria.app_igreja"
+        },
+        "stats": {
+            "current_streak": 0,
+            "longest_streak": 0,
+            "total_prayer_minutes": 0
+        },
+        "created_at": "2026-10-04T08:30:00-03:00"
+    }
+}

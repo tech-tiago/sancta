@@ -1,0 +1,15 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/login",
+        "status": 403
+    },
+    "body": {
+        "message": "Esta conta está suspensa. Fale com o suporte.",
+        "errors": {
+            "email": [
+                "Esta conta está suspensa. Fale com o suporte."
+            ]
+        }
+    }
+}

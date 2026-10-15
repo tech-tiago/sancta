@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/announcements/{id}/interactions",
+        "status": 200
+    },
+    "body": {
+        "ok": true
+    }
+}

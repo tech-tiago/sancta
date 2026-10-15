@@ -1,0 +1,25 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/register",
+        "status": 422
+    },
+    "body": {
+        "message": "validation.min.string (and 4 more errors)",
+        "errors": {
+            "name": [
+                "validation.min.string"
+            ],
+            "email": [
+                "validation.email"
+            ],
+            "password": [
+                "validation.min.string",
+                "validation.password.letters"
+            ],
+            "accept_terms": [
+                "validation.accepted"
+            ]
+        }
+    }
+}

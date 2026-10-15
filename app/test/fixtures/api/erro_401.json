@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me",
+        "status": 401
+    },
+    "body": {
+        "message": "Sessão expirada. Entre novamente."
+    }
+}

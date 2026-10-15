@@ -1,0 +1,600 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/bible/books",
+        "status": 200
+    },
+    "body": {
+        "version": {
+            "name": "Bíblia Ave-Maria",
+            "abbreviation": "AM",
+            "license_notice": "Tradução Ave-Maria. Uso sujeito à autorização da Editora Ave-Maria."
+        },
+        "books": [
+            {
+                "testament": "AT",
+                "position": 1,
+                "name": "Gênesis",
+                "abbreviation": "Gn",
+                "slug": "genesis",
+                "chapters_count": 50
+            },
+            {
+                "testament": "AT",
+                "position": 2,
+                "name": "Êxodo",
+                "abbreviation": "Ex",
+                "slug": "exodo",
+                "chapters_count": 40
+            },
+            {
+                "testament": "AT",
+                "position": 3,
+                "name": "Levítico",
+                "abbreviation": "Lv",
+                "slug": "levitico",
+                "chapters_count": 27
+            },
+            {
+                "testament": "AT",
+                "position": 4,
+                "name": "Números",
+                "abbreviation": "Nm",
+                "slug": "numeros",
+                "chapters_count": 36
+            },
+            {
+                "testament": "AT",
+                "position": 5,
+                "name": "Deuteronômio",
+                "abbreviation": "Dt",
+                "slug": "deuteronomio",
+                "chapters_count": 34
+            },
+            {
+                "testament": "AT",
+                "position": 6,
+                "name": "Josué",
+                "abbreviation": "Js",
+                "slug": "josue",
+                "chapters_count": 24
+            },
+            {
+                "testament": "AT",
+                "position": 7,
+                "name": "Juízes",
+                "abbreviation": "Jz",
+                "slug": "juizes",
+                "chapters_count": 21
+            },
+            {
+                "testament": "AT",
+                "position": 8,
+                "name": "Rute",
+                "abbreviation": "Rt",
+                "slug": "rute",
+                "chapters_count": 4
+            },
+            {
+                "testament": "AT",
+                "position": 9,
+                "name": "1 Samuel",
+                "abbreviation": "1Sm",
+                "slug": "1-samuel",
+                "chapters_count": 31
+            },
+            {
+                "testament": "AT",
+                "position": 10,
+                "name": "2 Samuel",
+                "abbreviation": "2Sm",
+                "slug": "2-samuel",
+                "chapters_count": 24
+            },
+            {
+                "testament": "AT",
+                "position": 11,
+                "name": "1 Reis",
+                "abbreviation": "1Rs",
+                "slug": "1-reis",
+                "chapters_count": 22
+            },
+            {
+                "testament": "AT",
+                "position": 12,
+                "name": "2 Reis",
+                "abbreviation": "2Rs",
+                "slug": "2-reis",
+                "chapters_count": 25
+            },
+            {
+                "testament": "AT",
+                "position": 13,
+                "name": "1 Crônicas",
+                "abbreviation": "1Cr",
+                "slug": "1-cronicas",
+                "chapters_count": 29
+            },
+            {
+                "testament": "AT",
+                "position": 14,
+                "name": "2 Crônicas",
+                "abbreviation": "2Cr",
+                "slug": "2-cronicas",
+                "chapters_count": 36
+            },
+            {
+                "testament": "AT",
+                "position": 15,
+                "name": "Esdras",
+                "abbreviation": "Esd",
+                "slug": "esdras",
+                "chapters_count": 10
+            },
+            {
+                "testament": "AT",
+                "position": 16,
+                "name": "Neemias",
+                "abbreviation": "Ne",
+                "slug": "neemias",
+                "chapters_count": 13
+            },
+            {
+                "testament": "AT",
+                "position": 17,
+                "name": "Tobias",
+                "abbreviation": "Tb",
+                "slug": "tobias",
+                "chapters_count": 14
+            },
+            {
+                "testament": "AT",
+                "position": 18,
+                "name": "Judite",
+                "abbreviation": "Jt",
+                "slug": "judite",
+                "chapters_count": 16
+            },
+            {
+                "testament": "AT",
+                "position": 19,
+                "name": "Ester",
+                "abbreviation": "Est",
+                "slug": "ester",
+                "chapters_count": 16
+            },
+            {
+                "testament": "AT",
+                "position": 20,
+                "name": "Jó",
+                "abbreviation": "Jó",
+                "slug": "jo-livro",
+                "chapters_count": 42
+            },
+            {
+                "testament": "AT",
+                "position": 21,
+                "name": "Salmos",
+                "abbreviation": "Sl",
+                "slug": "salmos",
+                "chapters_count": 150
+            },
+            {
+                "testament": "AT",
+                "position": 22,
+                "name": "1 Macabeus",
+                "abbreviation": "1Mc",
+                "slug": "1-macabeus",
+                "chapters_count": 16
+            },
+            {
+                "testament": "AT",
+                "position": 23,
+                "name": "2 Macabeus",
+                "abbreviation": "2Mc",
+                "slug": "2-macabeus",
+                "chapters_count": 15
+            },
+            {
+                "testament": "AT",
+                "position": 24,
+                "name": "Provérbios",
+                "abbreviation": "Pr",
+                "slug": "proverbios",
+                "chapters_count": 31
+            },
+            {
+                "testament": "AT",
+                "position": 25,
+                "name": "Eclesiastes",
+                "abbreviation": "Ecl",
+                "slug": "eclesiastes",
+                "chapters_count": 12
+            },
+            {
+                "testament": "AT",
+                "position": 26,
+                "name": "Cântico dos Cânticos",
+                "abbreviation": "Ct",
+                "slug": "cantico-dos-canticos",
+                "chapters_count": 8
+            },
+            {
+                "testament": "AT",
+                "position": 27,
+                "name": "Sabedoria",
+                "abbreviation": "Sb",
+                "slug": "sabedoria",
+                "chapters_count": 19
+            },
+            {
+                "testament": "AT",
+                "position": 28,
+                "name": "Eclesiástico",
+                "abbreviation": "Eclo",
+                "slug": "eclesiastico",
+                "chapters_count": 51
+            },
+            {
+                "testament": "AT",
+                "position": 29,
+                "name": "Isaías",
+                "abbreviation": "Is",
+                "slug": "isaias",
+                "chapters_count": 66
+            },
+            {
+                "testament": "AT",
+                "position": 30,
+                "name": "Jeremias",
+                "abbreviation": "Jr",
+                "slug": "jeremias",
+                "chapters_count": 52
+            },
+            {
+                "testament": "AT",
+                "position": 31,
+                "name": "Lamentações",
+                "abbreviation": "Lm",
+                "slug": "lamentacoes",
+                "chapters_count": 5
+            },
+            {
+                "testament": "AT",
+                "position": 32,
+                "name": "Baruc",
+                "abbreviation": "Br",
+                "slug": "baruc",
+                "chapters_count": 6
+            },
+            {
+                "testament": "AT",
+                "position": 33,
+                "name": "Ezequiel",
+                "abbreviation": "Ez",
+                "slug": "ezequiel",
+                "chapters_count": 48
+            },
+            {
+                "testament": "AT",
+                "position": 34,
+                "name": "Daniel",
+                "abbreviation": "Dn",
+                "slug": "daniel",
+                "chapters_count": 14
+            },
+            {
+                "testament": "AT",
+                "position": 35,
+                "name": "Oséias",
+                "abbreviation": "Os",
+                "slug": "oseias",
+                "chapters_count": 14
+            },
+            {
+                "testament": "AT",
+                "position": 36,
+                "name": "Joel",
+                "abbreviation": "Jl",
+                "slug": "joel",
+                "chapters_count": 4
+            },
+            {
+                "testament": "AT",
+                "position": 37,
+                "name": "Amós",
+                "abbreviation": "Am",
+                "slug": "amos",
+                "chapters_count": 9
+            },
+            {
+                "testament": "AT",
+                "position": 38,
+                "name": "Abdias",
+                "abbreviation": "Ab",
+                "slug": "abdias",
+                "chapters_count": 1
+            },
+            {
+                "testament": "AT",
+                "position": 39,
+                "name": "Jonas",
+                "abbreviation": "Jn",
+                "slug": "jonas",
+                "chapters_count": 4
+            },
+            {
+                "testament": "AT",
+                "position": 40,
+                "name": "Miquéias",
+                "abbreviation": "Mq",
+                "slug": "miqueias",
+                "chapters_count": 7
+            },
+            {
+                "testament": "AT",
+                "position": 41,
+                "name": "Naum",
+                "abbreviation": "Na",
+                "slug": "naum",
+                "chapters_count": 3
+            },
+            {
+                "testament": "AT",
+                "position": 42,
+                "name": "Habacuc",
+                "abbreviation": "Hab",
+                "slug": "habacuc",
+                "chapters_count": 3
+            },
+            {
+                "testament": "AT",
+                "position": 43,
+                "name": "Sofonias",
+                "abbreviation": "Sf",
+                "slug": "sofonias",
+                "chapters_count": 3
+            },
+            {
+                "testament": "AT",
+                "position": 44,
+                "name": "Ageu",
+                "abbreviation": "Ag",
+                "slug": "ageu",
+                "chapters_count": 2
+            },
+            {
+                "testament": "AT",
+                "position": 45,
+                "name": "Zacarias",
+                "abbreviation": "Zc",
+                "slug": "zacarias",
+                "chapters_count": 14
+            },
+            {
+                "testament": "AT",
+                "position": 46,
+                "name": "Malaquias",
+                "abbreviation": "Ml",
+                "slug": "malaquias",
+                "chapters_count": 3
+            },
+            {
+                "testament": "NT",
+                "position": 47,
+                "name": "Mateus",
+                "abbreviation": "Mt",
+                "slug": "mateus",
+                "chapters_count": 28
+            },
+            {
+                "testament": "NT",
+                "position": 48,
+                "name": "Marcos",
+                "abbreviation": "Mc",
+                "slug": "marcos",
+                "chapters_count": 16
+            },
+            {
+                "testament": "NT",
+                "position": 49,
+                "name": "Lucas",
+                "abbreviation": "Lc",
+                "slug": "lucas",
+                "chapters_count": 24
+            },
+            {
+                "testament": "NT",
+                "position": 50,
+                "name": "João",
+                "abbreviation": "Jo",
+                "slug": "joao",
+                "chapters_count": 21
+            },
+            {
+                "testament": "NT",
+                "position": 51,
+                "name": "Atos dos Apóstolos",
+                "abbreviation": "At",
+                "slug": "atos",
+                "chapters_count": 28
+            },
+            {
+                "testament": "NT",
+                "position": 52,
+                "name": "Romanos",
+                "abbreviation": "Rm",
+                "slug": "romanos",
+                "chapters_count": 16
+            },
+            {
+                "testament": "NT",
+                "position": 53,
+                "name": "1 Coríntios",
+                "abbreviation": "1Cor",
+                "slug": "1-corintios",
+                "chapters_count": 16
+            },
+            {
+                "testament": "NT",
+                "position": 54,
+                "name": "2 Coríntios",
+                "abbreviation": "2Cor",
+                "slug": "2-corintios",
+                "chapters_count": 13
+            },
+            {
+                "testament": "NT",
+                "position": 55,
+                "name": "Gálatas",
+                "abbreviation": "Gl",
+                "slug": "galatas",
+                "chapters_count": 6
+            },
+            {
+                "testament": "NT",
+                "position": 56,
+                "name": "Efésios",
+                "abbreviation": "Ef",
+                "slug": "efesios",
+                "chapters_count": 6
+            },
+            {
+                "testament": "NT",
+                "position": 57,
+                "name": "Filipenses",
+                "abbreviation": "Fl",
+                "slug": "filipenses",
+                "chapters_count": 4
+            },
+            {
+                "testament": "NT",
+                "position": 58,
+                "name": "Colossenses",
+                "abbreviation": "Cl",
+                "slug": "colossenses",
+                "chapters_count": 4
+            },
+            {
+                "testament": "NT",
+                "position": 59,
+                "name": "1 Tessalonicenses",
+                "abbreviation": "1Ts",
+                "slug": "1-tessalonicenses",
+                "chapters_count": 5
+            },
+            {
+                "testament": "NT",
+                "position": 60,
+                "name": "2 Tessalonicenses",
+                "abbreviation": "2Ts",
+                "slug": "2-tessalonicenses",
+                "chapters_count": 3
+            },
+            {
+                "testament": "NT",
+                "position": 61,
+                "name": "1 Timóteo",
+                "abbreviation": "1Tm",
+                "slug": "1-timoteo",
+                "chapters_count": 6
+            },
+            {
+                "testament": "NT",
+                "position": 62,
+                "name": "2 Timóteo",
+                "abbreviation": "2Tm",
+                "slug": "2-timoteo",
+                "chapters_count": 4
+            },
+            {
+                "testament": "NT",
+                "position": 63,
+                "name": "Tito",
+                "abbreviation": "Tt",
+                "slug": "tito",
+                "chapters_count": 3
+            },
+            {
+                "testament": "NT",
+                "position": 64,
+                "name": "Filêmon",
+                "abbreviation": "Fm",
+                "slug": "filemon",
+                "chapters_count": 1
+            },
+            {
+                "testament": "NT",
+                "position": 65,
+                "name": "Hebreus",
+                "abbreviation": "Hb",
+                "slug": "hebreus",
+                "chapters_count": 13
+            },
+            {
+                "testament": "NT",
+                "position": 66,
+                "name": "Tiago",
+                "abbreviation": "Tg",
+                "slug": "tiago",
+                "chapters_count": 5
+            },
+            {
+                "testament": "NT",
+                "position": 67,
+                "name": "1 Pedro",
+                "abbreviation": "1Pd",
+                "slug": "1-pedro",
+                "chapters_count": 5
+            },
+            {
+                "testament": "NT",
+                "position": 68,
+                "name": "2 Pedro",
+                "abbreviation": "2Pd",
+                "slug": "2-pedro",
+                "chapters_count": 3
+            },
+            {
+                "testament": "NT",
+                "position": 69,
+                "name": "1 João",
+                "abbreviation": "1Jo",
+                "slug": "1-joao",
+                "chapters_count": 5
+            },
+            {
+                "testament": "NT",
+                "position": 70,
+                "name": "2 João",
+                "abbreviation": "2Jo",
+                "slug": "2-joao",
+                "chapters_count": 1
+            },
+            {
+                "testament": "NT",
+                "position": 71,
+                "name": "3 João",
+                "abbreviation": "3Jo",
+                "slug": "3-joao",
+                "chapters_count": 1
+            },
+            {
+                "testament": "NT",
+                "position": 72,
+                "name": "Judas",
+                "abbreviation": "Jd",
+                "slug": "judas",
+                "chapters_count": 1
+            },
+            {
+                "testament": "NT",
+                "position": 73,
+                "name": "Apocalipse",
+                "abbreviation": "Ap",
+                "slug": "apocalipse",
+                "chapters_count": 22
+            }
+        ]
+    }
+}

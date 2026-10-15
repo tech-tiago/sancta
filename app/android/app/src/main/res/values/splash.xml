@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Abertura do app (dono: Motion — docs/design/MOTION.md). Igual no tema claro e no escuro. -->
+<resources>
+    <!-- Azul Manto: fundo do splash nativo, da janela do Flutter e do primeiro quadro da abertura. -->
+    <color name="sancta_splash_background">#1F3D9C</color>
+</resources>

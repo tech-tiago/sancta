@@ -1,0 +1,43 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/bible/books/{livro}/chapters/{n}",
+        "status": 200
+    },
+    "body": {
+        "book": {
+            "name": "Salmos",
+            "abbreviation": "Sl",
+            "slug": "salmos",
+            "testament": "AT",
+            "chapters_count": 150
+        },
+        "chapter": 116,
+        "previous": {
+            "book": "salmos",
+            "chapter": 115
+        },
+        "next": {
+            "book": "salmos",
+            "chapter": 117
+        },
+        "verses": [
+            {
+                "id": 16341,
+                "number": 1,
+                "text": "Aleluia. Louvai ao Senhor todas as nações, louvai-o todos os povos,",
+                "highlight": "gold",
+                "note": "Louvar com toda a família.",
+                "bookmarked": true
+            },
+            {
+                "id": 16342,
+                "number": 2,
+                "text": "porque sem limites é a sua misericórdia para conosco, e eterna a fidelidade do Senhor.",
+                "highlight": null,
+                "note": null,
+                "bookmarked": false
+            }
+        ]
+    }
+}

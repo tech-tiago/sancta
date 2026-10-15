@@ -1,0 +1,38 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers/{slug}",
+        "status": 200
+    },
+    "body": {
+        "id": 16,
+        "slug": "exame-de-consciencia",
+        "title": "Exame de consciência",
+        "subtitle": "Revisão orante do dia (guiada)",
+        "category": {
+            "slug": "manha-e-noite",
+            "name": "Manhã e noite",
+            "color": "#E8B04B"
+        },
+        "cover_url": null,
+        "duration_minutes": 10,
+        "has_audio": false,
+        "is_premium": true,
+        "is_featured": true,
+        "locked": true,
+        "description": null,
+        "author": "Equipe Sancta",
+        "audio_url": null,
+        "blocks": [
+            {
+                "type": "paragraph",
+                "text": "1. Presença: coloque-se diante de Deus. Respire fundo e peça a luz do Espírito Santo."
+            },
+            {
+                "type": "paragraph",
+                "text": "2. Gratidão: recorde três momentos de hoje pelos quais você é grato."
+            }
+        ],
+        "is_favorite": false
+    }
+}

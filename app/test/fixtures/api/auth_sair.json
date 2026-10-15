@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/logout",
+        "status": 200
+    },
+    "body": {
+        "message": "Sessão encerrada."
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me/stats",
+        "status": 200
+    },
+    "body": {
+        "current_streak": 1,
+        "longest_streak": 1,
+        "total_prayer_minutes": 14,
+        "sessions_count": 2,
+        "journeys_completed_steps": 1,
+        "last_seven_days": [
+            {
+                "date": "2026-09-28",
+                "seconds": 0
+            },
+            {
+                "date": "2026-09-29",
+                "seconds": 0
+            },
+            {
+                "date": "2026-09-30",
+                "seconds": 0
+            },
+            {
+                "date": "2026-10-01",
+                "seconds": 0
+            },
+            {
+                "date": "2026-10-02",
+                "seconds": 0
+            },
+            {
+                "date": "2026-10-03",
+                "seconds": 0
+            },
+            {
+                "date": "2026-10-04",
+                "seconds": 840
+            }
+        ]
+    }
+}

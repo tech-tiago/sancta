@@ -1,0 +1,38 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers/{slug}",
+        "status": 200
+    },
+    "body": {
+        "id": 14,
+        "slug": "oracao-da-manha",
+        "title": "Oração da manhã",
+        "subtitle": "Ofereça o seu dia a Deus",
+        "category": {
+            "slug": "manha-e-noite",
+            "name": "Manhã e noite",
+            "color": "#E8B04B"
+        },
+        "cover_url": null,
+        "duration_minutes": 2,
+        "has_audio": false,
+        "is_premium": false,
+        "is_featured": true,
+        "locked": false,
+        "description": null,
+        "author": "Tradição da Igreja",
+        "audio_url": null,
+        "blocks": [
+            {
+                "type": "paragraph",
+                "text": "Senhor, no silêncio deste dia que amanhece, venho pedir paz, sabedoria e força. Quero olhar o mundo com olhos cheios de amor, ser paciente, compreensivo, manso e prudente."
+            },
+            {
+                "type": "paragraph",
+                "text": "Ofereço-vos este dia: meus trabalhos, alegrias e sofrimentos. Que tudo o que eu fizer seja para a vossa glória e para o bem dos meus irmãos. Maria, minha Mãe, guiai os meus passos. Amém."
+            }
+        ],
+        "is_favorite": false
+    }
+}

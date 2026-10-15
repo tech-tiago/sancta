@@ -1,0 +1,97 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers?category={slug}",
+        "status": 200
+    },
+    "body": {
+        "data": [
+            {
+                "id": 14,
+                "slug": "oracao-da-manha",
+                "title": "Oração da manhã",
+                "subtitle": "Ofereça o seu dia a Deus",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            {
+                "id": 15,
+                "slug": "oracao-da-noite",
+                "title": "Oração da noite",
+                "subtitle": "Entregue o seu descanso",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 16,
+                "slug": "exame-de-consciencia",
+                "title": "Exame de consciência",
+                "subtitle": "Revisão orante do dia (guiada)",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 10,
+                "has_audio": false,
+                "is_premium": true,
+                "is_featured": true,
+                "locked": true
+            }
+        ],
+        "links": {
+            "first": "https://api.sancta.test/api/v1/prayers?page=1",
+            "last": "https://api.sancta.test/api/v1/prayers?page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "links": [
+                {
+                    "url": null,
+                    "label": "pagination.previous",
+                    "page": null,
+                    "active": false
+                },
+                {
+                    "url": "https://api.sancta.test/api/v1/prayers?page=1",
+                    "label": "1",
+                    "page": 1,
+                    "active": true
+                },
+                {
+                    "url": null,
+                    "label": "pagination.next",
+                    "page": null,
+                    "active": false
+                }
+            ],
+            "path": "https://api.sancta.test/api/v1/prayers",
+            "per_page": 40,
+            "to": 3,
+            "total": 3
+        }
+    }
+}

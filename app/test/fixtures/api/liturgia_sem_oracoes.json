@@ -1,0 +1,26 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/liturgy?date={data}",
+        "status": 200
+    },
+    "body": {
+        "date": "2026-10-05",
+        "title": "Segunda-feira da 27ª Semana do Tempo Comum",
+        "color": "Verde",
+        "color_hex": "#2E7D4F",
+        "readings": [
+            {
+                "label": "Evangelho",
+                "reference": "Lc 10,25-37",
+                "title": null,
+                "refrain": null,
+                "text": "Um mestre da Lei se levantou e, querendo pôr Jesus em dificuldade, perguntou."
+            }
+        ],
+        "prayers": {},
+        "homily": null,
+        "homily_author": null,
+        "homily_locked": false
+    }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><title>Sancta</title>
+<rect width="32" height="32" rx="7" fill="#1F3D9C"/>
+<path fill="#FBF6EC" d="M8 27V13A8 8 0 0 1 24 13V27H20V13A4 4 0 0 0 12 13V27Z"/>
+<path fill="#E3B65B" d="M15 14H17V16H19V18H17V24H15V18H13V16H15Z"/>
+</svg>

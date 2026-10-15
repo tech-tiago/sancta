@@ -1,0 +1,57 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/bible/search?q={termo}",
+        "status": 200
+    },
+    "body": {
+        "query": "Nicodemos",
+        "results": [
+            {
+                "id": 30474,
+                "reference": "Jo 3,1",
+                "book": "João",
+                "book_slug": "joao",
+                "chapter": 3,
+                "verse": 1,
+                "text": "Havia um homem entre os fariseus, chamado Nicodemos, príncipe dos judeus."
+            },
+            {
+                "id": 30477,
+                "reference": "Jo 3,4",
+                "book": "João",
+                "book_slug": "joao",
+                "chapter": 3,
+                "verse": 4,
+                "text": "Nicodemos perguntou-lhe: “Como pode um homem renascer, sendo velho? Porventura pode tornar a entrar no seio de sua mãe e nascer pela segunda vez?”."
+            },
+            {
+                "id": 30482,
+                "reference": "Jo 3,9",
+                "book": "João",
+                "book_slug": "joao",
+                "chapter": 3,
+                "verse": 9,
+                "text": "Replicou Nicodemos: “Como se pode fazer isso?”."
+            },
+            {
+                "id": 30731,
+                "reference": "Jo 7,50",
+                "book": "João",
+                "book_slug": "joao",
+                "chapter": 7,
+                "verse": 50,
+                "text": "Replicou-lhes Nicodemos, um deles, o mesmo que de noite o fora procurar:"
+            },
+            {
+                "id": 31217,
+                "reference": "Jo 19,39",
+                "book": "João",
+                "book_slug": "joao",
+                "chapter": 19,
+                "verse": 39,
+                "text": "Acompanhou-o Nicodemos (aquele que anterior­mente fora de noite ter com Jesus), levando umas cem libras de uma mistura de mirra e aloés."
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me/bible/progress",
+        "status": 200
+    },
+    "body": {
+        "book_slug": "joao",
+        "book": "João",
+        "chapter": 3,
+        "verse": null,
+        "updated_at": "2026-10-04T08:30:00-03:00"
+    }
+}

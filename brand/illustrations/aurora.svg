@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800"><title>Sancta — céu Aurora</title>
+<defs><linearGradient id="aurora-ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D4DB4"/><stop offset="0.2" stop-color="#5266C1"/><stop offset="0.42" stop-color="#7A82CE"/><stop offset="0.53" stop-color="#9890C1"/><stop offset="0.66" stop-color="#C9A3A3"/><stop offset="0.78" stop-color="#EEB38D"/><stop offset="1" stop-color="#F8D69C"/></linearGradient><radialGradient id="aurora-halo" cx="600" cy="776" r="560" gradientUnits="userSpaceOnUse"><stop offset="0.42" stop-color="#FFF3DC" stop-opacity="0.42"/><stop offset="1" stop-color="#FFF3DC" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="800" fill="url(#aurora-ceu)"/>
+<circle cx="600" cy="776" r="560" fill="url(#aurora-halo)"/>
+<circle cx="600" cy="776" r="235" fill="#FBF6EC"/>
+</svg>

@@ -1,0 +1,39 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/google",
+        "status": 201
+    },
+    "body": {
+        "token": "1|token-de-exemplo",
+        "token_type": "Bearer",
+        "expires_at": "2026-12-03T08:30:00-03:00",
+        "user": {
+            "id": "01a13cab-698e-70e4-8727-440ea0afaa0c",
+            "name": "João Pedro",
+            "first_name": "João",
+            "email": "joao.google@exemplo.com",
+            "email_verified": true,
+            "avatar_url": null,
+            "has_password": false,
+            "google_linked": true,
+            "theme": "system",
+            "notification_preferences": {
+                "daily_reminder": true,
+                "reminder_time": "07:00",
+                "liturgy": true,
+                "news": false,
+                "churches": true
+            },
+            "marketing_opt_in": false,
+            "is_premium": false,
+            "subscription": null,
+            "stats": {
+                "current_streak": 0,
+                "longest_streak": 0,
+                "total_prayer_minutes": 0
+            },
+            "created_at": "2026-10-04T08:30:00-03:00"
+        }
+    }
+}

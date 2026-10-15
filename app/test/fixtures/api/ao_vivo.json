@@ -1,0 +1,100 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/live-channels",
+        "status": 200
+    },
+    "body": [
+        {
+            "id": 2,
+            "name": "TV Aparecida",
+            "description": "A TV de Nossa Senhora: missas, novenas e programação católica.",
+            "category": "missa",
+            "category_label": "Missa",
+            "cover_url": null,
+            "logo_url": "https://api.sancta.test/storage/live/tv_aparecida.png",
+            "youtube_url": "https://www.youtube.com/watch?v=4CAmwaFJo6k",
+            "watch_url": "https://www.youtube.com/watch?v=LIVEvideo01",
+            "is_live": true,
+            "live": {
+                "video_id": "LIVEvideo01",
+                "title": "Santa Missa do Santuário",
+                "started_at": "2026-10-04T08:00:00-03:00",
+                "thumbnail_url": "https://i.ytimg.com/vi/LIVEvideo01/hqdefault.jpg"
+            },
+            "upcoming": null,
+            "on_schedule_now": true,
+            "current_schedule_title": "Missa de domingo",
+            "schedule": [
+                {
+                    "weekday": 0,
+                    "time": "08:00",
+                    "duration_minutes": 90,
+                    "title": "Missa de domingo"
+                }
+            ],
+            "next_at": "2026-10-11T08:00:00-03:00",
+            "topic": "sancta_live_2",
+            "type": "live",
+            "url": "https://www.youtube.com/watch?v=LIVEvideo01",
+            "video_id": "LIVEvideo01",
+            "fallback_url": "https://www.a12.com/tv/tv-ao-vivo",
+            "thumbnail_url": "https://i.ytimg.com/vi/LIVEvideo01/hqdefault.jpg"
+        },
+        {
+            "id": 1,
+            "name": "TV Canção Nova",
+            "description": "Missas, pregações e orações 24 horas por dia.",
+            "category": "canal",
+            "category_label": "Canal",
+            "cover_url": null,
+            "logo_url": "https://api.sancta.test/storage/live/tv_cancao_nova.png",
+            "youtube_url": "https://www.youtube.com/watch?v=NuJ2gazIEs8",
+            "watch_url": "https://www.youtube.com/watch?v=NuJ2gazIEs8",
+            "is_live": false,
+            "live": null,
+            "upcoming": null,
+            "on_schedule_now": false,
+            "current_schedule_title": null,
+            "schedule": [
+                {
+                    "weekday": null,
+                    "time": "18:00",
+                    "duration_minutes": 60,
+                    "title": "Terço da Misericórdia"
+                }
+            ],
+            "next_at": "2026-10-04T18:00:00-03:00",
+            "topic": "sancta_live_1",
+            "type": "live",
+            "url": "https://www.youtube.com/watch?v=NuJ2gazIEs8",
+            "video_id": "NuJ2gazIEs8",
+            "fallback_url": "https://tv.cancaonova.com/",
+            "thumbnail_url": "https://api.sancta.test/storage/live/tv_cancao_nova.png"
+        },
+        {
+            "id": 3,
+            "name": "Frei Gilson",
+            "description": "Meditação da Palavra e orações.",
+            "category": "oracao",
+            "category_label": "Oração",
+            "cover_url": null,
+            "logo_url": null,
+            "youtube_url": "https://www.youtube.com/playlist?list=PLWM-D0VS9_EwwQSQnBjGjp0G11vCsYTiU",
+            "watch_url": "https://www.youtube.com/playlist?list=PLWM-D0VS9_EwwQSQnBjGjp0G11vCsYTiU",
+            "is_live": false,
+            "live": null,
+            "upcoming": null,
+            "on_schedule_now": false,
+            "current_schedule_title": null,
+            "schedule": [],
+            "next_at": null,
+            "topic": "sancta_live_3",
+            "type": "playlist",
+            "url": "https://www.youtube.com/playlist?list=PLWM-D0VS9_EwwQSQnBjGjp0G11vCsYTiU",
+            "video_id": null,
+            "fallback_url": null,
+            "thumbnail_url": null
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers/{slug}",
+        "status": 200
+    },
+    "body": {
+        "id": 16,
+        "slug": "exame-de-consciencia",
+        "title": "Exame de consciência",
+        "subtitle": "Revisão orante do dia (guiada)",
+        "category": {
+            "slug": "manha-e-noite",
+            "name": "Manhã e noite",
+            "color": "#E8B04B"
+        },
+        "cover_url": null,
+        "duration_minutes": 10,
+        "has_audio": false,
+        "is_premium": true,
+        "is_featured": true,
+        "locked": false,
+        "description": null,
+        "author": "Equipe Sancta",
+        "audio_url": null,
+        "blocks": [
+            {
+                "type": "paragraph",
+                "text": "1. Presença: coloque-se diante de Deus. Respire fundo e peça a luz do Espírito Santo."
+            },
+            {
+                "type": "paragraph",
+                "text": "2. Gratidão: recorde três momentos de hoje pelos quais você é grato."
+            },
+            {
+                "type": "paragraph",
+                "text": "3. Revisão: percorra o dia, hora a hora. Onde você percebeu Deus? Onde se afastou do amor?"
+            },
+            {
+                "type": "paragraph",
+                "text": "4. Perdão: peça perdão com confiança, sabendo que a misericórdia de Deus é maior que qualquer falta."
+            },
+            {
+                "type": "paragraph",
+                "text": "5. Propósito: escolha um pequeno passo concreto para amanhã. Termine com um Pai-Nosso."
+            }
+        ],
+        "is_favorite": false
+    }
+}

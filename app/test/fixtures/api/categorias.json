@@ -1,0 +1,81 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/categories",
+        "status": 200
+    },
+    "body": [
+        {
+            "slug": "essenciais",
+            "name": "Orações essenciais",
+            "description": "As orações que todo católico reza",
+            "icon": "sparkles",
+            "color": "#E3B65B",
+            "prayers_count": 8
+        },
+        {
+            "slug": "manha-e-noite",
+            "name": "Manhã e noite",
+            "description": "Comece e termine o dia com Deus",
+            "icon": "sun",
+            "color": "#E8B04B",
+            "prayers_count": 3
+        },
+        {
+            "slug": "marianas",
+            "name": "Marianas",
+            "description": "Com Maria, Mãe de Jesus",
+            "icon": "heart",
+            "color": "#4F7CC4",
+            "prayers_count": 3
+        },
+        {
+            "slug": "terco",
+            "name": "Terço e Rosário",
+            "description": "Contemple os mistérios de Cristo",
+            "icon": "circle-stack",
+            "color": "#7C5CBF",
+            "prayers_count": 1
+        },
+        {
+            "slug": "santa-missa",
+            "name": "Santa Missa",
+            "description": "Orações Eucarísticas e partes da Missa",
+            "icon": "sun",
+            "color": "#B8862F",
+            "prayers_count": 14
+        },
+        {
+            "slug": "via-sacra",
+            "name": "Via-Sacra",
+            "description": "Caminhe com Jesus até a cruz",
+            "icon": "plus",
+            "color": "#8E3B46",
+            "prayers_count": 1
+        },
+        {
+            "slug": "espirito-santo",
+            "name": "Espírito Santo",
+            "description": "Vinde, Espírito Santo",
+            "icon": "fire",
+            "color": "#D65A31",
+            "prayers_count": 1
+        },
+        {
+            "slug": "familia",
+            "name": "Família",
+            "description": "Orações pela sua casa",
+            "icon": "home",
+            "color": "#3E8E7E",
+            "prayers_count": 1
+        },
+        {
+            "slug": "para-dormir",
+            "name": "Para dormir",
+            "description": "Descanse em paz no Senhor",
+            "icon": "moon",
+            "color": "#2B3A67",
+            "prayers_count": 1
+        }
+    ]
+}

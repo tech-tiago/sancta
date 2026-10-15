@@ -1,0 +1,622 @@
+{
+  "titulo": "Oração Eucarística I ou Cânon Romano",
+  "blocos": [
+    {
+      "tipo": "icones",
+      "icones": ["de_pe", "maos_postas"]
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "O Senhor esteja convosco."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "Ele está no meio de nós."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Corações ao alto."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "O nosso coração está em Deus."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Demos graças ao Senhor, nosso Deus."
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "É nosso dever e nossa salvação."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Segue-se, conforme as rubricas, o prefácio, com a conclusão:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_joelhos"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ou"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe", "maos_postas"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O sacerdote, de braços abertos, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP",
+      "texto": "Pai de misericórdia, a quem sobem nossos louvores, suplicantes, vos rogamos e pedimos por Jesus Cristo, vosso Filho e Senhor nosso,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "que aceiteis e abençoeis ✠ estes dons, estas oferendas, este sacrifício puro e santo,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "de braços abertos, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "que oferecemos, antes de tudo, pela vossa Igreja santa e católica: concedei-lhe paz e proteção, unindo-a num só corpo e governando-a por toda a terra, em comunhão com vosso servo o Papa N., o nosso Bispo N., e todos os que guardam a fé católica que receberam dos Apóstolos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Abençoai nossa oferenda, ó Senhor!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Memento dos vivos"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "1C",
+      "texto": "Lembrai-vos, ó Pai, dos vossos filhos e filhas N. N."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos e reza por alguns momentos em silêncio por aqueles que quer recordar. De braços abertos, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "e de todos os que circundam este altar, dos quais conheceis a fé e a dedicação ao vosso serviço. ★"
+    },
+    {
+      "tipo": "expansivel",
+      "titulo": "Missa com Batismo",
+      "blocos": [
+        {
+          "tipo": "sacerdote",
+          "orador": "1C",
+          "texto": "Lembrai-vos, ó Pai, dos vossos filhos e filhas N. N."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "aqui se menciona os nomes dos padrinhos e das madrinhas"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "que conduziram os vossos eleitos à santa graça do Batismo, e de todos que circundam este altar, dos quais conheceis a fé e a dedicação ao vosso serviço. ★"
+        }
+      ]
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "★ Por eles nós vos oferecemos e também eles vos oferecem este sacrifício de louvor por si e por todos os seus, e elevam a vós as suas preces, Deus eterno, vivo e verdadeiro, para alcançar o perdão de suas faltas, a segurança em suas vidas e a salvação que esperam."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Lembrai-vos, ó Pai, dos vossos filhos!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "\"Infra actionem\""
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "2C",
+      "texto": "Em comunhão com toda a Igreja, celebramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+    },
+    {
+      "tipo": "expansivel",
+      "titulo": "Comunicantes Próprios",
+      "blocos": [
+        {
+          "tipo": "rubrica",
+          "texto": "Ⓑ Para os Domingos"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos o glorioso dia em que o Senhor Jesus venceu a morte e nos tornou participantes de sua vida imortal. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "No Natal do Senhor e durante a Oitava"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos (a noite santíssima) o dia santíssimo em que Maria, intacta em sua virgindade, deu à luz o Salvador do mundo. Veneramos em primeiro lugar a memória da mesma Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Na Epifania do Senhor"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que vosso Filho unigênito, eterno convosco na glória, se manifestou visivelmente em nossa carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Da Vigília Pascal até o 2° Domingo da Páscoa"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos (a noite santíssima) o dia santíssimo da Ressurreição de nosso Senhor Jesus Cristo segunda a carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Na Ascensão do Senhor"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que nosso Senhor, vosso Filho unigênito, elevou à vossa direita na glória a nossa frágil natureza humana. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Em Pentecostes"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Em comunhão com toda a Igreja, celebramos o dia santíssimo de Pentecostes em que o Espírito Santo, em línguas de fogo, se manifestou aos Apóstolos. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria, ★"
+        }
+      ]
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "★ a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André, (Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião) e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção. (Por Cristo, nosso Senhor. Amém.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Em comunhão com vossos Santos vos louvamos!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O sacerdote, com os braços abertos, continua:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP",
+      "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "(Por Cristo, nosso Senhor. Amém.)"
+    },
+    {
+      "tipo": "expansivel",
+      "titulo": "Missa com Batismo, Crisma, Unção dos Enfermos",
+      "blocos": [
+        {
+          "tipo": "rubrica",
+          "texto": "Da Vigília Pascal até o 2° Domingo da Páscoa"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também por aqueles que vos dignastes regenerar pela água e pelo Espírito Santo, concedendo-lhes a remissão de todos os pecados. Dai aos nossos dias a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Na Missa com Batismo"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também por aqueles que vos dignastes regenerar pela água e pelo Espírito Santo, concedendo-lhes a remissão de todos os pecados, para que vivam em nosso Senhor Jesus Cristo e tenham seus nomes inscritos no livro da vida."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Na Missa com Crisma"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também por aqueles que, regenerados pelo Batismo, confirmastes com o dom do Espírito Santo. Nós vos pedimos, Senhor, acolhei benigno a nossa oferta e dignai-vos guardar neles a vossa graça."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Ⓑ Na Missa com Primeira Comunhão Eucarística"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos por vossos filhos e filhas que hoje reunis pela primeira vez à vossa mesa, na participação do Pão da vida e do Cálice da salvação; concedei-lhes crescer sempre em vossa amizade e na comunhão com vossa Igreja."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Ⓑ Na Missa com Unção dos Enfermos"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também pelos nossos irmãos enfermos que, mediante a santa unção, unem os seus sofrimentos à Páscoa de Cristo; dai-lhes consolação, saúde e paz."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Na Missa com Matrimônio"
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "Aceitai, ó Pai, com bondade, a oblação de vossos servos, como também dos novos esposos N. e N., e de toda a vossa família que por eles intercede. E, como lhes destes chegar ao dia do casamento, concedei-lhes também vida longa e feliz (e a alegria dos filhos que desejam)."
+        },
+        {
+          "tipo": "rubrica",
+          "texto": "Une as mãos."
+        },
+        {
+          "tipo": "sacerdote",
+          "texto": "(Por Cristo, nosso Senhor. Amém.)"
+        }
+      ]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Estendendo as mãos sobre as oferendas, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CC",
+      "texto": "Dignai-vos, ó Pai, aceitar, abençoar e santificar estas oferendas; recebei-as como sacrifício espiritual perfeito, a fim de que se tornem para nós o Corpo e o Sangue de vosso amado Filho, nosso Senhor Jesus Cristo."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Enviai o vosso Espírito Santo!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O relato da instituição da Eucaristia seja proferido de modo claro e audível, como requer a sua natureza."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Na véspera de sua paixão,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "ele tomou o pão em suas santas e veneráveis mãos,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "eleva os olhos,"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "elevou os olhos ao céu, a vós, ó Pai todo-poderoso, pronunciou a bênção de ação de graças, partiu o pão e o deu a seus discípulos, dizendo:"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "inclina-se levemente"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Mostra ao povo a hóstia consagrada, coloca na patena e genuflete em adoração."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Então prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Do mesmo modo, no fim da Ceia,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "ele tomou este precioso cálice em suas santas e veneráveis mãos, pronunciou novamente a bênção de ação de graças e o deu a seus discípulos, dizendo:"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "inclina-se levemente"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Em seguida, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ou"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé e do amor!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ou"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Mistério da fé para a salvação do mundo!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição."
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ou"
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_joelhos"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "O sacerdote, de braços abertos, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CC",
+      "texto": "Celebrando, pois, a memória da bem-aventurada paixão do vosso Filho, da sua ressurreição dentre os mortos e gloriosa ascensão aos céus, nós, vossos servos, e também vosso povo santo, vos oferecemos, ó Pai, dentre os bens que nos destes, o sacrifício puro, santo e imaculado, Pão santo da vida eterna e Cálice da perpétua salvação.\nRecebei, ó Pai, com olhar benigno, esta oferta, como recebestes os dons do justo Abel, o sacrifício de nosso patriarca Abraão e a oblação pura e santa do sumo sacerdote Melquisedeque."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Aceitai, ó Senhor, a nossa oferta!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos e, inclinando-se, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Suplicantes, vos pedimos, ó Deus onipotente, que esta nossa oferenda seja levada à vossa presença, no altar do céu, pelas mãos do vosso santo Anjo, para que todos nós, participando deste altar pela comunhão do santíssimo Corpo e Sangue do vosso Filho,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ergue-se e faz sobre si o sinal da cruz, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "sejamos repletos de todas as graças e bênçãos do céu."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "(Por Cristo, nosso Senhor. Amém.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "O Espírito nos una num só corpo!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Memento dos mortos.\nDe braços abertos, diz:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "3C",
+      "texto": "Lembrai-vos, ó Pai, dos vossos filhos e filhas N. N. que nos precederam com o sinal da fé e dormem o sono da paz."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos e, em silêncio, reza brevemente pelos defuntos que deseja recordar. De braços abertos, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "A eles, e a todos os que descansam no Cristo, concedei o repouso, a luz e a paz."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "(Por Cristo, nosso Senhor. Amém.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Concedei-lhes, ó Senhor, a luz eterna!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Bate no peito, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "4C",
+      "texto": "E a todos nós pecadores,"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "e, de braços abertos, prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "que esperamos na vossa infinita misericórdia, concedei, não por nossos méritos, mas por vossa bondade, o convívio dos Apóstolos e Mártires: João Batista e Estêvão, Matias e Barnabé, (Inácio, Alexandre, Marcelino e Pedro, Felicidade e Perpétua, Águeda e Luzia, Inês, Cecília, Anastácia) e de todos os vossos Santos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Une as mãos:"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Por Cristo, nosso Senhor."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "E prossegue:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP",
+      "texto": "Por ele não cessais de criar, santificar, vivificar, abençoar estes bens e distribuí-los entre nós."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Ergue a patena com a hóstia e o cálice, dizendo:"
+    },
+    {
+      "tipo": "sacerdote",
+      "orador": "CP ou CC",
+      "texto": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "A assembleia aclama:"
+    },
+    {
+      "tipo": "assembleia",
+      "texto": "Amém."
+    },
+    {
+      "tipo": "icones",
+      "icones": ["de_pe"]
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "Segue-se o Rito da Comunhão."
+    }
+  ]
+}

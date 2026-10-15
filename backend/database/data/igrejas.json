@@ -1,0 +1,150 @@
+[
+  {
+    "id": "1",
+    "name": "PARÓQUIA NOSSA SENHORA DA SAÚDE",
+    "address": "Rua Espirito Santo, Av. Bahia, 01 - Alto do Mundaí",
+    "location": {
+      "latitude": -16.404554,
+      "longitude": -39.05166
+    },
+    "mass_times": [
+      "19:00 (Quinta-feira)",
+      "08:30 (Domingo)",
+      "10:00 (Domingo)",
+      "19:30 (Domingo)"
+    ],
+    "adoration_times": [
+      "18:00 (Quinta-feira)"
+    ],
+    "confession_times": [
+      "Antes da missa, 18:00 (Quinta-feira)"
+    ],
+    "secretary_hours": [
+      "08:00 às 12:00 (Segunda a Sexta)",
+      "14:00 às 17:00 (Segunda a Sexta)",
+      "08:00 às 11:00 (Sábado)"
+    ],
+    "is_verified": true,
+    "phone": "(73) 99804-9945",
+    "email": "paroquiansradasaude_ps@gmail.com",
+    "instagram": "@paroquiansradasaude_ps",
+    "description": "Igreja matriz da região"
+  },
+  {
+    "id": "2",
+    "name": "COMUNIDADE SANTO ANTÔNIO",
+    "address": "Rua Ararai, 92 - Paraíso dos Pataxós",
+    "location": {
+      "latitude": -16.37891,
+      "longitude": -39.03338
+    },
+    "mass_times": [
+      "19:00 (Terça-feira)",
+      "19:00 (Sábado)",
+      "07:00 (Domingo)"
+    ],
+    "adoration_times": [
+      "18:00 (Terça-feira)"
+    ],
+    "confession_times": [
+      "Antes da missa, 18:00 (Terça-feira)"
+    ],
+    "secretary_hours": [
+      "Atendimento na matriz",
+      "Consultar horários via telefone"
+    ],
+    "is_verified": true,
+    "phone": "(73) 99804-9945",
+    "email": "paroquiansradasaude_ps@gmail.com",
+    "instagram": "@paroquiansradasaude_ps",
+    "description": "Pertence a matriz Paróquia Nossa Senhora da Saúde"
+  },
+  {
+    "id": "3",
+    "name": "COMUNIDADE SANT'ANA E SÃO JOAQUIM",
+    "address": "Eixo Acácias, Village III",
+    "location": {
+      "latitude": -16.38521,
+      "longitude": -39.04952
+    },
+    "mass_times": [
+      "19:00 (Quarta-feira)",
+      "17:30 (Domingo)"
+    ],
+    "adoration_times": [
+      "18:00 (Quarta-feira)"
+    ],
+    "confession_times": [
+      "Antes da missa, 18:00 (Quarta-feira)"
+    ],
+    "secretary_hours": [
+      "Atendimento na matriz",
+      "Consultar horários via telefone"
+    ],
+    "is_verified": true,
+    "phone": "(73) 99804-9945",
+    "email": "paroquiansradasaude_ps@gmail.com",
+    "instagram": "@paroquiansradasaude_ps",
+    "description": "Pertence a matriz Paróquia Nossa Senhora da Saúde"
+  },
+  {
+    "id": "4",
+    "name": "PARÓQUIA DIVINO ESPÍRITO SANTO",
+    "address": "Praça Divino Espírito Santo, s/nº Centro, Distrito de Vale Verde, Porto Seguro -  BA",
+    "location": {
+      "latitude": -16.4256586,
+      "longitude": -39.2166122
+    },
+    "mass_times": [
+      "19:00 (Segunda-feira)",
+      "09:00 (Sábado)",
+      "06:30 (Domingo)",
+      "19:00 (Domingo)"
+    ],
+    "adoration_times": [
+      "18:30 (Quinta-feira)"
+    ],
+    "confession_times": [
+      "Antes da missa, 18:00 (Domingo)",
+      "Durante a adoração, 18:30 (Quinta-feira)"
+    ],
+    "secretary_hours": [
+      "07:00 às 11:00 (Segunda a Sexta)",
+      "13:00 às 17:00 (Segunda a Sexta)"
+    ],
+    "is_verified": false,
+    "phone": "(73) 3575-1268",
+    "email": "paroquiavaleverde@gmail.com",
+    "instagram": "@paroquiadivinodovaleverde",
+    "description": "Igreja Matriz da região"
+  },
+  {
+    "id": "5",
+    "name": "COMUNIDADE SÃO JOÃO BATISTA",
+    "address": "Praça da Agrovila, Distrito de Vale Verde, Porto Seguro -  BA",
+    "location": {
+      "latitude": -16.4324067,
+      "longitude": -39.2009349
+    },
+    "mass_times": [
+      "19:00 (Sexta-feira)",
+      "08:00 (Domingo)"
+    ],
+    "adoration_times": [
+      "18:30 (Quinta-feira)"
+    ],
+    "confession_times": [
+      "Durante a adoração, 18:00 (Sexta-feira)"
+    ],
+    "secretary_hours": [
+      "Atendimento na matriz",
+      "Consultar horários via telefone"
+    ],
+    "is_verified": false,
+    "phone": "(73) 3575-1268",
+    "email": "paroquiavaleverde@gmail.com",
+    "instagram": "@paroquiadivinodovaleverde",
+    "description": "Pertence a matriz Paróquia Divino Espírito Santo"
+  }
+
+]

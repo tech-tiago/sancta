@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notificações do Sancta: cor de destaque = Azul Manto (docs/design/MARCA.md). -->
+<resources>
+    <color name="sancta_notification_accent">#1F3D9C</color>
+</resources>

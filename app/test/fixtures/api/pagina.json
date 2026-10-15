@@ -1,0 +1,22 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/pages/{slug}",
+        "status": 200
+    },
+    "body": {
+        "slug": "sobre",
+        "title": "Sobre o Sancta",
+        "blocks": [
+            {
+                "type": "paragraph",
+                "text": "O Sancta nasceu para ajudar católicos a rezar todos os dias: Bíblia, liturgia diária, orações guiadas, jornadas e novenas, igrejas próximas com horários de missa e muito mais — em um só lugar, com beleza e simplicidade."
+            },
+            {
+                "type": "paragraph",
+                "text": "Ora · Lê · Vive."
+            }
+        ],
+        "updated_at": "2026-10-04T08:30:00-03:00"
+    }
+}

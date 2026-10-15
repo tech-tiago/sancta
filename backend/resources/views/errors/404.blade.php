@@ -1,0 +1,5 @@
+@extends('errors.minimal-sancta')
+@section('code', '404')
+@section('sky', 'entardecer')
+@section('title', 'Página não encontrada')
+@section('message', 'O caminho pode ter mudado. Que tal recomeçar pelo início?')

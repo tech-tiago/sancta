@@ -1,0 +1,125 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/config",
+        "status": 200
+    },
+    "body": {
+        "app": {
+            "name": "Sancta",
+            "tagline": "Ora · Lê · Vive",
+            "slogan": "Sua jornada de fé, todos os dias.",
+            "min_version": "3.0.0",
+            "latest_version": "3.0.0",
+            "update_message": "Uma nova versão do Sancta está disponível com melhorias e correções.",
+            "maintenance": false,
+            "maintenance_message": "Estamos realizando uma manutenção rápida. Volte em alguns minutos. 🙏",
+            "play_store_url": "https://play.google.com/store/apps/details?id=com.maria.app_igreja",
+            "support_email": "contato@sancta.app.br",
+            "support_whatsapp": "",
+            "website_url": "https://api.sancta.test",
+            "privacy_url": "https://api.sancta.test/p/politica-de-privacidade",
+            "terms_url": "https://api.sancta.test/p/termos-de-uso",
+            "delete_account_url": "https://api.sancta.test/p/excluir-conta"
+        },
+        "features": {
+            "ai_explanations": true,
+            "live": true,
+            "news": true,
+            "churches": true,
+            "intentions": true,
+            "events": true,
+            "guest_mode": true
+        },
+        "theme": {
+            "default": "system"
+        },
+        "maps": {
+            "tiles_light": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            "tiles_dark": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            "dark_filter": true,
+            "attribution": "© colaboradores do OpenStreetMap"
+        },
+        "premium": {
+            "name": "Sancta+",
+            "headline": "Aprofunde sua vida de oração",
+            "subheadline": "Orações guiadas, jornadas e reflexões para rezar todos os dias — no app e no site, com a mesma conta.",
+            "benefits": [
+                "Todas as orações guiadas, jornadas e novenas",
+                "Reflexão diária do Evangelho e homilia",
+                "Explicação de versículos com IA",
+                "Planos de leitura da Bíblia completos",
+                "Eventos e retiros exclusivos",
+                "Sem anúncios — e você apoia a evangelização"
+            ],
+            "benefit_items": [
+                {
+                    "icon": "headphones",
+                    "title": "Todas as orações guiadas, jornadas e novenas",
+                    "description": "Reze com calma, passo a passo, onde estiver."
+                },
+                {
+                    "icon": "sun",
+                    "title": "Reflexão diária do Evangelho e homilia",
+                    "description": "Uma meditação curta para cada dia da liturgia."
+                },
+                {
+                    "icon": "sparkles",
+                    "title": "Explicação de versículos com IA",
+                    "description": "Entenda o contexto da Palavra quando surgir uma dúvida."
+                },
+                {
+                    "icon": "book",
+                    "title": "Planos de leitura da Bíblia completos",
+                    "description": "Leia a Bíblia inteira no seu ritmo."
+                },
+                {
+                    "icon": "calendar",
+                    "title": "Eventos e retiros exclusivos",
+                    "description": "Encontros online para rezar em comunidade."
+                },
+                {
+                    "icon": "heart",
+                    "title": "Sem anúncios — e você apoia a evangelização",
+                    "description": "Sua assinatura mantém o Sancta no ar."
+                }
+            ],
+            "social_proof": null,
+            "guarantee": "Cancele quando quiser",
+            "faq": [
+                {
+                    "question": "Posso cancelar quando quiser?",
+                    "answer": "Sim. No app, a assinatura é gerenciada pelo Google Play e pode ser cancelada a qualquer momento na Play Store. No site, os planos são pré-pagos e não renovam sozinhos."
+                },
+                {
+                    "question": "Como funciona o teste grátis?",
+                    "answer": "Nos planos com teste grátis, você usa o Sancta+ completo durante o período de teste e só é cobrado depois. Cancelando antes do fim do teste, nada é cobrado."
+                },
+                {
+                    "question": "A assinatura vale no app e no site?",
+                    "answer": "Sim. O acesso fica na sua conta: entre com o mesmo e-mail no app e no site."
+                },
+                {
+                    "question": "Posso dar o Sancta+ de presente?",
+                    "answer": "Sim. Em \"Presentear Sancta+\", no site, você compra um plano e recebe um código para enviar a quem quiser."
+                }
+            ],
+            "testimonials": [
+                {
+                    "author": "Maria",
+                    "content": "Rezo o terço todos os dias com o app.",
+                    "rating": 5
+                }
+            ]
+        },
+        "billing": {
+            "obfuscated_account_id": null,
+            "product_ids": [
+                "sancta_plus"
+            ]
+        },
+        "auth": {
+            "google_server_client_id": "123-sancta.apps.googleusercontent.com"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800"><title>Sancta — céu Luz</title>
+<defs><linearGradient id="luz-ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE3F7"/><stop offset="0.55" stop-color="#EEEDF1"/><stop offset="1" stop-color="#FBF6EC"/></linearGradient><radialGradient id="luz-brilho" cx="300" cy="800" r="280" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/><stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><linearGradient id="luz-raios" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#luz-ceu)"/>
+<path fill="url(#luz-raios)" d="M300 810L-681.844 314.035L-620.441 207.68ZM300 810L-520.024 76.814L-433.186 -10.024ZM300 810L-302.32 -110.441L-195.965 -171.844ZM300 810L-43.568 -234.969L75.054 -266.754ZM300 810L238.596 -288.285L361.404 -288.285ZM300 810L524.946 -266.754L643.568 -234.969ZM300 810L795.965 -171.844L902.32 -110.441ZM300 810L1033.186 -10.024L1120.024 76.814ZM300 810L1220.441 207.68L1281.844 314.035Z"/>
+<circle cx="300" cy="800" r="280" fill="url(#luz-brilho)"/>
+<circle cx="300" cy="795" r="85" fill="#FFFFFF" fill-opacity="0.9"/>
+</svg>

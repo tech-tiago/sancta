@@ -1,0 +1,11 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/bible/explain",
+        "status": 402
+    },
+    "body": {
+        "message": "Explicações com IA são exclusivas do Sancta+.",
+        "paywall": true
+    }
+}

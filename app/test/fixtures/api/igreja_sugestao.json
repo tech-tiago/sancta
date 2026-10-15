@@ -1,0 +1,11 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/church-submissions",
+        "status": 201
+    },
+    "body": {
+        "id": "01a13cab-6b1c-7172-885a-fc16ab3104a0",
+        "message": "Obrigado! Sua contribuição será revisada pela nossa equipe antes de aparecer no mapa."
+    }
+}

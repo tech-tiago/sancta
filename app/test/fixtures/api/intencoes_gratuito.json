@@ -1,0 +1,31 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/intentions",
+        "status": 200
+    },
+    "body": {
+        "data": [
+            {
+                "id": "01a13cab-6954-71c8-bf93-23170174e0db",
+                "text": "Pela paz nas famílias da nossa comunidade.",
+                "author": "Maria",
+                "prayers_count": 4,
+                "prayed": true,
+                "created_at": "2026-10-04T08:30:00-03:00"
+            },
+            {
+                "id": "01a13cab-6954-71c8-bf93-2317024db1a5",
+                "text": "Por um emprego para o meu filho.",
+                "author": "Anônimo",
+                "prayers_count": 3,
+                "prayed": false,
+                "created_at": "2026-10-04T08:30:00-03:00"
+            }
+        ],
+        "meta": {
+            "current_page": 1,
+            "last_page": 1
+        }
+    }
+}

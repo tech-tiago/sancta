@@ -1,0 +1,527 @@
+{
+  "titulo": "Via-Sacra das Misericórdias",
+  "blocos": [
+    {
+      "tipo": "rubrica",
+      "texto": "ORAÇÃO INICIAL"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Senhor, nosso Deus, Pai das Misericórdias e Deus de toda consolação, humildemente Vos pedimos a graça de meditar a Paixão de Vosso benditíssimo Filho, Nosso Senhor Jesus Cristo, que em tudo buscou fazer a Vossa santíssima vontade. Queremos, pela contemplação da via dolorosa, aprender que devemos ser gratos por termos um Pai misericordioso, que nos ama com infinito amor e que o expressa por intermédio de Jesus Cristo, nosso Salvador."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pedimos, ainda, à Mãe da Misericórdia, que sofreu ao ver o Filho padecer, que se una aos nossos sofrimentos, para que, com sua intercessão, cheguemos à morada eterna. Amém!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "PRIMEIRA ESTAÇÃO: JESUS É CONDENADO À MORTE"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus Cristo foi entregue nas mãos de homens cruéis, que O acusaram, agrediram e condenaram como um malfeitor. Nosso Senhor revealed a face misericordiosa do Pai e, infelizmente, recebeu como resposta a traição, a condenação. A crueldade do ser humano não está apenas na violência física, que hoje em dia não pode ser descartada, mas também em sua mente e em seu coração."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, tende piedade pelas vezes que condenei meu semelhante. Perdão pela minha posição de juiz(íza) injusto(a), que apenas condena e se sente melhor que o outro. Misericórdia!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Ao morrer crucificado / Teu Jesus é condenado\nPor teus crimes, pecador / Por teus crimes, pecador\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "SEGUNDA ESTAÇÃO: JESUS LEVA A CRUZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus recebe o madeiro, a Cruz. Com esse gesto, Ele agora nos mostra, não com palavras, mas com a própria vida, o que havia dito: devemos tomar a cruz de cada dia e segui-Lo. Sem reclamar, sem murmurar, Jesus assume a missão que recebeu do Pai, Ele entende que a Cruz não é um peso, e sim o meio de salvar a humanidade."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Hoje em dia, as pessoas fogem da cruz, não querem compromisso; a cruz ainda é vista negativamente como um símbolo do sofrimento, pois ninguém quer sofrer – a maioria quer vida fácil."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, Vós me ensinais, por intermédio de Vosso Filho Jesus, que devo tomar a cruz de cada dia, devo assume a minha filiação divina e minhas limitações humanas; devo entender que a cruz e o sofrimento, muitas vezes, não são consequências do pecado ou um castigo, mas um instrumento para minha salvação. Senhor, tomo hoje a minha cruz, a cruz de hoje, e preciso carregá-la e enxergá-la com gratidão e esperança de salvação. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Com a cruz é carregado / E do peso, acabrunhado\nVai morrer por teu amor /Vai morrer por teu amor\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "TERCEIRA ESTAÇÃO: JESUS CAI PELA PRIMEIRA VEZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus cai pela primeira vez. A Cruz do Senhor é pesada, as chicotadas são desumanas. Com o peso da Cruz e as chicotadas, a queda acaba sendo inevitável, pois o Senhor levava não apenas o peso e a dor, mas o world."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "O Senhor caiu por causa dos pecados da humanidade, já os homens caem por causa de seus próprios pecados – vícios, orgulho, indiferença. Mas quem dera que, ao caírem, eles também tivessem a mesma atitude de Jesus: levantar e prosseguir."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, minhas quedas são inúmeras e, muitas vezes, inevitáveis; até tento não cair, mas minha fraqueza, minha limitação, minha autossuficiência me impedem de permanecer de pé. Fraquejo como ser humano que sou, por isso conto com Vossa graça para me levantar e prosseguir. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Pela cruz tão oprimido / Cai Jesus desfalecido\nPela tua salvação / Pela tua salvação.\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "QUARTA ESTAÇÃO: ENCONTRO DE JESUS COM SUA MÃE"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "O caminho para fazer a vontade do Pai não é fácil. Quem se anima a fazer algo de bom quando é maltratado, ignorado e desprezado?"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Nesse caminho de dores, Jesus encontra uma consolação: a presença da mãe, Maria. Será que as mães sofrem pelos filhos?\nMaria sofreu ao ver seu Filho naquele estado, condenado.\nJustamente nesse caminho está Maria. A mãe não esquece o filho, e, mesmo que esquecesse, o Pai, com carinho de mãe, o acolheria."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, que escolhestes Maria para ser a Mãe do Salvador, ajudai-me nesse caminho. Que a Mãe de Jesus seja também consolação, presença na minha vida. \"Mãe, passo por várias dificuldades, tribulações, e tenho vontade de desistir. Que a Senhora, que é Mãe da Misericórdia, me anime a perseverar na obediência aos mandamentos do Senhor. Amém!\""
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Vê a dor da mãe amada / Que se encontra desolada\nCom seu filho em aflição / Com seu filho em aflição\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "QUINTA ESTAÇÃO: JESUS RECEBE A AJUDA DE SIMÃO CIRENEU"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus é Deus, é a segunda Pessoa da Santíssima Trindade, é o Todo-poderoso. Mas, apesar disso, Ele quis a ajuda de homens, criaturas frágeis e limitadas. Que grande lição de humildade Nosso Senhor nos dá."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus escolheu algumas pessoas e lhes concedeu autoridade para ajudá-Lo no ministério. Claro que o Senhor sabia das fraquezas dos discípulos, mas, mesmo assim, concedeu-lhes um voto de confiança, deu-lhes responsabilidades, e, até em um dos últimos momentos de Sua caminhada na terra, contou com a ajuda de Simão Cireneu."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, Vós enviastes Vosso Filho Jesus para salvar a humanidade do grande mal – o pecado. Vosso Filho Jesus fez bem todas as coisas, mas, apesar disso, quis a ajuda de homens para Vossa obra."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "O Senhor me dá esta grande lição: não sou bom sozinho, sozinho nada posso. Curai, Senhor, todo meu egoísmo, pois muitas vezes quero fazer do meu jeito, não me abro aos outros, não partilho, e, por isso, erro.\nPai, misericórdia, pois Vós, mesmo sendo Deus, quisestes partilhar Vosso melhor, e eu também preciso partilhar o meu melhor e acolher o outro como irmão e não como inimigo. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "No caminho do Calvário / Um auxílio é necessário\nNão lhe nega o Cireneu / Não lhe nega o Cireneu.\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "SEXTA ESTAÇÃO: VERÔNICA ENXUGA O ROSTO DE JESUS"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Verônica enxuga o Rosto da Misericórdia, Jesus Cristo. No caminho, Jesus foi consolado por Sua Mãe, pelo Cireneu e agora por Verônica. Verônica tem compaixão d’Aquele que é a Compaixão. Seu gesto de enxugar o rosto ensanguentado do Senhor teve como resultado a Face da Misericórdia impressa naquele pano. A experiência com Cristo levou aquela mulher a revelar a Face do Amor. A atitude de caridade de Verônica traz a lição: apresentar a Face do Amor e revelá-La."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Em nossos dias, o ser humano precisa não só das palavras, mas dos testemunhos. O cristão precisa honrar esse nome, pois, se não for assim, não tem sentido. Ser cristão é revelar o Cristo. Ser cristão é apresentar a Misericórdia do Pai."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, perdão pelas vezes que, mesmo tendo o nome de cristão(ã), não revelei a Sagrada Face de Vosso Filho. Perdão pelas vezes que não vivi a caridade e, por isso, não convenci, porque o convencimento não vem apenas pelas palavras, mas, principalmente, pela boa conduta, pelo amor impresso no coração e na vida. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Eis o rosto ensanguentado / Por Verônica enxugado\nQue no pano apareceu / Que no pano apareceu\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "SÉTIMA ESTAÇÃO: JESUS CAI PELA SEGUNDA VEZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus cai pela segunda vez. E quanto a nós? Quem disse que em nossas vidas não haveria dificuldades? Nem o Filho de Deus foi privado do caminho pesado da Cruz."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "A segunda queda mostra que as forças de Jesus estão se acabando.\nQue Cruz pesada é essa? E pensar que Aquele que não teve pecado estava ali no chão. Quanta humilhação! Por que tudo isso? Por amor, só por amor."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, Vosso Filho Se fez pecado para me salvar. Que nas minhas quedas eu não me esqueça desse amor tão grande que o Senhor tem por mim. Senhor, mesmo que eu sinta que as minhas forças estão se acabando, levantai-me com a Vossa misericórdia. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Outra vez desfalecido / Pelas dores abatido\nCai por terra o salvador / Cai por terra o salvador\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "OITAVA ESTAÇÃO: JESUS CONSOLA AS MULHERES DE JERUSALÉM"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus, o homem-Deus, o Deus-homem, compreende o sofrimento humano. Embora talvez estivesse em um dos piores momentos, ainda assim, o Filho do Pai Amado foi capaz de consolar as mulheres de Jerusalém."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Que grande amor o Senhor tem pelos homens e pelas mulheres! Ele é o Consolador. Quantas vezes Ele se compadeceu dos necessitados, curando da cegueira, da lepra, da paralisia!… Hoje, quantos precisam ser consolados!"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, vinde em meu socorro, em meu auxílio, pois preciso ser consolado(a). Sofro pelos meus pecados, sofro porque sou gente; às vezes, acerto sem querer, e, quando quero acertar, erro. Consolai-me, Senhor, em minhas dores, em minhas enfermidades interiores e físicas. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Das mulheres que choravam /Que fiéis O acompanhavam /\nÉ Jesus consolador /É Jesus consolador /\nPela virgem dolorosa /Vossa mãe tão piedosa /\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "NONA ESTAÇÃO: JESUS CAI PELA TERCEIRA VEZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus cai pela terceira vez. Alguém tem dúvida de que o caminho trilhado by Jesus não foi fácil? O que se passou na cabeça de Nosso Senhor? Será que Ele pensou em desistir? Ele teria desanimado?"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "É certo que qualquer ser humano teria desistido, desanimado, a não ser que tivesse fé e força divina. Jesus Cristo caiu pela terceira vez devido aos açoites, aos socos e ao peso da Cruz. Quanto mais caminhava para fazer a vontade de Deus, mais vinham as afrontas, as agressões do corpo e da alma."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Hoje, os cristãos sofrem porque buscam fazer a vontade de Deus. Eles são chamados a perseverar sempre, a nunca desistir, mesmo que apanhem, que sejam esbofeteados e caiam. Que o Pai misericordioso venha em auxílio e, por meio do Seu Filho, envie o Espírito Santo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, ajudai-me nas minhas quedas, que são muitas. Sou tentado(a) a desistir, pois me sinto sem forças. Peço que envieis sobre mi, por Jesus, o Vosso Espírito Santo, pois ainda que venham os ataques, as perseguições do corpo e da alma, pelo fato de estar Vos seguindo, que Vós sempre me levanteis, que Vosso Espírito me conduza. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Cai terceira vez prostrado / Pelo peso redobrado\nDos pecados e da cruz / Dos pecados e da cruz\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "DÉCIMA ESTAÇÃO: JESUS É DESPIDO DE SUAS VESTES"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus está próximo da crucificação e é despojado de Suas vestes.\nO caminho até o Calvário foi um caminho de humilhação; as autoridades não O respeitaram, o Amor não foi amado, desnudaram o Senhor."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Hoje, infelizmente, a nudez é cultivada, propagada como natural; é um meio de expressar a liberdade. Assim, o corpo do ser humano virou um objeto, um produto. O homem perdeu a noção do sagrado, de que seu corpo é morada do Divino e, por isso, não deve ser banalizado, vendido ou comprado."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, a nudez do Vosso Filho me mostra que devo cuidar de mim, que sou templo do Vosso Espírito, que sou sagrado(a) também exteriormente. Perdão, Senhor, pelas vezes que usei vestes inadequadas, pelas vezes que seduzi e levei pessoas ao pecado. Perdão, porque não cuidei de mim. Senhor, que a nudez de amor de Vosso Filho cubra a minha nudez de malícia e sedução. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Das suas vestes despojado / Tão chagado e pisado\nEu vos vejo meu Jesus / Eu vos vejo meu Jesus\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "DÉCIMA PRIMEIRA ESTAÇÃO: JESUS É PREGADO NA CRUZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus é pregado na Cruz. Durante todo o percurso, a Cruz foi pesada e companheira, mas agora ela não mais é levada, pois se une a Cristo pelos pregos."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "O Filho se une ao madeiro com o objetivo de amar os homens no alto daquele Calvário. Se, antes, no primeiro Paraíso, veio a perdição pela desobediência, agora, o Senhor, no madeiro, pela obediência redime os pecadores e os salva."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, Vosso Filho foi pregado na Cruz. Ele se fez pecado para me salvar, levou a Cruz e nela foi pregado por obediência a Vós.\nSenhor, hoje eu peço que seja crucificado tudo aquilo que me separa de Vós. Toma na Cruz, do Vosso Filho, os meus pecados. Nesta hora, decido romper com todo pecado. Que na Cruz sejam pregados todos os males que me separam de Vós. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Sois por mim na cruz pregado /Insultado e blasfemado /\nCom cegueira e com furor / Com cegueira e com furor /\nPela virgem dolorosa / Vossa mãe tão piedosa/\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "DÉCIMA SEGUNDA ESTAÇÃO: JESUS MORRE NA CRUZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus morre na Cruz, “tudo está consumado”, o Filho Amado do Pai cumpriu a Sua missão, foi obediente até a morte, e morte de Cruz."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Talvez quem passasse por ali dissesse que foi um fracasso, que tudo o que Ele havia feito tinha sido em vão. Talvez dissesse: “E agora? Ele morreu?”.\nNa caminhada cristã ou nesse caminho da vida, nem tudo dá certo, muitas vezes vem o desconsolo, a desesperança, e todos, sem exceção, passam por isso. No entanto, para o cristão existe uma luz: as palavras de Jesus. Seus ensinamentos falavam desse momento de morte e também de ressurreição; a morte é certa para todos e que seja ela para as realidades pecaminosas que persistem em acompanhar o homem."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, na morte do Vosso Filho na Cruz surge a minha morte para o pecado; na morte de Cruz do Vosso Filho, surge a vida nova. Senhor, que morram em mim todas as realidades que me afastam do Vosso amor. A Cruz do Vosso Filho não é maldita, mas bendita, porque é Salvação. Amém."
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Meu Jesus por nós morrestes / Por nós todos padecestes /\nOh! Que grande é a vossa dor /Oh! Que grande é a vossa dor /\nPela virgem dolorosa / Vossa mãe tão piedosa /\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "DÉCIMA TERCEIRA ESTAÇÃO: JESUS É DESCIDO DA CRUZ"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Jesus é descido da Cruz.\nMaria, o primeiro colo que recebeu como bebê a promessa de salvação, é agora o mesmo colo que O acolhe após uma jornada dura e sofredora."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Antes, Maria acolhia a fragilidade de uma criança, e, agora, acolhe em seus braços a fragilidade de um homem com Sua missão cumprida."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Que Maria, a Mãe do Senhor, continue acolhendo os sofredores.\nEla é a Pietá, a Piedade, a Mãe da Misericórdia.\nHoje, os homens e as mulheres precisam do colo da Mãe.\nQue Maria, Mãe da Misericórdia, acolha tantos filhos e filhas que se perdem por falta de uma acolhida e de uma amizade verdadeira."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias, Vós amastes a humanidade por intermédio de Vosso Filho Jesus. Destes a Ele uma mãe, Maria, a Mãe da Misericórdia. “Mãezinha do Céu, me acolhe no teu colo, preciso de consolação, de amor e de cuidado. Um pouco antes da morte do teu Filho, Ele te encarregou de me acolher. Mãezinha, me acolhe e me ama. Amém!”"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "Do madeiro Vos tiraram / E à mãe Vos entregaram\nCom que dor e compaixão / Com que dor e compaixão /\nPela virgem dolorosa / Vossa mãe tão piedosa\nPerdoai ó meu Jesus, perdoai ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "DÉCIMA QUARTA ESTAÇÃO: JESUS É COLOCADO NO SEPULCRO"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℣.",
+      "texto": "Nós Vos adoramos, Senhor Jesus Cristo, e Vos bendizemos,"
+    },
+    {
+      "tipo": "dialogo",
+      "orador": "℟.",
+      "texto": "porque pela Vossa santa Cruz remistes o mundo."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "O Filho de Deus, tendo cumprido com Sua missão em obediência ao Pai, é colocado no sepulcro. A dor daqueles que O queriam bem foi grande."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "A incerteza, o medo e a dor da perda foram imensuráveis. Não é fácil perder alguém querido. Quando alguém é sepultado, a comoção é inevitável, pois sente-se muito a falta da presença física da pessoa. Na morte do Senhor, ficava a esperança, o desejo de consolação, a lembrança de suas palavras e a promessa da Ressurreição."
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai misericordioso, a dor da morte ainda é estranha, enterrar alguém é ainda sofrido. Vós, por intermédio da morte e sepultamento de Vosso Filho, abençoastes todas as moradas provisórias que acolhem o corpo de entes queridos. Que pelo sepultamento de Jesus, Vosso Filho, sejam semeadas no meu coração a esperança e a lembrança das palavras: “Mas no terceiro dia, ressuscitará” (Mt 20, 19 b). Eu creio na Ressurreição, Pai, creio na Vida Eterna. Mesmo me deparando com a separação física dos meus, enchei meu coração de alegria e esperança por esse encontro definitivo convosco. Amém!"
+    },
+    {
+      "tipo": "sacerdote",
+      "destaque": true,
+      "texto": "No sepulcro Vos deixaram/ sepultado Vos choraram/\nmagoado o coração,/magoado o coração\nPela Virgem dolorosa / Vossa Mãe tão piedosa\nPerdoai, ó meu Jesus! Perdoai, ó meu Jesus."
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.)"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "ORAÇÃO FINAL"
+    },
+    {
+      "tipo": "sacerdote",
+      "texto": "Pai das Misericórdias e Deus de toda consolação, queremos dar graças pela meditação que fizemos ao percorrer a caminhada dolorosa de Jesus, que também é nossa. Pela Via-sacra do Vosso Filho Jesus Cristo, nosso Salvador, aprendemos que a vida é um presente, um dom, e que os sofrimentos são inevitáveis, mas, ao mesmo tempo, encontramos consolação e esperança em Vossa infinita misericórdia. Amém!"
+    },
+    {
+      "tipo": "rubrica",
+      "texto": "(Rezar: Pai-Nosso, Ave-Maria e Glória ao Pai.\nPela intenção do Sumo Pontífice, para ganhar as indulgências.)"
+    }
+  ]
+}

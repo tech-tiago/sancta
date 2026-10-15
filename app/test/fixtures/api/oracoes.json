@@ -1,0 +1,607 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers",
+        "status": 200
+    },
+    "body": {
+        "data": [
+            {
+                "id": 1,
+                "slug": "sinal-da-cruz",
+                "title": "Sinal da Cruz",
+                "subtitle": "Início de toda oração",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 2,
+                "slug": "pai-nosso",
+                "title": "Pai-Nosso",
+                "subtitle": "A oração que Jesus nos ensinou",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            {
+                "id": 3,
+                "slug": "ave-maria",
+                "title": "Ave-Maria",
+                "subtitle": "Saudação do Anjo a Maria",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 4,
+                "slug": "gloria-ao-pai",
+                "title": "Glória ao Pai",
+                "subtitle": "Doxologia",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 5,
+                "slug": "creio-simbolo-dos-apostolos",
+                "title": "Creio (Símbolo dos Apóstolos)",
+                "subtitle": "Profissão de fé",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 6,
+                "slug": "ato-de-contricao",
+                "title": "Ato de contrição",
+                "subtitle": "Para pedir perdão",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 7,
+                "slug": "santo-anjo",
+                "title": "Santo Anjo",
+                "subtitle": "Ao anjo da guarda",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 8,
+                "slug": "oracao-a-sao-miguel-arcanjo",
+                "title": "Oração a São Miguel Arcanjo",
+                "subtitle": "Proteção no combate espiritual",
+                "category": {
+                    "slug": "essenciais",
+                    "name": "Orações essenciais",
+                    "color": "#E3B65B"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 9,
+                "slug": "salve-rainha",
+                "title": "Salve-Rainha",
+                "subtitle": "Antífona mariana",
+                "category": {
+                    "slug": "marianas",
+                    "name": "Marianas",
+                    "color": "#4F7CC4"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 10,
+                "slug": "angelus",
+                "title": "Angelus",
+                "subtitle": "Ao meio-dia, com Maria",
+                "category": {
+                    "slug": "marianas",
+                    "name": "Marianas",
+                    "color": "#4F7CC4"
+                },
+                "cover_url": null,
+                "duration_minutes": 3,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 11,
+                "slug": "consagracao-a-nossa-senhora",
+                "title": "Consagração a Nossa Senhora",
+                "subtitle": "Ó minha Senhora e minha Mãe",
+                "category": {
+                    "slug": "marianas",
+                    "name": "Marianas",
+                    "color": "#4F7CC4"
+                },
+                "cover_url": null,
+                "duration_minutes": 1,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 12,
+                "slug": "vinde-espirito-santo",
+                "title": "Vinde, Espírito Santo",
+                "subtitle": "Invocação ao Espírito Santo",
+                "category": {
+                    "slug": "espirito-santo",
+                    "name": "Espírito Santo",
+                    "color": "#D65A31"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 13,
+                "slug": "como-rezar-o-terco",
+                "title": "Como rezar o Terço",
+                "subtitle": "Passo a passo e mistérios do dia",
+                "category": {
+                    "slug": "terco",
+                    "name": "Terço e Rosário",
+                    "color": "#7C5CBF"
+                },
+                "cover_url": null,
+                "duration_minutes": 20,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 14,
+                "slug": "oracao-da-manha",
+                "title": "Oração da manhã",
+                "subtitle": "Ofereça o seu dia a Deus",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": true,
+                "locked": false
+            },
+            {
+                "id": 15,
+                "slug": "oracao-da-noite",
+                "title": "Oração da noite",
+                "subtitle": "Entregue o seu descanso",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 2,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 16,
+                "slug": "exame-de-consciencia",
+                "title": "Exame de consciência",
+                "subtitle": "Revisão orante do dia (guiada)",
+                "category": {
+                    "slug": "manha-e-noite",
+                    "name": "Manhã e noite",
+                    "color": "#E8B04B"
+                },
+                "cover_url": null,
+                "duration_minutes": 10,
+                "has_audio": false,
+                "is_premium": true,
+                "is_featured": true,
+                "locked": true
+            },
+            {
+                "id": 17,
+                "slug": "oracao-pela-familia",
+                "title": "Oração pela família",
+                "subtitle": "Abençoe a sua casa",
+                "category": {
+                    "slug": "familia",
+                    "name": "Família",
+                    "color": "#3E8E7E"
+                },
+                "cover_url": null,
+                "duration_minutes": 3,
+                "has_audio": false,
+                "is_premium": true,
+                "is_featured": false,
+                "locked": true
+            },
+            {
+                "id": 18,
+                "slug": "oracao-para-dormir-em-paz",
+                "title": "Oração para dormir em paz",
+                "subtitle": "Meditação noturna para acalmar o coração",
+                "category": {
+                    "slug": "para-dormir",
+                    "name": "Para dormir",
+                    "color": "#2B3A67"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": true,
+                "is_featured": false,
+                "locked": true
+            },
+            {
+                "id": 19,
+                "slug": "oracao-eucaristica-para-missas-com-criancas-i",
+                "title": "Oração Eucarística para Missas com Crianças I",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 20,
+                "slug": "oracao-eucaristica-para-missas-com-criancas-ii",
+                "title": "Oração Eucarística para Missas com Crianças II",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 21,
+                "slug": "oracao-eucaristica-para-missas-com-criancas-iii",
+                "title": "Oração Eucarística para Missas com Crianças III",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 22,
+                "slug": "oracao-eucaristica-para-diversas-circunstancias-i-a-igreja-a-caminho-da-unidade",
+                "title": "Oração Eucarística para Diversas Circunstâncias I (A Igreja a Caminho da Unidade)",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 23,
+                "slug": "oracao-eucaristica-para-diversas-circunstancias-ii-deus-conduz-sua-igreja-no-caminho-da-salvacao",
+                "title": "Oração Eucarística para Diversas Circunstâncias II (Deus Conduz Sua Igreja no Caminho da Salvação)",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 24,
+                "slug": "oracao-eucaristica-para-diversas-circunstancias-iii-jesus-caminho-para-o-pai",
+                "title": "Oração Eucarística para Diversas Circunstâncias III (Jesus, Caminho para o Pai)",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 25,
+                "slug": "oracao-eucaristica-para-diversas-circunstancias-iv-jesus-que-passa-fazendo-o-bem",
+                "title": "Oração Eucarística para Diversas Circunstâncias IV (Jesus que Passa Fazendo o Bem)",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 26,
+                "slug": "oracao-eucaristica-i-ou-canon-romano",
+                "title": "Oração Eucarística I ou Cânon Romano",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 27,
+                "slug": "oracao-eucaristica-ii",
+                "title": "Oração Eucarística II",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 28,
+                "slug": "oracao-eucaristica-iii",
+                "title": "Oração Eucarística III",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 29,
+                "slug": "oracao-eucaristica-iv",
+                "title": "Oração Eucarística IV",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 30,
+                "slug": "oracao-eucaristica-v",
+                "title": "Oração Eucarística V",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 31,
+                "slug": "oracao-eucaristica-sobre-a-reconciliacao-i",
+                "title": "Oração Eucarística Sobre a Reconciliação I",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 32,
+                "slug": "oracao-eucaristica-sobre-a-reconciliacao-ii",
+                "title": "Oração Eucarística Sobre a Reconciliação II",
+                "subtitle": "Missal Romano",
+                "category": {
+                    "slug": "santa-missa",
+                    "name": "Santa Missa",
+                    "color": "#B8862F"
+                },
+                "cover_url": null,
+                "duration_minutes": 8,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            },
+            {
+                "id": 33,
+                "slug": "via-sacra-das-misericordias",
+                "title": "Via-Sacra das Misericórdias",
+                "subtitle": "14 estações meditadas",
+                "category": {
+                    "slug": "via-sacra",
+                    "name": "Via-Sacra",
+                    "color": "#8E3B46"
+                },
+                "cover_url": null,
+                "duration_minutes": 40,
+                "has_audio": false,
+                "is_premium": false,
+                "is_featured": false,
+                "locked": false
+            }
+        ],
+        "links": {
+            "first": "https://api.sancta.test/api/v1/prayers?page=1",
+            "last": "https://api.sancta.test/api/v1/prayers?page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "links": [
+                {
+                    "url": null,
+                    "label": "pagination.previous",
+                    "page": null,
+                    "active": false
+                },
+                {
+                    "url": "https://api.sancta.test/api/v1/prayers?page=1",
+                    "label": "1",
+                    "page": 1,
+                    "active": true
+                },
+                {
+                    "url": null,
+                    "label": "pagination.next",
+                    "page": null,
+                    "active": false
+                }
+            ],
+            "path": "https://api.sancta.test/api/v1/prayers",
+            "per_page": 40,
+            "to": 33,
+            "total": 33
+        }
+    }
+}

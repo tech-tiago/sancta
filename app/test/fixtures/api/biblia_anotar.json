@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "PUT",
+        "route": "/me/bible/annotations",
+        "status": 200
+    },
+    "body": {
+        "message": "Anotações atualizadas."
+    }
+}

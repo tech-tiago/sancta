@@ -1,0 +1,5 @@
+@extends('errors.minimal-sancta')
+@section('code', '403')
+@section('sky', 'aurora')
+@section('title', 'Acesso não permitido')
+@section('message', 'Você não tem permissão para ver esta página. Se achar que é um engano, fale com a gente.')

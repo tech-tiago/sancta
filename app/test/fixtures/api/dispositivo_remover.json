@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "DELETE",
+        "route": "/me/devices",
+        "status": 200
+    },
+    "body": {
+        "message": "Dispositivo removido."
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ic_launcher_round: ícone adaptativo Sancta "Portal" (fundo Azul Manto, Portal vetorial e versão temática). Gerado por brand/source/build-brand.js. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@drawable/sancta_portal_launcher_foreground" />
+    <monochrome android:drawable="@drawable/sancta_portal_launcher_monochrome" />
+</adaptive-icon>

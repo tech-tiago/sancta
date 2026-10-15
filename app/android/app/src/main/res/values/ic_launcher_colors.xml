@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cor de fundo do ícone adaptativo (Azul Manto). Dono: marca (brand/source/build-brand.js). -->
+<resources>
+    <color name="ic_launcher_background">#1F3D9C</color>
+</resources>

@@ -1,0 +1,32 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/churches/{uuid}",
+        "status": 200
+    },
+    "body": {
+        "id": "01a13cab-65cb-73e4-aeef-243abc9763a5",
+        "slug": "capela-sao-jose",
+        "name": "Capela São José",
+        "type": "capela",
+        "type_label": "Capela",
+        "city": "Porto Seguro",
+        "state": "BA",
+        "address": "Porto Seguro/BA",
+        "latitude": null,
+        "longitude": null,
+        "is_verified": false,
+        "cover_url": null,
+        "distance_km": null,
+        "next_mass": null,
+        "description": null,
+        "diocese": null,
+        "patron": null,
+        "neighborhood": null,
+        "postal_code": null,
+        "contacts": {},
+        "maps_url": null,
+        "schedules": {},
+        "is_favorite": false
+    }
+}

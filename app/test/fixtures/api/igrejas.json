@@ -1,0 +1,125 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/churches",
+        "status": 200
+    },
+    "body": [
+        {
+            "id": "01a13cab-65a5-73ea-9ea4-26b28fbcbf53",
+            "slug": "comunidade-santana-e-sao-joaquim",
+            "name": "Comunidade Sant'Ana e São Joaquim",
+            "type": "comunidade",
+            "type_label": "Comunidade",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Eixo Acácias, Village III — Porto Seguro/BA",
+            "latitude": -16.38521,
+            "longitude": -39.04952,
+            "is_verified": true,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": {
+                "weekday": 0,
+                "time": "17:30",
+                "label": "Hoje às 17:30"
+            }
+        },
+        {
+            "id": "01a13cab-65a3-7327-97c5-552141ac5d86",
+            "slug": "comunidade-santo-antonio",
+            "name": "Comunidade Santo Antônio",
+            "type": "comunidade",
+            "type_label": "Comunidade",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Rua Ararai, 92 - Paraíso dos Pataxós — Porto Seguro/BA",
+            "latitude": -16.37891,
+            "longitude": -39.03338,
+            "is_verified": true,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": {
+                "weekday": 2,
+                "time": "19:00",
+                "label": "Terça-feira às 19:00"
+            }
+        },
+        {
+            "id": "01a13cab-659d-7108-84e2-3c688bec9384",
+            "slug": "paroquia-nossa-senhora-da-saude",
+            "name": "Paróquia Nossa Senhora da Saúde",
+            "type": "paroquia",
+            "type_label": "Paróquia",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Rua Espirito Santo, Av. Bahia, 01 - Alto do Mundaí — Porto Seguro/BA",
+            "latitude": -16.404554,
+            "longitude": -39.05166,
+            "is_verified": true,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": {
+                "weekday": 0,
+                "time": "08:30",
+                "label": "Hoje às 08:30"
+            }
+        },
+        {
+            "id": "01a13cab-65cb-73e4-aeef-243abc9763a5",
+            "slug": "capela-sao-jose",
+            "name": "Capela São José",
+            "type": "capela",
+            "type_label": "Capela",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Porto Seguro/BA",
+            "latitude": null,
+            "longitude": null,
+            "is_verified": false,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": null
+        },
+        {
+            "id": "01a13cab-65ac-70e7-8604-eadd31f22087",
+            "slug": "comunidade-sao-joao-batista",
+            "name": "Comunidade São João Batista",
+            "type": "comunidade",
+            "type_label": "Comunidade",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Praça da Agrovila, Distrito de Vale Verde, Porto Seguro -  BA — Porto Seguro/BA",
+            "latitude": -16.4324067,
+            "longitude": -39.2009349,
+            "is_verified": false,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": {
+                "weekday": 5,
+                "time": "19:00",
+                "label": "Sexta-feira às 19:00"
+            }
+        },
+        {
+            "id": "01a13cab-65a8-727d-9c40-6a8712b7294b",
+            "slug": "paroquia-divino-espirito-santo",
+            "name": "Paróquia Divino Espírito Santo",
+            "type": "paroquia",
+            "type_label": "Paróquia",
+            "city": "Porto Seguro",
+            "state": "BA",
+            "address": "Praça Divino Espírito Santo, s/nº Centro, Distrito de Vale Verde, Porto Seguro -  BA — Porto Seguro/BA",
+            "latitude": -16.4256586,
+            "longitude": -39.2166122,
+            "is_verified": false,
+            "cover_url": null,
+            "distance_km": null,
+            "next_mass": {
+                "weekday": 0,
+                "time": "19:00",
+                "label": "Hoje às 19:00"
+            }
+        }
+    ]
+}

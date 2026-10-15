@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/prayers/{slug}",
+        "status": 404
+    },
+    "body": {
+        "message": "Não encontrado."
+    }
+}

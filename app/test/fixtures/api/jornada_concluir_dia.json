@@ -1,0 +1,12 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/journeys/{slug}/steps/{n}/complete",
+        "status": 200
+    },
+    "body": {
+        "completed_steps": 1,
+        "steps_count": 9,
+        "finished": false
+    }
+}

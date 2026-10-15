@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800"><title>Sancta — céu Entardecer</title>
+<defs><linearGradient id="entardecer-ceu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1A3388"/><stop offset="0.24" stop-color="#3B4BAA"/><stop offset="0.44" stop-color="#7559AC"/><stop offset="0.6" stop-color="#B8628F"/><stop offset="0.76" stop-color="#E57F63"/><stop offset="1" stop-color="#F4AE5A"/></linearGradient><radialGradient id="entardecer-halo" cx="300" cy="820" r="320" gradientUnits="userSpaceOnUse"><stop offset="0.38" stop-color="#FFD9A0" stop-opacity="0.5"/><stop offset="1" stop-color="#FFD9A0" stop-opacity="0"/></radialGradient><linearGradient id="entardecer-sol" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDEFD2"/><stop offset="1" stop-color="#F9CF8C"/></linearGradient></defs>
+<rect width="600" height="800" fill="url(#entardecer-ceu)"/>
+<circle cx="300" cy="820" r="320" fill="url(#entardecer-halo)"/>
+<circle cx="300" cy="825" r="145" fill="url(#entardecer-sol)"/>
+<rect x="125" y="626" width="165" height="13" rx="6.5" fill="#FCE1CF" fill-opacity="0.28"/>
+<rect x="320" y="650" width="150" height="11" rx="5.5" fill="#FCE1CF" fill-opacity="0.24"/>
+<rect x="190" y="713" width="235" height="15" rx="7.5" fill="#FCE1CF" fill-opacity="0.34"/>
+<rect x="345" y="745" width="130" height="11" rx="5.5" fill="#FCE1CF" fill-opacity="0.3"/>
+</svg>

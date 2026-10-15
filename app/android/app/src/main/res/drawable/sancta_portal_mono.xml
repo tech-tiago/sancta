@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Portal monocromático (arco + cruz na mesma cor), branco — tingível com android:tint. Gerado por brand/source/build-brand.js — não edite à mão. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="91.125dp"
+    android:height="96dp"
+    android:viewportWidth="91.125"
+    android:viewportHeight="96">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0 96V45.563A45.563 45.563 0 0 1 91.125 45.563V96H66.375V42.75A20.813 20.813 0 0 0 24.75 42.75V96ZM40.125 36.563L51 36.563L51 46.313L59.625 46.313L59.625 57.188L51 57.188L51 85.688L40.125 85.688L40.125 57.188L31.5 57.188L31.5 46.313L40.125 46.313Z" />
+</vector>

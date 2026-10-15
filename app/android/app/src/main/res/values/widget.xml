@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget "Oração do dia" (cores da marca: docs/design/MARCA.md). -->
+<resources>
+    <string name="widget_oracao_label">Oração do dia</string>
+    <string name="widget_oracao_description">A oração de cada momento do dia, com um toque para rezar.</string>
+    <string name="widget_play">Rezar agora</string>
+
+    <color name="widget_azul_manto">#1F3D9C</color>
+    <color name="widget_nevoa">#C8D5FF</color>
+    <color name="widget_pergaminho">#FBF6EC</color>
+
+    <dimen name="widget_radius">24dp</dimen>
+    <dimen name="widget_padding">14dp</dimen>
+</resources>

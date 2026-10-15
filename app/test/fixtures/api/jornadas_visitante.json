@@ -1,0 +1,51 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/journeys",
+        "status": 200
+    },
+    "body": [
+        {
+            "id": 1,
+            "slug": "novena-nossa-senhora-aparecida",
+            "title": "Novena a Nossa Senhora Aparecida",
+            "type": "novena",
+            "type_label": "Novena",
+            "subtitle": "9 dias com a Padroeira do Brasil",
+            "cover_url": null,
+            "color": "#2F5DA8",
+            "is_premium": false,
+            "locked": false,
+            "steps_count": 9,
+            "completed_steps": 0
+        },
+        {
+            "id": 2,
+            "slug": "7-dias-para-comecar-a-rezar",
+            "title": "7 dias para começar a rezar",
+            "type": "challenge",
+            "type_label": "Desafio",
+            "subtitle": "Crie o hábito com 10 minutos por dia",
+            "cover_url": null,
+            "color": "#E3B65B",
+            "is_premium": false,
+            "locked": false,
+            "steps_count": 7,
+            "completed_steps": 0
+        },
+        {
+            "id": 3,
+            "slug": "evangelho-de-joao-em-21-dias",
+            "title": "O Evangelho de João em 21 dias",
+            "type": "reading_plan",
+            "type_label": "Plano de leitura",
+            "subtitle": "Um capítulo por dia com reflexão",
+            "cover_url": null,
+            "color": "#6B3FA0",
+            "is_premium": true,
+            "locked": true,
+            "steps_count": 21,
+            "completed_steps": 0
+        }
+    ]
+}

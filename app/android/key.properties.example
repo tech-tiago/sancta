@@ -1,0 +1,6 @@
+# Copie para android/key.properties (NÃO versionar) e aponte para a MESMA keystore
+# usada no app atual da Play Store (upload-keystore.jks), para publicar como atualização.
+storePassword=SENHA_DA_KEYSTORE
+keyPassword=SENHA_DA_CHAVE
+keyAlias=upload
+storeFile=C:/caminho/seguro/upload-keystore.jks

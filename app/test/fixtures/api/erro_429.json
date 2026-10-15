@@ -1,0 +1,15 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/login",
+        "status": 429
+    },
+    "body": {
+        "message": "Muitas tentativas. Tente novamente em 300 segundos.",
+        "errors": {
+            "email": [
+                "Muitas tentativas. Tente novamente em 300 segundos."
+            ]
+        }
+    }
+}

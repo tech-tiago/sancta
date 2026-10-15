@@ -1,0 +1,12 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/me/prayer-sessions",
+        "status": 201
+    },
+    "body": {
+        "current_streak": 1,
+        "longest_streak": 1,
+        "total_prayer_minutes": 14
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "_contract": {
+        "method": "POST",
+        "route": "/auth/forgot-password",
+        "status": 200
+    },
+    "body": {
+        "message": "Se o e-mail estiver cadastrado, você receberá um link para redefinir a senha."
+    }
+}

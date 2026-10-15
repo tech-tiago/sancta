@@ -1,0 +1,381 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/journeys/{slug}",
+        "status": 200
+    },
+    "body": {
+        "id": 3,
+        "slug": "evangelho-de-joao-em-21-dias",
+        "title": "O Evangelho de João em 21 dias",
+        "type": "reading_plan",
+        "type_label": "Plano de leitura",
+        "subtitle": "Um capítulo por dia com reflexão",
+        "cover_url": null,
+        "color": "#6B3FA0",
+        "is_premium": true,
+        "locked": false,
+        "steps_count": 21,
+        "completed_steps": 0,
+        "description": "Leia o Evangelho do discípulo amado, um capítulo por dia, com perguntas para meditação.",
+        "steps": [
+            {
+                "id": 17,
+                "position": 1,
+                "title": "Dia 1 — João, capítulo 1",
+                "bible_reference": "Jo 1",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 18,
+                "position": 2,
+                "title": "Dia 2 — João, capítulo 2",
+                "bible_reference": "Jo 2",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 19,
+                "position": 3,
+                "title": "Dia 3 — João, capítulo 3",
+                "bible_reference": "Jo 3",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 20,
+                "position": 4,
+                "title": "Dia 4 — João, capítulo 4",
+                "bible_reference": "Jo 4",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 21,
+                "position": 5,
+                "title": "Dia 5 — João, capítulo 5",
+                "bible_reference": "Jo 5",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 22,
+                "position": 6,
+                "title": "Dia 6 — João, capítulo 6",
+                "bible_reference": "Jo 6",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 23,
+                "position": 7,
+                "title": "Dia 7 — João, capítulo 7",
+                "bible_reference": "Jo 7",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 24,
+                "position": 8,
+                "title": "Dia 8 — João, capítulo 8",
+                "bible_reference": "Jo 8",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 25,
+                "position": 9,
+                "title": "Dia 9 — João, capítulo 9",
+                "bible_reference": "Jo 9",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 26,
+                "position": 10,
+                "title": "Dia 10 — João, capítulo 10",
+                "bible_reference": "Jo 10",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 27,
+                "position": 11,
+                "title": "Dia 11 — João, capítulo 11",
+                "bible_reference": "Jo 11",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 28,
+                "position": 12,
+                "title": "Dia 12 — João, capítulo 12",
+                "bible_reference": "Jo 12",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 29,
+                "position": 13,
+                "title": "Dia 13 — João, capítulo 13",
+                "bible_reference": "Jo 13",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 30,
+                "position": 14,
+                "title": "Dia 14 — João, capítulo 14",
+                "bible_reference": "Jo 14",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 31,
+                "position": 15,
+                "title": "Dia 15 — João, capítulo 15",
+                "bible_reference": "Jo 15",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 32,
+                "position": 16,
+                "title": "Dia 16 — João, capítulo 16",
+                "bible_reference": "Jo 16",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 33,
+                "position": 17,
+                "title": "Dia 17 — João, capítulo 17",
+                "bible_reference": "Jo 17",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 34,
+                "position": 18,
+                "title": "Dia 18 — João, capítulo 18",
+                "bible_reference": "Jo 18",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 35,
+                "position": 19,
+                "title": "Dia 19 — João, capítulo 19",
+                "bible_reference": "Jo 19",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 36,
+                "position": 20,
+                "title": "Dia 20 — João, capítulo 20",
+                "bible_reference": "Jo 20",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 37,
+                "position": 21,
+                "title": "Dia 21 — João, capítulo 21",
+                "bible_reference": "Jo 21",
+                "duration_minutes": 15,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Leia o capítulo com calma. Pergunte-se: o que este texto revela sobre Jesus? O que ele pede de mim hoje?"
+                    }
+                ],
+                "prayer_slug": null,
+                "audio_url": null,
+                "locked": false
+            }
+        ]
+    }
+}

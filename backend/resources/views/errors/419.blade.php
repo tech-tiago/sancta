@@ -1,0 +1,5 @@
+@extends('errors.minimal-sancta')
+@section('code', '419')
+@section('sky', 'aurora')
+@section('title', 'Sessão expirada')
+@section('message', 'Por segurança, sua sessão expirou. Volte, atualize a página e tente de novo.')

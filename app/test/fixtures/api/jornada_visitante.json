@@ -1,0 +1,213 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/journeys/{slug}",
+        "status": 200
+    },
+    "body": {
+        "id": 1,
+        "slug": "novena-nossa-senhora-aparecida",
+        "title": "Novena a Nossa Senhora Aparecida",
+        "type": "novena",
+        "type_label": "Novena",
+        "subtitle": "9 dias com a Padroeira do Brasil",
+        "cover_url": null,
+        "color": "#2F5DA8",
+        "is_premium": false,
+        "locked": false,
+        "steps_count": 9,
+        "completed_steps": 0,
+        "description": "Prepare o coração para a festa de 12 de outubro. A cada dia, uma meditação breve, uma passagem da Palavra e a oração da novena.",
+        "steps": [
+            {
+                "id": 1,
+                "position": 1,
+                "title": "Dia 1 — Maria, mulher da escuta",
+                "bible_reference": "Lc 1,26-38",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "No silêncio de Nazaré, Maria ouviu o anjo e disse \"sim\". Peça hoje a graça de escutar a voz de Deus no meio do barulho do dia."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 2,
+                "position": 2,
+                "title": "Dia 2 — Maria, mulher que serve",
+                "bible_reference": "Lc 1,39-45",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Grávida, Maria partiu apressadamente para servir Isabel. Em quem Deus te pede para servir hoje?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 3,
+                "position": 3,
+                "title": "Dia 3 — Maria, mulher que louva",
+                "bible_reference": "Lc 1,46-55",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "O Magnificat brota de um coração agradecido. Faça hoje uma lista de dez graças recebidas."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 4,
+                "position": 4,
+                "title": "Dia 4 — Maria, mãe na pobreza",
+                "bible_reference": "Lc 2,1-7",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Jesus nasceu sem lugar na hospedaria. Maria acolhe a simplicidade. Onde Deus está escondido na sua rotina?"
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 5,
+                "position": 5,
+                "title": "Dia 5 — Maria, mulher que guarda",
+                "bible_reference": "Lc 2,15-19",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "\"Maria guardava todas essas coisas, meditando-as no coração.\" Reserve cinco minutos de silêncio hoje."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 6,
+                "position": 6,
+                "title": "Dia 6 — Maria em Caná",
+                "bible_reference": "Jo 2,1-11",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "\"Fazei tudo o que Ele vos disser.\" Entregue a Maria a \"falta de vinho\" da sua família."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 7,
+                "position": 7,
+                "title": "Dia 7 — Maria aos pés da cruz",
+                "bible_reference": "Jo 19,25-27",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Na dor, Maria permaneceu. Leve a ela as dores que você carrega e as de quem você ama."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 8,
+                "position": 8,
+                "title": "Dia 8 — Maria no Cenáculo",
+                "bible_reference": "At 1,12-14",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Com os apóstolos, Maria perseverou em oração. Reze hoje pela Igreja e pelo Brasil."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "ave-maria",
+                "audio_url": null,
+                "locked": false
+            },
+            {
+                "id": 9,
+                "position": 9,
+                "title": "Dia 9 — A imagem encontrada nas águas",
+                "bible_reference": "Jo 2,1-5",
+                "duration_minutes": 10,
+                "completed": false,
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Em 1717, pescadores encontraram nas águas do Paraíba a pequena imagem. Deus age nos humildes. Consagre-se hoje à Mãe Aparecida."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Oração da novena: Ó incomparável Senhora da Conceição Aparecida, Mãe de Deus e nossa Mãe, olhai por nós, por nossas famílias e por todo o Brasil. Alcançai-nos de Jesus as graças de que necessitamos. Amém."
+                    }
+                ],
+                "prayer_slug": "consagracao-a-nossa-senhora",
+                "audio_url": null,
+                "locked": false
+            }
+        ]
+    }
+}

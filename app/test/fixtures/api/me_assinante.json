@@ -1,0 +1,45 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me",
+        "status": 200
+    },
+    "body": {
+        "id": "01a13cab-6dc6-732e-8c4f-f7ff86133ab3",
+        "name": "Bruno Lima",
+        "first_name": "Bruno",
+        "email": "bruno@exemplo.com",
+        "email_verified": true,
+        "avatar_url": null,
+        "has_password": true,
+        "google_linked": false,
+        "theme": "system",
+        "notification_preferences": {
+            "daily_reminder": true,
+            "reminder_time": "07:00",
+            "liturgy": true,
+            "news": false,
+            "churches": true
+        },
+        "marketing_opt_in": false,
+        "is_premium": true,
+        "subscription": {
+            "id": "01a13cab-6de0-70b0-afb7-95175d0ed966",
+            "plan": "Anual",
+            "plan_slug": "anual",
+            "status": "active",
+            "status_label": "Ativa",
+            "provider": "fake",
+            "auto_renew": false,
+            "starts_at": "2026-10-04T08:30:00-03:00",
+            "ends_at": "2027-10-04T08:30:00-03:00",
+            "manage_url": "https://api.sancta.test/minha-conta"
+        },
+        "stats": {
+            "current_streak": 0,
+            "longest_streak": 0,
+            "total_prayer_minutes": 0
+        },
+        "created_at": "2026-10-04T08:30:00-03:00"
+    }
+}

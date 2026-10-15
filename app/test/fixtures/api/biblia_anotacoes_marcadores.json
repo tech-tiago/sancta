@@ -1,0 +1,28 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/me/bible/annotations?type={tipo}",
+        "status": 200
+    },
+    "body": {
+        "data": [
+            {
+                "verse_id": 16341,
+                "reference": "Sl 116,1",
+                "book_slug": "salmos",
+                "chapter": 116,
+                "verse": 1,
+                "text": "Aleluia. Louvai ao Senhor todas as nações, louvai-o todos os povos,",
+                "highlight": "gold",
+                "note": "Louvar com toda a família.",
+                "bookmarked": true,
+                "updated_at": "2026-10-04T08:30:00-03:00"
+            }
+        ],
+        "meta": {
+            "current_page": 1,
+            "last_page": 1,
+            "total": 1
+        }
+    }
+}

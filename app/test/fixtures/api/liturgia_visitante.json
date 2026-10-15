@@ -1,0 +1,51 @@
+{
+    "_contract": {
+        "method": "GET",
+        "route": "/liturgy?date={data}",
+        "status": 200
+    },
+    "body": {
+        "date": "2026-10-04",
+        "title": "27º Domingo do Tempo Comum",
+        "color": "Verde",
+        "color_hex": "#2E7D4F",
+        "readings": [
+            {
+                "label": "Primeira leitura",
+                "reference": "Is 5,1-7",
+                "title": "A vinha do Senhor",
+                "refrain": null,
+                "text": "Vou cantar para o meu amado o cântico do amigo para a sua vinha."
+            },
+            {
+                "label": "Salmo responsorial",
+                "reference": "Sl 79",
+                "title": null,
+                "refrain": "A vinha do Senhor é a casa de Israel.",
+                "text": "Arrancastes do Egito esta videira."
+            },
+            {
+                "label": "Segunda leitura",
+                "reference": "Fl 4,6-9",
+                "title": "O Deus da paz",
+                "refrain": null,
+                "text": "Não vos inquieteis com coisa alguma."
+            },
+            {
+                "label": "Evangelho",
+                "reference": "Mt 21,33-43",
+                "title": "A parábola dos vinhateiros",
+                "refrain": null,
+                "text": "Naquele tempo, Jesus disse aos sumos sacerdotes e aos anciãos do povo."
+            }
+        ],
+        "prayers": {
+            "collect": "Ó Deus eterno e todo-poderoso, que nos concedeis mais do que merecemos e pedimos.",
+            "offerings": "Acolhei, Senhor, o sacrifício.",
+            "communion": "Saciados pelo pão do céu."
+        },
+        "homily": null,
+        "homily_author": "Pe. Marcos",
+        "homily_locked": true
+    }
+}

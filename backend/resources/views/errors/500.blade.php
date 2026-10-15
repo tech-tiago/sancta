@@ -1,0 +1,5 @@
+@extends('errors.minimal-sancta')
+@section('code', '500')
+@section('sky', 'noite')
+@section('title', 'Algo deu errado')
+@section('message', 'Já fomos avisados e estamos cuidando disso. Tente novamente em instantes.')

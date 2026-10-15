@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Portal para windowSplashScreenAnimatedIcon (Android 12+): 288 dp, Portal com 110 dp de altura no círculo de 192 dp. Gerado por brand/source/build-brand.js — não edite à mão. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="288dp"
+    android:height="288dp"
+    android:viewportWidth="288"
+    android:viewportHeight="288">
+    <path
+        android:fillColor="#FBF6EC"
+        android:pathData="M91.793 199V141.207A52.207 52.207 0 0 1 196.207 141.207V199H167.848V137.984A23.848 23.848 0 0 0 120.152 137.984V199Z" />
+    <path
+        android:fillColor="#E3B65B"
+        android:pathData="M137.77 130.895L150.23 130.895L150.23 142.066L160.113 142.066L160.113 154.527L150.23 154.527L150.23 187.184L137.77 187.184L137.77 154.527L127.887 154.527L127.887 142.066L137.77 142.066Z" />
+</vector>

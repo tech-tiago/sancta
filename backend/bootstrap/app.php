@@ -4,6 +4,7 @@ use App\Http\Middleware\EnsureAccountIsActive;
 use App\Http\Middleware\ForceJsonResponse;
 use App\Http\Middleware\RestrictAdminAccess;
 use App\Http\Middleware\SecurityHeaders;
+use App\Http\Middleware\TrustProxies;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -27,8 +28,8 @@ return Application::configure(basePath: dirname(__DIR__))
             'admin.ip' => RestrictAdminAccess::class,
         ]);
 
-        // Proxies confiáveis (Cloudflare/load balancer): configure TRUSTED_PROXIES no servidor.
-        $middleware->trustProxies(at: env('TRUSTED_PROXIES') ? explode(',', env('TRUSTED_PROXIES')) : null);
+        // Proxies confiáveis (Cloudflare/balanceador): TRUSTED_PROXIES no .env, lido pela config.
+        $middleware->replace(Illuminate\Http\Middleware\TrustProxies::class, TrustProxies::class);
 
         // Fora do ambiente local, só atende o domínio do APP_URL (e subdomínios): um cabeçalho Host
         // forjado não consegue influenciar links absolutos (canonical, retornos de pagamento etc.).

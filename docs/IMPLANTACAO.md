@@ -8,9 +8,9 @@ Este guia leva o Sancta do ambiente local para produção. Siga na ordem.
 
 **Requisitos:** PHP 8.2+ (extensões: pdo_mysql, mbstring, openssl, intl, gd, curl, fileinfo, sodium), MySQL 8 (InnoDB, utf8mb4), HTTPS com certificado válido, acesso a cron. Funciona em VPS ou hospedagem compartilhada com SSH (ex.: Hostinger, Locaweb, DigitalOcean + Forge).
 
-> **VPS com Ubuntu (ex.: Oracle Cloud)?** Os passos abaixo estão automatizados: veja [VPS Oracle Cloud com Ubuntu](#vps-oracle-cloud-com-ubuntu--instalação-automática).
+> **VPS da Oracle com CloudPanel e Cloudflare?** Os passos abaixo estão automatizados: veja [VPS Oracle Cloud com CloudPanel e Cloudflare](#vps-oracle-cloud-com-cloudpanel-e-cloudflare).
 
-Uploads: o painel aceita áudios de até 50 MB. Na hospedagem, o servidor web e o PHP precisam aceitar pelo menos isso (`client_max_body_size` no Nginx, `upload_max_filesize` e `post_max_size` no PHP; o instalador da VPS usa 64 MB).
+Uploads: o painel aceita áudios de até 50 MB. Na hospedagem, o servidor web e o PHP precisam aceitar pelo menos isso (`client_max_body_size` no Nginx, `upload_max_filesize` e `post_max_size` no PHP; o modelo do CloudPanel usa 64 MB).
 
 1. Envie a pasta `backend/` e aponte o **document root** do domínio para `backend/public` (nunca para a raiz do projeto).
 2. Instale dependências sem pacotes de desenvolvimento:
@@ -24,11 +24,11 @@ Uploads: o painel aceita áudios de até 50 MB. Na hospedagem, o servidor web e 
    | `APP_ENV` | `production` |
    | `APP_DEBUG` | `false` (nunca exponha erros detalhados) |
    | `APP_URL` | `https://sancta.app.br` (seu domínio). Com `https://` os cookies seguros ligam sozinhos |
-   | `SESSION_DOMAIN` | `.sancta.app.br` |
+   | `SESSION_DOMAIN` | vazio (cookie só do domínio principal; o `www` é redirecionado) |
    | `DB_*` | banco MySQL |
    | `SANCTA_ADMIN_PATH` | um caminho difícil de adivinhar, ex.: `gestao-7f3k9` |
    | `SANCTA_FAKE_PAYMENTS` | `false` (o simulado já é ignorado em produção) |
-   | `TRUSTED_PROXIES` | IPs do proxy/Cloudflare, se usar (necessário para a restrição de IP funcionar) |
+   | `TRUSTED_PROXIES` | `cloudflare` atrás da Cloudflare; os IPs do proxy em outros casos; vazio sem proxy. Sem isso, todo visitante aparece com o IP do proxy (limite de login compartilhado, restrição de IP do painel errada) |
    | `LOG_LEVEL` | `warning` |
 
 4. Gere a chave, rode as migrations e os dados iniciais:
@@ -53,62 +53,121 @@ Uploads: o painel aceita áudios de até 50 MB. Na hospedagem, o servidor web e 
 7. Permissões: `storage/` e `bootstrap/cache/` graváveis pelo servidor web; `.env` com permissão 600.
 8. Backups diários do MySQL e da pasta `storage/app` (uploads).
 
-### VPS Oracle Cloud com Ubuntu — instalação automática
+### VPS Oracle Cloud com CloudPanel e Cloudflare
 
-A pasta [`deploy/oracle-ubuntu/`](../deploy/oracle-ubuntu/) faz os passos 1 a 8 acima numa VPS Ubuntu 22.04 ou 24.04, x86 ou ARM (Ampere). Uma VPS de 2 CPUs e 12 GB atende o lançamento com folga.
+A pasta [`deploy/cloudpanel/`](../deploy/cloudpanel/) instala o CloudPanel numa VPS Ubuntu 24.04 da Oracle (x86 ou ARM/Ampere), já protegido, e publica o Sancta nele atrás da Cloudflare. A mesma instalação serve para os próximos sites do CloudPanel. Uma VPS de 2 CPUs e 12 GB atende o lançamento com folga.
+
+**Como o tráfego chega**
+
+```
+visitante / app ──HTTPS──▶ Cloudflare (WAF, cache, certificado público)
+                              │ HTTPS "Full (strict)", certificado de origem da Cloudflare
+                              ▼
+              VPS Oracle: só 80/443 abertas ── Nginx do CloudPanel ── PHP-FPM ── Laravel
+                              │ o site do Sancta só aceita conexões vindas da Cloudflare
+              MySQL, Redis e Postfix só dentro da máquina · painel do CloudPanel só por túnel SSH
+```
+
+| Porta | Situação | Para quê |
+|---|---|---|
+| 22 | aberta na Oracle e no UFW | SSH só com chave, sem root, com fail2ban |
+| 80 e 443 | abertas na Oracle e no UFW | sites; o do Sancta recusa quem não vem da Cloudflare |
+| 8443 | **fechada na Oracle** | painel do CloudPanel, acessado por túnel SSH |
+| 3306, 6379, 25 | só `127.0.0.1` | MySQL, Redis, Postfix |
 
 **1. No console da Oracle (uma vez)**
+- **Instância:** imagem **Ubuntu 24.04** (no 22.04 o CloudPanel só oferece MySQL 8.0), com a sua chave SSH.
 - **IP fixo:** Networking → IP Management → Reserved public IPs → reserve um IP e associe à VPS.
-- **Portas:** na VCN da VPS → Security Lists (ou no NSG da instância) → Add Ingress Rules: origem `0.0.0.0/0`, TCP, portas `80` e `443`.
-- **Conta:** numa conta só "Always Free", a Oracle pode recolher máquinas que ficam ociosas por 7 dias. Passe a conta para **Pay As You Go** (o que é gratuito continua gratuito) e crie um alerta em Billing → Budgets.
-- **E-mail:** a Oracle bloqueia a porta 25. Use um provedor SMTP pela porta 587 (Brevo, Amazon SES, Mailgun) e configure na aba E-mail do painel.
+- **Portas:** na VCN → Security Lists (ou NSG) → Add Ingress Rules, origem `0.0.0.0/0`, TCP, porta de **destino** `22`, depois `80` e `443`. **Não** crie regra para a `8443`, mesmo que o guia do CloudPanel mande.
+- **Conta:** numa conta só "Always Free", a Oracle pode recolher máquinas ociosas por 7 dias. Passe para **Pay As You Go** (o gratuito continua gratuito) e crie um alerta em Billing → Budgets.
 
-**2. No provedor do domínio:** crie um registro `A` do domínio apontando para o IP reservado (e outro para `www`, se quiser atender também o `www`).
-
-**3. No seu computador**, de dentro da pasta do projeto, copie o instalador para a VPS e entre nela (troque o caminho da chave e o IP):
+**2. Instalar o CloudPanel.** No seu computador, de dentro da pasta do projeto, copie a pasta para a VPS e entre nela (troque o caminho da chave e o IP):
 ```powershell
-scp -i C:\caminho\chave-oracle.key -r deploy\oracle-ubuntu ubuntu@IP-DA-VPS:~/
+scp -i C:\caminho\chave-oracle.key -r deploy\cloudpanel ubuntu@IP-DA-VPS:~/
 ```
 ```powershell
 ssh -i C:\caminho\chave-oracle.key ubuntu@IP-DA-VPS
 ```
-
-**4. Na VPS**, rode o instalador:
+Na VPS:
 ```bash
-sudo bash ~/oracle-ubuntu/instalar.sh
+sudo bash ~/cloudpanel/instalar-cloudpanel.sh
 ```
-- Ele pergunta o domínio, se deve atender o `www`, o e-mail para avisos do certificado HTTPS, o e-mail do super administrador e o repositório.
-- No meio, mostra uma **deploy key**: cadastre em GitHub → repositório `sancta` → Settings → Deploy keys → Add deploy key, com **Allow write access desmarcado**, e tecle Enter. O servidor só consegue ler o repositório.
-- **Anote a senha do super administrador** que aparece na etapa "Dados iniciais": ela é mostrada uma única vez.
-- No fim aparecem o endereço do site e o do painel. O caminho do painel é sorteado (ex.: `/gestao-3f9a1c`) e fica em `SANCTA_ADMIN_PATH`, no `.env`.
-- Ao emitir o certificado, o instalador aceita os termos de uso do Let's Encrypt em seu nome. Se o domínio ainda não apontar para a VPS, ele avisa e mostra o comando `certbot` para rodar depois.
-- Pode rodar de novo sem medo: cada etapa pula o que já foi feito.
+- Ele pergunta usuário, e-mail e nome do administrador do CloudPanel. A senha é sorteada e aparece **uma única vez**: anote.
+- O instalador oficial só roda se o SHA-256 bater com o publicado pelo CloudPanel. Se o CloudPanel lançar versão nova, o script para e explica como informar o SHA-256 novo, que fica na [página oficial](https://www.cloudpanel.io/docs/v2/getting-started/oracle-cloud/installation/installer/).
+- Ao final ele oferece reiniciar a VPS, como a Oracle recomenda.
 
-**O que fica configurado na VPS**
-- Código em `/var/www/sancta`, do usuário `sancta`. O PHP-FPM roda como esse usuário, num pool próprio (até 24 processos, OPcache ligado). O Nginx só executa o `index.php`, recusa arquivos ocultos e aceita uploads de até 64 MB.
-- MySQL 8 ouvindo só em `127.0.0.1`, com banco e usuário próprios e senha sorteada (gravada só no `.env`, com permissão 600).
-- `.env` de produção: `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL` com `https://`, pagamentos simulados desligados, `LOG_LEVEL=warning`.
-- Firewall da máquina com as portas 80 e 443 liberadas no iptables. As imagens Ubuntu da Oracle bloqueiam tudo além do SSH, e a Oracle desaconselha o `ufw` nelas.
-- SSH só com chave e sem login de root, fail2ban, atualizações automáticas de segurança, 2 GB de memória de troca e fuso `America/Sao_Paulo`.
-- Cron do agendador (`schedule:run` a cada minuto) e do backup diário. Não há fila de jobs para manter: nada no Sancta depende de `queue:work`.
+O que ele deixa configurado:
+- **Firewall:** o UFW do CloudPanel manda nas portas. As regras de bloqueio da imagem da Oracle saem do iptables, porque viriam antes das do UFW e manteriam 80/443 fechadas; o original fica em `/etc/iptables/rules.v4.oracle-original`. A cadeia `InstanceServices`, que protege o serviço de metadados da Oracle, é mantida.
+- **Administrador:** criado pela linha de comando, então a tela de "primeiro acesso" do CloudPanel nunca fica aberta para robôs.
+- **Proteção da máquina:** SSH só com chave e sem root, fail2ban e atualizações automáticas de segurança. O Postfix, o MySQL e o Redis ficam ouvindo só dentro da máquina.
+- **IPs da Cloudflare:** o `cloudflare-ips` atualiza toda segunda-feira a lista usada pela trava "só Cloudflare" (`/etc/nginx/cloudflare/allow.conf`).
 
-**Atualizar o servidor** depois de enviar mudanças ao `main` no GitHub:
+**3. Entrar no CloudPanel** (sempre por túnel). No seu computador, deixe esta janela aberta:
+```powershell
+ssh -i C:\caminho\chave-oracle.key -N -L 8443:127.0.0.1:8443 ubuntu@IP-DA-VPS
+```
+Abra <https://localhost:8443> e aceite o aviso do certificado. Logo no primeiro acesso:
+- ative o **2FA** no seu perfil;
+- configure **Admin Area → Backups** com um destino fora da VPS (Google Drive, Dropbox, S3, Wasabi…). Ele copia a pasta de cada site, inclusive o `.env` e os uploads, e os backups do banco que o CloudPanel faz toda noite às 03:15 (guardados 7 dias em `/home/<usuário>/backups`).
+
+**4. Domínio e Cloudflare** (depois de registrar o `sancta.app.br` no Registro.br)
+- **Nameservers:** crie uma conta grátis na Cloudflare e adicione o site `sancta.app.br`. No Registro.br, troque os servidores DNS pelos dois que a Cloudflare indicar.
+- **DNS:** registro `A` do `sancta.app.br` apontando para o IP reservado, e `CNAME` do `www` para `sancta.app.br`. Os dois com a **nuvem laranja** (Proxied).
+- **SSL/TLS → Overview:** modo **Full (strict)**.
+- **SSL/TLS → Edge Certificates:** liga *Always Use HTTPS*, *Minimum TLS* 1.2 e *TLS 1.3*. O HSTS da Cloudflare fica desligado, porque o Sancta já envia o seu.
+- **SSL/TLS → Origin Server → Create Certificate:** RSA, `sancta.app.br` e `*.sancta.app.br`, 15 anos. Deixe a tela aberta: o certificado e a chave são colados no passo 5, e a chave não deve ir para nenhum outro lugar.
+- **Rules → Redirect Rules:** use o modelo *Redirect from WWW to root* (301).
+- **Desligue o que quebra o app ou a segurança do site:**
+  - *Security → Bots → Bot Fight Mode:* bloqueia o app e os avisos de pagamento do Mercado Pago e do Google, e no plano grátis não dá para abrir exceções.
+  - *Speed → Rocket Loader* e *Scrape Shield → Email Address Obfuscation:* injetam scripts que a política de segurança (CSP) do site bloqueia.
+  - Não crie regra de cache *Cache Everything* nem ligue o *Under Attack Mode* no site inteiro: as respostas da API não podem ser guardadas, e o app não passa por desafio de navegador.
+- **Opcional:** em *Security → WAF → Custom rules*, bloqueie o caminho do painel do Sancta (`/gestao-...`) para quem está fora do Brasil (ou fora do seu IP).
+
+**5. Publicar o Sancta.** Na VPS:
+```bash
+sudo bash ~/cloudpanel/instalar-sancta.sh
+```
+- Pergunta domínio (`sancta.app.br`), usuário do site (`sancta`), versão do PHP (8.3), e-mail do super administrador e repositório.
+- Cadastra o modelo de vhost **Sancta** e cria o site, o usuário do site e o banco (senha sorteada) pelo `clpctl`.
+- Pede para colar o certificado de origem e a chave (a chave não aparece na tela), confere se os dois combinam e os instala.
+- Mostra uma **deploy key**: cadastre em GitHub → repositório `sancta` → Settings → Deploy keys, com **Allow write access desmarcado**.
+- Cria o `.env` de produção (`TRUSTED_PROXIES=cloudflare`, caminho do painel sorteado), roda Composer, migrations, dados iniciais e caches. **Anote a senha do super administrador** da etapa "Dados iniciais".
+- Agenda o Laravel em `/etc/cron.d/sancta`, e não no crontab do usuário, que o CloudPanel regrava quando se mexe na aba Cron Jobs.
+- No fim, testa o site no próprio servidor e pela Cloudflare.
+
+Depois, no CloudPanel → Sites → `sancta.app.br` → **Settings → PHP Settings**, confira `memory_limit` 256M, `max_execution_time` 120, `post_max_size` 64M e `upload_max_filesize` 64M.
+
+**Como o site do Sancta fica no CloudPanel.** O modelo de vhost [`sancta-vhost.tpl`](../deploy/cloudpanel/sancta-vhost.tpl) parte do "Laravel 12" oficial do CloudPanel, com estas mudanças:
+- só aceita conexões da Cloudflare;
+- só executa o `index.php`;
+- nunca serve arquivos ocultos;
+- manda para o Laravel os arquivos estáticos que não existem (no oficial, o JavaScript do Livewire daria 404 e o painel quebraria);
+- aceita uploads de 64 MB;
+- não troca as respostas de erro da API por páginas do Nginx.
+
+A pasta pública é `backend/public`, e o código fica em `/home/sancta/htdocs/sancta.app.br`.
+
+**Atualizar** depois de enviar mudanças ao `main` no GitHub:
 ```bash
 sudo sancta-atualizar
 ```
-Põe o site em manutenção por alguns segundos, baixa o código, instala as dependências, roda as migrations, recria os caches e recarrega o PHP. Se algo falhar, o site fica em manutenção e a mensagem diz como seguir. No fim, ele avisa se o `.env.example` ganhou variáveis que o `.env` de produção (`/var/www/sancta/backend/.env`) ainda não tem; essas você copia à mão.
+Põe o site em manutenção por alguns segundos, baixa o código, instala dependências, roda as migrations, recria os caches e recarrega o PHP. Se algo falhar, o site fica em manutenção e a mensagem diz como seguir. Ele também avisa quando o `.env.example` ganhou variáveis que o `.env` de produção ainda não tem.
 
-**Backups:** todo dia às 04:15 o banco, os arquivos enviados pelo painel e o `.env` (com a `APP_KEY`) vão para `/var/backups/sancta`, e ficam 14 dias. Um backup que só existe dentro da VPS se perde junto com ela: copie para fora com frequência, por exemplo do seu computador:
-```powershell
-scp -i C:\caminho\chave-oracle.key "ubuntu@IP-DA-VPS:/var/backups/sancta/*" D:\backups-sancta\
+**Outros sites no mesmo CloudPanel.** Para que um site também só aceite a Cloudflare, acrescente no Vhost dele (aba Vhost do site):
+```nginx
+set_real_ip_from 127.0.0.1;
+include /etc/nginx/cloudflare/allow.conf;
 ```
-Guarde essas cópias com cuidado: com o `.env` dá para ler as credenciais salvas no painel. Para restaurar na VPS:
-```bash
-gunzip -c banco-AAAA-MM-DD.sql.gz | sudo mysql sancta
-```
-```bash
-sudo tar -xzf arquivos-AAAA-MM-DD.tar.gz -C /var/www/sancta/backend
-```
+Configure a aplicação para confiar nas faixas da Cloudflare (lista em `/etc/nginx/cloudflare/ips.txt`). Bloqueios de IP de visitantes se fazem na Cloudflare, não no CloudPanel: para o servidor, todo acesso vem dela.
+
+**Problemas comuns**
+| Sintoma | Causa provável |
+|---|---|
+| Erro 521 ou 522 da Cloudflare | Portas 80/443 fechadas na Security List da Oracle |
+| Erro 526 | Certificado de origem não instalado, ou SSL fora do modo Full (strict) |
+| 403 para todo mundo | A nuvem do DNS está cinza (sem Cloudflare). Volte para laranja ou, temporariamente, `sudo cloudflare-ips --desligar` (religue com `sudo cloudflare-ips`) |
+| App sem conexão, pagamentos sem confirmação | Bot Fight Mode ligado, ou regra de desafio/cache na API |
+| Upload de áudio falha | PHP Settings do site abaixo de 64M |
 
 ### Primeiro acesso ao painel
 - Entre em `https://seudominio/SANCTA_ADMIN_PATH` com o super administrador.
@@ -218,7 +277,9 @@ O novo app usa o **mesmo `applicationId` (`com.maria.app_igreja`)**, então ele 
 - [ ] E-mail de teste recebido (SMTP configurado) — com o e-mail em modo "registro" (log), códigos de presente **não** são enviados (só aparecem uma vez na página do pagamento) e "gerar novo código" fica indisponível
 - [ ] Cupons revisados: cada cupom vale **uma vez por pessoa** por padrão (campo "Limite por pessoa"; vazio = sem limite)
 - [ ] Pacote da Play Store gerado com `key.properties` (sem `SANCTA_ALLOW_DEBUG_SIGNING`)
-- [ ] Backups automáticos do banco e de `storage/app`
+- [ ] Backups automáticos do banco e de `storage/app`, com cópia fora da VPS (CloudPanel → Admin Area → Backups)
+- [ ] Porta 8443 fechada na Oracle (CloudPanel só por túnel SSH) e 2FA ligado no CloudPanel
+- [ ] Atrás da Cloudflare: `TRUSTED_PROXIES=cloudflare`, SSL Full (strict), Bot Fight Mode e Rocket Loader desligados
 - [ ] Senha do super administrador trocada; cada membro da equipe com conta própria
 - [ ] Textos de Termos e Privacidade revisados por um advogado (modelos iniciais no painel → Site → Páginas)
 - [ ] Licença do texto bíblico resolvida (ver SOBRE_O_PROJETO.md → Riscos)

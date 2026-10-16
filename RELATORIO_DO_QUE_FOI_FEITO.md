@@ -14,7 +14,7 @@ O app "Paróquia Nossa Sra. da Saúde" foi analisado por completo e **reconstru�
 | Painel administrativo (Filament 5) com 25 cadastros, dashboard e configurações | ✅ 43 telas testadas no navegador |
 | Site público (apresentação, Bíblia, mapa de igrejas, planos Pix/cartão, conta) | ✅ Testado no navegador nos temas claro e escuro |
 | App Flutter reconstruído (login novo, 4 temas, Bíblia, orações, jornadas, igrejas, assinatura) | ✅ `flutter analyze` sem problemas, 302 testes passando |
-| Segurança e testes automatizados | ✅ 245 testes / 5.177 asserções no backend — todos passando; dois pentests (seção 13); `composer audit` sem vulnerabilidades |
+| Segurança e testes automatizados | ✅ 252 testes / 5.186 asserções no backend — todos passando; dois pentests (seção 13); `composer audit` sem vulnerabilidades |
 | Relatórios e documentação | ✅ Este arquivo, `SOBRE_O_PROJETO.md`, `README.md`, `docs/` |
 
 ---
@@ -271,19 +271,29 @@ O cliente aprovou uma nova identidade ("Opção A: Portal" — referências em `
 
 **Pendências que dependem do cliente:** IDs dos canais do YouTube e (opcional) chave da YouTube Data API em Integrações; SMTP real antes de abrir ao público; credenciais reais para validar FCM, Google Play Billing (tag `trial` na oferta), Mercado Pago de produção, login com Google e Gemini; ícones do iOS (exigem Mac — masters em `brand/app-icon/png/`); `php artisan migrate` no MySQL local quando ele voltar a rodar (há migrations novas); revisar o limite por pessoa dos cupons existentes (agora 1 por padrão); links `sancta://` vindos de fora do app (e-mail/site) não abrem o app — se desejado, implementar App Links verificados.
 
-## 14. Hospedagem em VPS Oracle Cloud com Ubuntu (15/10/2026)
+## 14. Hospedagem: VPS Oracle Cloud com CloudPanel e Cloudflare (out/2026)
 
-O cliente vai hospedar o Sancta numa VPS da Oracle (2 CPUs, 12 GB, Ubuntu). O projeto já rodava em VPS sem mudança de código; o que faltava era montar e proteger o servidor. Foi criado o repositório privado `tech-tiago/sancta` (sem segredos: `.env`, `key.properties`, `local.properties` e `google-services.json` ficam fora) e a pasta [`deploy/oracle-ubuntu/`](deploy/oracle-ubuntu/):
+O cliente vai hospedar o Sancta (e futuros sistemas) numa VPS da Oracle (2 CPUs, 12 GB, Ubuntu) com **CloudPanel**, atrás da **Cloudflare**, no domínio `sancta.app.br`. Foi criado o repositório privado `tech-tiago/sancta` (sem segredos: `.env`, `key.properties`, `local.properties` e `google-services.json` ficam fora) e a pasta [`deploy/cloudpanel/`](deploy/cloudpanel/), com o passo a passo em [docs/IMPLANTACAO.md](docs/IMPLANTACAO.md#vps-oracle-cloud-com-cloudpanel-e-cloudflare). Um primeiro instalador para VPS sem painel (`deploy/oracle-ubuntu`) foi substituído por este.
 
 | Arquivo | Função |
 |---|---|
-| `instalar.sh` | Instalação completa e repetível: Nginx, PHP 8.3, MySQL 8, Composer (instalador com assinatura conferida), portas 80/443 no iptables da Oracle, SSH só com chave, fail2ban, atualizações automáticas, usuário `sancta`, deploy key somente leitura (chaves do GitHub obtidas por HTTPS), banco com senha sorteada, `.env` de produção com caminho do painel sorteado, migrations, dados iniciais, caches, HTTPS com Let's Encrypt, cron e verificação final |
+| `instalar-cloudpanel.sh` | Instala o CloudPanel só se o SHA-256 do instalador oficial bater; tira do iptables as regras de bloqueio da imagem Oracle (que deixariam 80/443 fechadas mesmo com o UFW liberando) e preserva a cadeia `InstanceServices`; cria o administrador pelo `clpctl` com senha sorteada (a tela de primeiro acesso nunca fica aberta para robôs); SSH só com chave, fail2ban, atualizações automáticas; Postfix, MySQL e Redis só em `127.0.0.1`; fuso America/Sao_Paulo. A porta 8443 fica fechada na Oracle e o painel é acessado por túnel SSH |
+| `cloudflare-ips.sh` → `cloudflare-ips` | Lista oficial de IPs da Cloudflare, validada linha a linha, gerando `/etc/nginx/cloudflare/allow.conf` (trava "só Cloudflare", reutilizável por outros sites) e a cópia para o Laravel; só troca a configuração se o Nginx aceitar; `--desligar` para emergências; cron semanal |
+| `sancta-vhost.tpl` | Modelo de vhost a partir do "Laravel 12" oficial: só a Cloudflare acessa, só o `index.php` executa PHP, arquivos ocultos bloqueados, estáticos inexistentes caem no Laravel (no oficial, o JavaScript do Livewire daria 404), uploads de 64 MB, erros da API repassados como JSON |
+| `instalar-sancta.sh` | Cria site, usuário e banco pelo `clpctl`; instala o certificado de origem da Cloudflare (confere se chave e certificado combinam); deploy key somente leitura; `.env` de produção com `TRUSTED_PROXIES=cloudflare` e caminho do painel sorteado; Composer, migrations, dados iniciais, caches; agendador em `/etc/cron.d`; verificação no servidor e pela Cloudflare |
 | `atualizar.sh` → `sudo sancta-atualizar` | Publica o `main` com manutenção de poucos segundos, migrations, caches e recarga do PHP-FPM; avisa variáveis novas do `.env.example` |
-| `backup.sh` | Backup diário (banco, uploads e `.env`) por 14 dias em `/var/backups/sancta` |
-| `nginx-sancta.conf`, `php-fpm-sancta.conf`, `php-sancta.ini`, `mysql-sancta.cnf` | Só o `index.php` executa PHP, arquivos ocultos bloqueados, uploads de até 64 MB, OPcache, pool próprio com até 24 processos, MySQL só em `127.0.0.1` |
 
-Os scripts que rodam como root ficam em `/usr/local/sbin`, fora da pasta do código (que pertence ao usuário do PHP), para que uma invasão do site não vire acesso de root.
+Backups ficam com o CloudPanel: dump noturno de cada banco (7 dias) e cópia remota da pasta dos sites, que inclui o `.env` com a `APP_KEY`, configurada em Admin Area → Backups.
 
-**Bug encontrado e corrigido:** o painel aceita áudios de até 50 MB, mas o Livewire barrava qualquer envio acima de 12 MB antes da validação do campo. Criado `backend/config/livewire.php` (limite de 50 MB, 10 minutos para o envio) e o teste `UploadLimitTest`, que falha se algum campo do painel passar a aceitar mais do que o Livewire.
+**Bugs encontrados e corrigidos**
+- **IP do visitante atrás de proxy (grave para produção):** `TRUSTED_PROXIES` era lido com `env()` no `bootstrap/app.php`, que roda antes de o `.env` ser carregado. Nenhum proxy era confiado, com ou sem cache de configuração (testado). Atrás da Cloudflare, todo visitante teria o IP dela: limite de tentativas de login compartilhado por todos (um ataque trancaria todo mundo), restrição de IP do painel comparando o endereço errado, logs e pagamentos com IP errado. Novo `App\Http\Middleware\TrustProxies` lê da configuração (`sancta.security.trusted_proxies`). Aceita `cloudflare` (faixas oficiais, com a lista do servidor tendo prioridade quando íntegra) e confia só no IP e no protocolo encaminhados, nunca em Host ou porta, que a Cloudflare repassa do jeito que o visitante mandou. São 7 testes em `TrustedProxiesTest`, incluindo tentativas de forjar IP pela Cloudflare e direto na origem.
+- **Áudios acima de 12 MB:** o painel aceita 50 MB, mas o Livewire barrava antes da validação. Corrigido com `backend/config/livewire.php` e o teste `UploadLimitTest`.
 
-**Verificado:** caminho de produção simulado numa cópia limpa do backend (Composer sem pacotes de desenvolvimento, `.env` de produção, migrations, dados iniciais sem Faker, `optimize`, `filament:optimize`, agendador): site, API e painel com 200; `/painel` antigo e `/.env` com 404; domínio estranho com 400. Backend com **245 testes / 5.177 asserções** verdes e Pint limpo; sintaxe dos scripts conferida com `bash -n`.
+**Verificado:**
+- **Caminho de produção:** simulado numa cópia limpa do backend (Composer sem pacotes de desenvolvimento, `.env` de produção, migrations, dados iniciais sem Faker, `optimize`, `filament:optimize`, agendador). Site, API e painel responderam 200; o `/painel` antigo e o `/.env`, 404; um domínio estranho, 400.
+- **IP real:** com a configuração em cache, o proxy confiável passou a ser respeitado, e um cabeçalho forjado vindo de fora da Cloudflare foi ignorado.
+- **`cloudflare-ips`:** testado com Nginx simulado. Gera a lista, não recarrega quando nada muda, desliga e religa a trava, mantém a anterior se o Nginx recusar, e recusa lista adulterada ou curta.
+- **Backend:** 252 testes / 5.186 asserções, todos verdes, com Pint limpo.
+- **Scripts:** sintaxe conferida com `bash -n`.
+
+Os scripts **não foram executados numa VPS real** (dependem do CloudPanel instalado). As informações do CloudPanel vieram da documentação oficial, do instalador oficial (SHA-256 conferido) e do modelo "Laravel 12" do repositório oficial de vhosts.

@@ -8,7 +8,7 @@ Plataforma católica completa, inspirada no Hallow, que substitui o app **"Paró
 | [`backend/`](backend/) | **Laravel 12 + MySQL**: API do app, **site público** (apresentação, Bíblia online, mapa de igrejas, planos com Pix/cartão, área do assinante) e **painel administrativo** (Filament 5). |
 | [`brand/`](brand/) | Identidade visual: marca em SVG/PNG, ícones Android (todas as densidades + adaptativo + notificação), ícone e banner da Play Store, favicon, imagem social. |
 | [`docs/`](docs/) | Guias técnicos: [implantação e Play Store](docs/IMPLANTACAO.md) e [referência da API](docs/API.md). |
-| [`deploy/`](deploy/) | Instalador e atualização para VPS Ubuntu (Oracle Cloud): Nginx, PHP, MySQL, HTTPS, backup e proteção do servidor — passo a passo em [IMPLANTACAO.md](docs/IMPLANTACAO.md#vps-oracle-cloud-com-ubuntu--instalação-automática). |
+| [`deploy/`](deploy/) | Instalação na VPS Oracle com **CloudPanel** atrás da **Cloudflare**: CloudPanel protegido, site do Sancta só acessível pela Cloudflare, certificado de origem, deploy e atualização — passo a passo em [IMPLANTACAO.md](docs/IMPLANTACAO.md#vps-oracle-cloud-com-cloudpanel-e-cloudflare). |
 | [`RELATORIO_DO_QUE_FOI_FEITO.md`](RELATORIO_DO_QUE_FOI_FEITO.md) | Relatório completo de tudo que foi analisado, construído e testado. |
 | [`SOBRE_O_PROJETO.md`](SOBRE_O_PROJETO.md) | Documento do produto: visão, funcionalidades, modelo de assinatura, arquitetura e roadmap. |
 
@@ -89,7 +89,7 @@ flutter build appbundle --release --obfuscate --split-debug-info=build/symbols -
 
 | Verificação | Resultado |
 |---|---|
-| Backend — PHPUnit | **245 testes, 5.177 asserções — todos passando** (inclui contrato API↔app, fluxos de pagamento, pentest e limite de upload) |
+| Backend — PHPUnit | **252 testes, 5.186 asserções — todos passando** (inclui contrato API↔app, fluxos de pagamento, pentest, limite de upload e IP real atrás da Cloudflare) |
 | Backend — `composer audit` | Nenhuma vulnerabilidade conhecida nas dependências |
 | Backend — Pint (padrão de código) | Aplicado |
 | App — `flutter analyze` | **Nenhum problema** |

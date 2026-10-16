@@ -788,7 +788,14 @@ legend { font-weight: 600; font-size: var(--fs-sm); margin-bottom: 10px; padding
 .hero-stats { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0; padding: 0; list-style: none; color: var(--nevoa); font-size: var(--fs-sm); }
 .hero-stats strong { color: var(--pergaminho); font-size: 1.125rem; margin-right: 4px; }
 .hero-visual { position: relative; height: 484px; display: flex; justify-content: center; }
-.hero-visual .device { --device-w: 262px; position: absolute; top: 0; left: 50%; transform: translateX(-38%); }
+.hero-art {
+  position: absolute; z-index: 0; top: 14px; right: 0; width: min(86%, 420px); height: calc(100% - 28px);
+  overflow: hidden; border: 1px solid rgba(251, 246, 236, .24); border-radius: 999px 999px 22px 22px;
+  background: var(--noite); box-shadow: 0 30px 70px -36px rgba(4, 9, 30, .72); transform: rotate(1deg);
+}
+.hero-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 72% center; }
+.hero-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(19, 39, 96, .28), transparent 48%), linear-gradient(0deg, rgba(14, 26, 58, .2), transparent 45%); }
+.hero-visual .device { --device-w: 262px; position: absolute; z-index: 1; top: 0; left: 50%; transform: translateX(-38%); }
 .hero-visual .widget { --widget-w: 270px; position: absolute; top: 334px; left: 50%; transform: translateX(-66%); z-index: 2; }
 @media (min-width: 980px) {
   .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); padding-block: clamp(56px, 7vw, 96px); }
@@ -1083,14 +1090,22 @@ mark { background: color-mix(in srgb, var(--ouro) 42%, transparent); color: inhe
 /* ---------- Entrar / cadastrar ---------- */
 .auth { display: grid; min-height: calc(100dvh - var(--header-h)); }
 @media (min-width: 960px) { .auth { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
-.auth-art { display: none; }
+.auth-art {
+  position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; min-height: 188px; padding: 24px; background: var(--hero-bg); color: var(--pergaminho); text-align: center;
+}
+.auth-art::before {
+  content: ""; position: absolute; z-index: -1; inset: 0;
+  background: linear-gradient(145deg, rgba(31, 61, 156, .78), rgba(14, 26, 58, .72)), url("/images/editorial/fundo-acesso.webp") center 54% / cover;
+}
+.auth-art .arch { display: none; }
+.auth-art p { color: var(--pergaminho); font-size: 1rem; font-weight: 500; max-width: 28ch; margin: 0; text-shadow: 0 1px 12px rgba(4, 9, 30, .4); }
 @media (min-width: 960px) {
   .auth-art {
-    position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 28px; padding: 48px; background: var(--hero-bg); color: var(--pergaminho); text-align: center;
+    min-height: 100%; gap: 28px; padding: 48px;
   }
-  .auth-art .arch { width: min(280px, 56%); box-shadow: 0 40px 70px -30px rgba(5, 10, 30, .6); }
-  .auth-art p { color: var(--nevoa); font-size: 1.25rem; font-weight: 500; max-width: 24ch; margin: 0; }
+  .auth-art .arch { display: block; width: min(280px, 56%); box-shadow: 0 40px 70px -30px rgba(5, 10, 30, .6); }
+  .auth-art p { color: var(--nevoa); font-size: 1.25rem; max-width: 24ch; }
 }
 .auth-main { display: grid; place-items: center; padding: clamp(28px, 6vw, 64px) var(--gutter); }
 .auth-card { width: min(440px, 100%); }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/brand/brand.dart';
+import '../../core/brand/editorial_art.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/theme/system_bars.dart';
 
@@ -62,6 +63,20 @@ class _AuthHeader extends StatelessWidget {
             height: 206,
             child: Stack(
               children: [
+                Positioned.fill(
+                  child: Image.asset(EditorialArt.acesso, fit: BoxFit.cover, alignment: Alignment.center, cacheWidth: 1200),
+                ),
+                Positioned.fill(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [p.heroStart.withValues(alpha: .62), p.heroEnd.withValues(alpha: .9)],
+                      ),
+                    ),
+                  ),
+                ),
                 if (canPop)
                   Positioned(
                     left: 4,

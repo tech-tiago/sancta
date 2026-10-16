@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 import '../../core/brand/brand.dart';
+import '../../core/brand/editorial_art.dart';
 import '../../core/models/models.dart';
 import '../../core/motion/live_badge.dart';
 import '../../core/motion/skeleton.dart';
@@ -188,7 +189,18 @@ class _HomeContent extends ConsumerWidget {
           subtitle: gospel ?? '${liturgy['title'] ?? 'Liturgia diária'}',
           onTap: () => context.push('/liturgia'),
         ),
-      if (saint != null) SanctaTile(icon: Icons.today_rounded, title: 'Santo do dia', subtitle: '${saint['name']}', onTap: () => _showSaint(context, saint)),
+      if (saint != null)
+        SanctaTile(
+          leading: ArchThumb(
+            url: saint['image_url'] as String?,
+            assetPath: EditorialArt.forSaint('${saint['name'] ?? ''}'),
+            scene: SkyScene.aurora,
+            width: 48,
+          ),
+          title: 'Santo do dia',
+          subtitle: '${saint['name']}',
+          onTap: () => _showSaint(context, saint),
+        ),
       if (continueJourney != null)
         SanctaTile(
           icon: Icons.route_rounded,
@@ -340,8 +352,15 @@ class _HomeContent extends ConsumerWidget {
         controller: controller,
         padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
         children: [
-          if (saint['image_url'] != null) ...[
-            Center(child: ArchCover(url: saint['image_url'] as String?, width: 150, aspectRatio: .78)),
+          if (saint['image_url'] != null || EditorialArt.forSaint('${saint['name'] ?? ''}') != null) ...[
+            Center(
+              child: ArchCover(
+                url: saint['image_url'] as String?,
+                assetPath: EditorialArt.forSaint('${saint['name'] ?? ''}'),
+                width: 150,
+                aspectRatio: .78,
+              ),
+            ),
             const SizedBox(height: 18),
           ],
           Text('Santo do dia', style: sheet.text.labelMedium),
@@ -409,6 +428,12 @@ class _PeriodPrayerCard extends StatelessWidget {
         : sameTitle
         ? [if (prayer.durationMinutes != null) '${prayer.durationMinutes} min', if (gospel != null) 'com o Evangelho do dia'].join(', ')
         : [prayer.title, if (prayer.durationMinutes != null) '${prayer.durationMinutes} min'].join(' · ');
+    final localCover = switch (period) {
+      PrayerPeriod.manha => EditorialArt.oracaoManha,
+      PrayerPeriod.tarde => EditorialArt.leituraBiblica,
+      PrayerPeriod.noite => EditorialArt.oracaoNoite,
+    };
+    final coverUrl = prayer?.coverUrl;
     void open() => prayer == null ? context.push('/liturgia') : context.push('/oracao/${prayer.slug}');
 
     return Material(
@@ -427,7 +452,12 @@ class _PeriodPrayerCard extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 4),
-                child: ArchFrame(aspectRatio: 1.5, child: prayer?.coverUrl != null ? NetImage(prayer!.coverUrl) : SkyArt.forTime(now)),
+                child: ArchFrame(
+                  aspectRatio: 1.5,
+                  child: coverUrl != null && coverUrl.startsWith('http')
+                      ? NetImage(coverUrl)
+                      : Image.asset(localCover, fit: BoxFit.cover, cacheWidth: 1200),
+                ),
               ),
               const SizedBox(height: 14),
               Row(

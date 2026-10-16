@@ -25,6 +25,9 @@
             </ul>
         </div>
         <div class="hero-visual">
+            <div class="hero-art" aria-hidden="true">
+                <img src="{{ asset('images/editorial/sancta-hero-marian.webp') }}" alt="" width="1920" height="1080" fetchpriority="high">
+            </div>
             <x-phone-today />
             <x-prayer-widget />
         </div>
@@ -43,10 +46,10 @@
         <div class="moments">
             <p class="list-label">Um dia com o Sancta</p>
             <ul class="today-list">
-                <li class="today-item"><span class="arch arch-thumb"><x-sky sky="aurora" portrait /></span><div><strong>Manhã</strong><span class="sub">Oferecimento do dia e o Evangelho para meditar.</span></div></li>
-                <li class="today-item"><span class="arch arch-thumb"><x-sky sky="luz" portrait /></span><div><strong>Durante o dia</strong><span class="sub">Liturgia, Angelus e um minuto de silêncio.</span></div></li>
-                <li class="today-item"><span class="arch arch-thumb"><x-sky sky="entardecer" portrait /></span><div><strong>Fim da tarde</strong><span class="sub">Terço, novenas e jornadas no seu ritmo.</span></div></li>
-                <li class="today-item"><span class="arch arch-thumb"><x-sky sky="noite" portrait /></span><div><strong>Noite</strong><span class="sub">Exame de consciência e oração para dormir em paz.</span></div></li>
+                <li class="today-item"><span class="arch arch-thumb"><img src="{{ asset('images/editorial/oracao-manha.webp') }}" alt="" width="1920" height="1280" loading="lazy" decoding="async"></span><div><strong>Manhã</strong><span class="sub">Oferecimento do dia e o Evangelho para meditar.</span></div></li>
+                <li class="today-item"><span class="arch arch-thumb"><img src="{{ asset('images/editorial/leitura-biblica.webp') }}" alt="" width="1920" height="1280" loading="lazy" decoding="async"></span><div><strong>Durante o dia</strong><span class="sub">Liturgia, Angelus e um minuto de silêncio.</span></div></li>
+                <li class="today-item"><span class="arch arch-thumb"><img src="{{ asset('images/editorial/jornada-rosario.webp') }}" alt="" width="1920" height="1280" loading="lazy" decoding="async"></span><div><strong>Fim da tarde</strong><span class="sub">Terço, novenas e jornadas no seu ritmo.</span></div></li>
+                <li class="today-item"><span class="arch arch-thumb"><img src="{{ asset('images/editorial/oracao-noite.webp') }}" alt="" width="1920" height="1280" loading="lazy" decoding="async"></span><div><strong>Noite</strong><span class="sub">Exame de consciência e oração para dormir em paz.</span></div></li>
             </ul>
         </div>
     </div>
@@ -153,7 +156,7 @@
 <section class="section" aria-label="Bíblia e igrejas">
     <div class="container grid grid-2 duo-cards">
         <article class="card card-media">
-            <div class="arch"><x-sky sky="aurora" /></div>
+            <div class="arch"><img src="{{ asset('images/editorial/leitura-biblica.webp') }}" alt="" width="1920" height="1280" loading="lazy" decoding="async"></div>
             <div class="card-body">
                 <h3>Bíblia online, grátis</h3>
                 <p class="soft">Leia todos os livros do Antigo e do Novo Testamento direto no navegador, com busca por palavras e leitura confortável.</p>
@@ -161,7 +164,7 @@
             </div>
         </article>
         <article class="card card-media">
-            <div class="arch"><x-sky sky="entardecer" /></div>
+            <div class="arch"><img src="{{ asset('images/editorial/fundo-acesso.webp') }}" alt="" width="1440" height="1920" loading="lazy" decoding="async"></div>
             <div class="card-body">
                 <h3>Encontre uma igreja</h3>
                 <p class="soft">Veja no mapa as igrejas, os horários de missa e os contatos. Sua paróquia não está lá? Cadastre em poucos minutos.</p>

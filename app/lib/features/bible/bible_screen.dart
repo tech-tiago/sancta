@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/brand/brand.dart';
+import '../../core/brand/editorial_art.dart';
 import '../../core/models/models.dart';
 import '../../core/state/content_providers.dart';
 import '../../core/state/session_controller.dart';
@@ -49,9 +50,13 @@ class BibleScreen extends ConsumerWidget {
                   onTap: () => context.push('/biblia/${progress['book_slug']}/${progress['chapter']}'),
                   child: Row(
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         width: 44,
-                        child: ArchFrame(aspectRatio: .82, bottomRadius: 6, child: SkyArt(scene: SkyScene.aurora)),
+                        child: ArchFrame(
+                          aspectRatio: .82,
+                          bottomRadius: 6,
+                          child: Image.asset(EditorialArt.leituraBiblica, fit: BoxFit.cover, cacheWidth: 192),
+                        ),
                       ),
                       const SizedBox(width: 14),
                       Expanded(
@@ -60,6 +65,38 @@ class BibleScreen extends ConsumerWidget {
                           children: [
                             Text('Continuar leitura', style: context.text.labelMedium?.copyWith(color: p.onHeroSoft)),
                             Text('${progress['book']} ${progress['chapter']}', style: context.text.titleLarge?.copyWith(color: p.onHero)),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.arrow_forward_rounded, color: BrandColors.pergaminho),
+                    ],
+                  ),
+                ),
+              ),
+            if (progress == null || progress['book_slug'] == null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                child: HeroCard(
+                  padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+                  radius: SanctaRadius.card,
+                  onTap: () => context.push('/biblia-busca'),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 54,
+                        child: ArchFrame(
+                          aspectRatio: .82,
+                          bottomRadius: 6,
+                          child: Image.asset(EditorialArt.leituraBiblica, fit: BoxFit.cover, cacheWidth: 192),
+                        ),
+                      ),
+                      const SizedBox(width: 14),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Uma pausa com a Palavra', style: context.text.titleSmall?.copyWith(color: p.onHero)),
+                            Text('Encontre um trecho para ler e meditar.', style: context.text.bodySmall?.copyWith(color: p.onHeroSoft)),
                           ],
                         ),
                       ),

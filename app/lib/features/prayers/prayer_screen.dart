@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/router.dart';
+import '../../core/brand/editorial_art.dart';
 import '../../core/models/models.dart';
 import '../../core/motion/amen_celebration.dart';
 import '../../core/motion/skeleton.dart';
@@ -107,7 +108,13 @@ class _PrayerScreenState extends ConsumerState<PrayerScreen> {
                   padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
                   child: Column(
                     children: [
-                      ArchCover(url: p.coverUrl, scene: skyFor(p.categoryName ?? p.slug), width: 200, aspectRatio: .86),
+                      ArchCover(
+                        url: p.coverUrl,
+                        assetPath: EditorialArt.forPrayer(p.title, p.slug),
+                        scene: skyFor(p.categoryName ?? p.slug),
+                        width: 200,
+                        aspectRatio: .86,
+                      ),
                       const SizedBox(height: 20),
                       if (p.categoryName != null) Text(p.categoryName!, style: context.text.labelLarge?.copyWith(color: palette.primary, fontSize: 14)),
                       const SizedBox(height: 4),

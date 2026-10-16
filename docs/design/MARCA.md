@@ -240,3 +240,14 @@ Edite medidas só em `brand/source/portal.js` **e** em `portal_geometry.dart` (o
   `@drawable/sancta_portal_splash`; cor de notificação `#1F3D9C` (também em `PushService.php`, hoje `#C9A45C`);
   ativar *core library desugaring* (exigido por `flutter_local_notifications`, hoje quebra o `assembleDebug`).
 - iOS: copiar `brand/app-icon/png/icone-{padrao,escuro,tingido}-1024.png` para `ios/Runner/Assets.xcassets/AppIcon.appiconset`.
+
+## 15. Sistema de arte editorial
+
+O Sancta também usa uma biblioteca de ilustrações em **vetor editorial, papel recortado e gravura devocional impressa**. Ela adiciona profundidade às histórias de oração, santos e leitura; não substitui o símbolo Portal, o wordmark, as cores funcionais nem a tipografia da marca.
+
+- Manual do kit, paleta ilustrativa, aplicações e padrão para futuras imagens: [`KIT-EDITORIAL-SANCTA.md`](KIT-EDITORIAL-SANCTA.md).
+- Masters PNG: `brand/editorial/`.
+- WebP otimizados: `backend/public/images/editorial/` (site) e `app/assets/images/editorial/` (app).
+- O ouro envelhecido, o vinho e a terracota são cores **das ilustrações**, não novos tokens de interface. Interfaces continuam usando os tokens deste manual.
+- As imagens não recebem palavras nem marcas desenhadas. Textos de tela permanecem componentes reais; o logotipo e o Portal são sempre os arquivos oficiais.
+- No app, uma capa remota do painel/API tem prioridade sobre o fallback editorial local; itens ainda não ilustrados mantêm o céu de marca existente.

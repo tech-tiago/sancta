@@ -11,8 +11,16 @@ String _masterArch(PortalGeometry g) {
   const i = PortalGeometry.innerRadius;
   String n(double v) => v == v.roundToDouble() ? v.toInt().toString() : v.toString();
   final h = g.height;
-  return 'M0 ${n(h)}V${n(h - g.outerCenterY)}A${n(r)} ${n(r)} 0 0 1 ${n(2 * r)} ${n(h - g.outerCenterY)}V${n(h)}'
-      'H${n(r + i)}V${n(h - g.innerCenterY)}A${n(i)} ${n(i)} 0 0 0 ${n(r - i)} ${n(h - g.innerCenterY)}V${n(h)}Z';
+  final innerTop = g.openingTop;
+  return 'M0 ${n(h)}V${n(h - g.outerCenterY)}'
+      'C0 ${n(h - g.outerCenterY - PortalGeometry.outerHandle)} ${n(r - PortalGeometry.outerHandle)} 0 ${n(r - PortalGeometry.outerCrownInset)} 0'
+      'H${n(r + PortalGeometry.outerCrownInset)}'
+      'C${n(r + PortalGeometry.outerHandle)} 0 ${n(2 * r)} ${n(h - g.outerCenterY - PortalGeometry.outerHandle)} ${n(2 * r)} ${n(h - g.outerCenterY)}'
+      'V${n(h)}H${n(r + i)}V${n(h - g.innerCenterY)}'
+      'C${n(r + i)} ${n(h - g.innerCenterY - PortalGeometry.innerSideHandle)} ${n(r + PortalGeometry.innerCrownHandle)} ${n(h - innerTop)} ${n(r + PortalGeometry.innerTopHalf)} ${n(h - innerTop)}'
+      'H${n(r - PortalGeometry.innerTopHalf)}'
+      'C${n(r - PortalGeometry.innerCrownHandle)} ${n(h - innerTop)} ${n(r - i)} ${n(h - g.innerCenterY - PortalGeometry.innerSideHandle)} ${n(r - i)} ${n(h - g.innerCenterY)}'
+      'V${n(h)}Z';
 }
 
 /// Compara retângulos com tolerância (a conversão de arcos em cônicas gera frações de pixel).
@@ -32,26 +40,26 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('PortalGeometry', () {
-    test('proporções e medidas derivadas do "n" da Figtree Bold', () {
-      expect(PortalGeometry.width, 486);
-      expect(PortalGeometry.stem, PortalGeometry.outerRadius - PortalGeometry.innerRadius); // 243 − 111 = 132
+    test('proporções do N/Portal e espessura reforçada das hastes', () {
+      expect(PortalGeometry.width, 512);
+      expect(PortalGeometry.stem, PortalGeometry.outerRadius - PortalGeometry.innerRadius); // 256 − 106 = 150
       expect(PortalGeometry.letter.height, 512);
       expect(PortalGeometry.door.height, 666);
-      expect(PortalGeometry.letter.openingTop, 395);
-      expect(PortalGeometry.letter.aspectRatio, closeTo(486 / 512, 1e-9));
+      expect(PortalGeometry.letter.openingTop, 362);
+      expect(PortalGeometry.letter.aspectRatio, 1);
       expect(PortalGeometry.of(PortalShape.door), same(PortalGeometry.door));
     });
 
     test('paths ocupam a caixa certa (escala 1)', () {
-      const s = Size(486, 512);
+      const s = Size(512, 512);
       final g = PortalGeometry.letter;
-      _rect(g.arch(s).getBounds(), const Rect.fromLTRB(0, 0, 486, 512));
-      _rect(g.outline(s).getBounds(), const Rect.fromLTRB(0, 0, 486, 512));
-      _rect(g.opening(s).getBounds(), const Rect.fromLTRB(132, 117, 354, 512));
-      _rect(g.crossPath(s).getBounds(), const Rect.fromLTRB(168, 195, 318, 457));
-      expect(g.stemWidth(s), 132);
+      _rect(g.arch(s).getBounds(), const Rect.fromLTRB(0, 0, 512, 512));
+      _rect(g.outline(s).getBounds(), const Rect.fromLTRB(0, 0, 512, 512));
+      _rect(g.opening(s).getBounds(), const Rect.fromLTRB(150, 150, 362, 512));
+      _rect(g.crossPath(s).getBounds(), const Rect.fromLTRB(184, 198, 328, 448));
+      expect(g.stemWidth(s), 150);
       // a abertura não pertence ao arco; a haste sim
-      expect(g.arch(s).contains(const Offset(243, 300)), isFalse);
+      expect(g.arch(s).contains(const Offset(256, 300)), isFalse);
       expect(g.arch(s).contains(const Offset(60, 400)), isTrue);
       expect(g.centerline(s).computeMetrics().single.length, greaterThan(1000));
     });
@@ -60,7 +68,7 @@ void main() {
       final g = PortalGeometry.door;
       final b = g.bounds(const Size(400, 400));
       expect(b.height, closeTo(400, 1e-9));
-      expect(b.width, closeTo(400 * 486 / 666, 1e-9));
+      expect(b.width, closeTo(400 * 512 / 666, 1e-9));
       expect(b.center.dx, closeTo(200, 1e-9));
       expect(g.arch(const Size(400, 400)).getBounds().left, closeTo(b.left, 1e-6));
     });
@@ -68,7 +76,7 @@ void main() {
     test('Dart e master SVG usam as mesmas coordenadas', () async {
       final svg = await rootBundle.loadString('assets/brand/portal_azul.svg');
       expect(svg, contains(_masterArch(PortalGeometry.letter)));
-      expect(svg, contains('M214 195L272 195L272 247L318 247L318 305L272 305L272 457L214 457L214 305L168 305L168 247L214 247Z'));
+      expect(svg, contains('M230 198L282 198L282 246L328 246L328 298L282 298L282 448L230 448L230 298L184 298L184 246L230 246Z'));
       expect(svg, contains('#1F3D9C'));
       expect(svg, contains('#E3B65B'));
     });
@@ -145,9 +153,9 @@ void main() {
       expect(find.byType(PortalMark), findsNWidgets(4));
       final size = tester.getSize(find.byType(PortalMark).first);
       expect(size.height, 64);
-      expect(size.width, closeTo(64 * 486 / 512, 1e-6));
+      expect(size.width, closeTo(64 * 512 / 512, 1e-6));
       final door = tester.getSize(find.byType(PortalMark).at(1));
-      expect(door.width, closeTo(32 * 486 / 666, 1e-6));
+      expect(door.width, closeTo(32 * 512 / 666, 1e-6));
       expect(find.bySemanticsLabel('Sancta'), findsWidgets);
     });
 

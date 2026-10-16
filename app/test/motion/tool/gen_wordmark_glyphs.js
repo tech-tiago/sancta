@@ -15,10 +15,10 @@ const glyphs = [
   ['a', subs[5] + subs[6], 1, 2],
 ];
 const portal = subs[7];
-const pm = portal.match(/^M([\d.]+) ([\d.]+)V([\d.]+)A([\d.]+)/);
+const pm = portal.match(/^M([\d.]+) ([\d.]+)V[\d.]+C[\d.]+ [\d.]+ [\d.]+ [\d.]+ [\d.]+ ([\d.]+)/);
 const left = Number(pm[1]);
 const base = Number(pm[2]);
-const top = Number(pm[3]) - Number(pm[4]);
+const top = Number(pm[3]);
 
 const lines = [];
 lines.push('// GERADO a partir de assets/brand/wordmark_pergaminho.svg (contornos da Figtree Bold do wordmark');
@@ -36,7 +36,7 @@ lines.push('');
 lines.push('  /// Linha de base (y): as letras descem até 724 (overshoot); o Portal pousa em 712.');
 lines.push(`  static const double baseline = ${base};`);
 lines.push('');
-lines.push('  /// Canto superior esquerdo do Portal no lugar do "n" (486 × 512, como `PortalGeometry.letter`).');
+lines.push('  /// Canto superior esquerdo do Portal/N no wordmark (512 × 512, como `PortalGeometry.letter`).');
 lines.push(`  static const double portalLeft = ${left};`);
 lines.push(`  static const double portalTop = ${top};`);
 lines.push('');

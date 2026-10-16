@@ -12,7 +12,7 @@ const fs = require('fs');
 const L = require('./lib');
 const A = require('./art');
 
-const { T, P, WM, wordmarkPaths, textoPath, svgDoc, write, png, ico, vectorDrawable, portal, r3 } = L;
+const { T, P, WM, PORTAL, wordmarkPaths, textoPath, svgDoc, write, png, ico, vectorDrawable, portal, r3 } = L;
 
 const saidas = [];
 const out = (rel, content) => {
@@ -33,7 +33,7 @@ const rm = (rel) => {
 };
 
 // ---------------------------------------------------------------------------------------------
-// 1. Símbolo (Portal na proporção da letra: 486 × 512 u)
+// 1. Símbolo (N/Portal na proporção da letra: 512 × 512 u)
 // ---------------------------------------------------------------------------------------------
 const SIMBOLO = {
   pergaminho: { arco: T.pergaminho, cruz: T.ouro, uso: 'para fundos azuis' },
@@ -43,12 +43,12 @@ const SIMBOLO = {
 };
 
 function simbolo(v, { cor } = {}) {
-  const pt = portal('letra', { cx: 243, base: 512, k: 1 });
+  const pt = portal('letra', { cx: PORTAL.raioExterno, base: PORTAL.letra.altura, k: 1 });
   const s = SIMBOLO[v];
   const body = s.mono || cor
     ? `<path fill="${cor || s.mono}" d="${pt.arco}${pt.cruz}"/>`
     : `<path fill="${s.arco}" d="${pt.arco}"/>\n<path fill="${s.cruz}" d="${pt.cruz}"/>`;
-  return svgDoc(486, 512, body, { title: 'Sancta — Portal', dw: 97.2, dh: 102.4 });
+  return svgDoc(PORTAL.letra.altura, PORTAL.letra.altura, body, { title: 'Sancta — N/Portal', dw: 102.4, dh: 102.4 });
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -125,27 +125,14 @@ function iconeSvg({ size = 1024, v = 'padrao', raio = 0, h = ICONE_ALTURA, pesoC
   return svgDoc(size, size, `${fundo}\n<path fill="${c.arco}" d="${pt.arco}"/>\n<path fill="${c.cruz}" d="${pt.cruz}"/>`, { title: `Sancta — ícone ${c.nome}` });
 }
 
-/**
- * Versões "hintadas" (alinhadas à grade de pixels) para 16/32/48 px: hastes e cruz em pixels inteiros,
- * Portal um pouco maior no quadro e cruz mais encorpada — o mesmo desenho, ajustado opticamente.
- */
-const HINT = {
-  16: { x0: 4, x1: 13, haste: 2, topo: 3, base: 14, raio: 3.5, cruz: [8, 9, 7, 12, 7, 10, 8, 9] },
-  32: { x0: 8, x1: 24, haste: 4, topo: 5, base: 27, raio: 7, cruz: [15, 17, 14, 24, 13, 19, 16, 18] },
-  48: { x0: 12, x1: 37, haste: 6, topo: 7, base: 41, raio: 10.5, cruz: [23, 26, 20, 35, 20, 29, 23, 26] },
-};
-
+/** Favicons compactos usam a mesma curva do master; muda só a escala, não a identidade do símbolo. */
 function iconeHint(N, { v = 'padrao', raio = true } = {}) {
-  const s = HINT[N];
   const c = ICONE[v];
-  const R = (s.x1 - s.x0) / 2;
-  const r = R - s.haste;
-  const cy = s.topo + R;
-  const arco = `M${s.x0} ${s.base}V${cy}A${R} ${R} 0 0 1 ${s.x1} ${cy}V${s.base}H${s.x1 - s.haste}V${cy}A${r} ${r} 0 0 0 ${s.x0 + s.haste} ${cy}V${s.base}Z`;
-  const [x0, x1, y0, y1, bx0, bx1, by0, by1] = s.cruz;
-  const cruz = `M${x0} ${y0}H${x1}V${by0}H${bx1}V${by1}H${x1}V${y1}H${x0}V${by1}H${bx0}V${by0}H${x0}Z`;
-  const fundo = `<rect width="${N}" height="${N}"${raio ? ` rx="${s.raio}"` : ''} fill="${c.fundo}"/>`;
-  return svgDoc(N, N, `${fundo}\n<path fill="${c.arco}" d="${arco}"/>\n<path fill="${c.cruz}" d="${cruz}"/>`, { title: 'Sancta' });
+  const k = (0.68 * N) / PORTAL.porta.altura;
+  const pt = portal('porta', { cx: N / 2, base: N / 2 + (PORTAL.porta.altura / 2) * k, k });
+  const corner = raio ? r3(N * 0.2237) : 0;
+  const fundo = `<rect width="${N}" height="${N}"${raio ? ` rx="${corner}"` : ''} fill="${c.fundo}"/>`;
+  return svgDoc(N, N, `${fundo}\n<path fill="${c.arco}" d="${pt.arco}"/>\n<path fill="${c.cruz}" d="${pt.cruz}"/>`, { title: 'Sancta' });
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -209,13 +196,11 @@ function android() {
   for (const d of Object.keys(DENS)) {
     rm(`${RES}/drawable-${d}/ic_notification.png`);
     rm(`${RES}/mipmap-${d}/ic_launcher_background.png`);
+    rm(`${RES}/mipmap-${d}/ic_launcher_foreground.png`);
   }
   for (const [d, f] of Object.entries(DENS)) {
     outPng(launcherLegado('square'), `${RES}/mipmap-${d}/ic_launcher.png`, 48 * f);
     outPng(launcherLegado('round'), `${RES}/mipmap-${d}/ic_launcher_round.png`, 48 * f);
-    // Mantido (com a arte nova) porque os estilos de splash v31 ainda apontam para @mipmap/ic_launcher_foreground.
-    const fg = foregroundPaths();
-    outPng(svgDoc(108, 108, `<path fill="${T.pergaminho}" d="${fg.arco}"/><path fill="${T.ouro}" d="${fg.cruz}"/>`), `${RES}/mipmap-${d}/ic_launcher_foreground.png`, 108 * f);
   }
 
   const fg = foregroundPaths();
@@ -281,15 +266,15 @@ function android() {
     svgDoc(108, 108, `<path fill="#000000" d="${fg.arco}"/><path fill="#000000" fill-opacity="0.55" d="${fg.cruz}"/>`, { title: 'Camada monocromática (Android 13+, só o alfa conta)', dw: 216, dh: 216 }),
   );
 
-  // Portal para splash/widget (proporção da letra, 486 × 512 u).
+  // Portal/N para splash/widget (proporção da letra, 512 × 512 u).
   const k = 96 / 512;
-  const pl = portal('letra', { cx: 243 * k, base: 96, k });
+  const pl = portal('letra', { cx: PORTAL.raioExterno * k, base: 96, k });
   out(
     `${RES}/drawable/sancta_portal.xml`,
     vectorDrawable({
-      dp: 486 * k,
+      dp: PORTAL.letra.altura * k,
       dpH: 96,
-      vw: 486 * k,
+      vw: PORTAL.letra.altura * k,
       vh: 96,
       comentario: 'Portal (proporção da letra) Pergaminho + cruz Ouro, para fundos Azul Manto (splash, widget).',
       paths: [
@@ -301,9 +286,9 @@ function android() {
   out(
     `${RES}/drawable/sancta_portal_mono.xml`,
     vectorDrawable({
-      dp: 486 * k,
+      dp: PORTAL.letra.altura * k,
       dpH: 96,
-      vw: 486 * k,
+      vw: PORTAL.letra.altura * k,
       vh: 96,
       comentario: 'Portal monocromático (arco + cruz na mesma cor), branco — tingível com android:tint.',
       paths: [{ d: pl.arco + pl.cruz, fill: '#FFFFFF' }],
@@ -325,10 +310,8 @@ function android() {
       ],
     }),
   );
-  // Logo da splash legada (mesmo nome referenciado por drawable/launch_background.xml): arte nova.
-  const kk = (0.66 * 512) / 512;
-  const pk = portal('letra', { cx: 256, base: 256 + 256 * kk, k: kk });
-  outPng(svgDoc(512, 512, `<path fill="${T.pergaminho}" d="${pk.arco}"/><path fill="${T.ouro}" d="${pk.cruz}"/>`), `${RES}/drawable/splash_logo.png`, 512);
+  // O PNG antigo do splash não é referenciado: ambos os caminhos usam vetores Android.
+  rm(`${RES}/drawable/splash_logo.png`);
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -477,18 +460,32 @@ function construcao() {
   const W = 1880;
   const H = 820;
   const nx = 120 - 57 * k; // origem do n (tinta começa em x = 120)
-  const cxL = 680 + 243 * k;
-  const cxD = 1180 + 243 * k;
+  const R = PORTAL.raioExterno;
+  const r = PORTAL.raioInterno;
+  const letter = PORTAL.letra;
+  const door = PORTAL.porta;
+  const cxL = 680 + R * k;
+  const cxD = 1180 + R * k;
+  const X = (x) => r3(cxL + x * k);
   const guia = (u, dash, op) => `<line x1="40" y1="${r3(Y(u))}" x2="${W - 40}" y2="${r3(Y(u))}" stroke="${T.azul}" stroke-opacity="${op}" stroke-width="2"${dash ? ' stroke-dasharray="8 8"' : ''}/>`;
   const colchete = (x0, x1, y, cor = T.ouro) => `<path d="M${r3(x0)} ${y - 10}V${y}H${r3(x1)}V${y - 10}" fill="none" stroke="${cor}" stroke-width="3"/>`;
   const nPath = L.bold.charToGlyph('n').getPath(nx, base, 1000 * k).toPathData(2);
   const pl = portal('letra', { cx: cxL, base, k });
   const pd = portal('porta', { cx: cxD, base, k });
+  const outerGuide = `M${X(-R)} ${r3(Y(0))}V${r3(Y(letter.centroExterno))}` +
+    `C${X(-R)} ${r3(Y(letter.centroExterno + PORTAL.alcaExterna))} ${X(-PORTAL.alcaExterna)} ${r3(Y(letter.altura))} ${X(-PORTAL.meiaCoroaExterna)} ${r3(Y(letter.altura))}` +
+    `H${X(PORTAL.meiaCoroaExterna)}` +
+    `C${X(PORTAL.alcaExterna)} ${r3(Y(letter.altura))} ${X(R)} ${r3(Y(letter.centroExterno + PORTAL.alcaExterna))} ${X(R)} ${r3(Y(letter.centroExterno))}V${r3(Y(0))}`;
+  const innerTop = letter.centroInterno + r;
+  const innerGuide = `M${X(-r)} ${r3(Y(0))}V${r3(Y(letter.centroInterno))}` +
+    `C${X(-r)} ${r3(Y(letter.centroInterno + PORTAL.alcaInternaLateral))} ${X(-PORTAL.alcaInternaCoroa)} ${r3(Y(innerTop))} ${X(-PORTAL.meiaCoroaInterna)} ${r3(Y(innerTop))}` +
+    `H${X(PORTAL.meiaCoroaInterna)}` +
+    `C${X(PORTAL.alcaInternaCoroa)} ${r3(Y(innerTop))} ${X(r)} ${r3(Y(letter.centroInterno + PORTAL.alcaInternaLateral))} ${X(r)} ${r3(Y(letter.centroInterno))}V${r3(Y(0))}`;
   const body = [
     `<rect width="${W}" height="${H}" fill="${T.pergaminho}"/>`,
     guia(0, false, 0.45),
     guia(500, true, 0.35),
-    guia(512, true, 0.18),
+    guia(letter.altura, true, 0.18),
     rotulo('linha de base', 20, { x: W - 200, y: Y(0) - 12 }),
     rotulo('altura-x 500 u', 20, { x: W - 200, y: Y(500) - 12 }),
     // n da Figtree Bold em contorno
@@ -502,28 +499,27 @@ function construcao() {
     `<path d="M560 ${Y(250)}H636M622 ${Y(250) - 12}L638 ${Y(250)}L622 ${Y(250) + 12}" fill="none" stroke="${T.tintaSuave}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`,
     // Portal (letra)
     `<path fill="${T.azul}" d="${pl.arco}"/>`,
-    `<circle cx="${r3(cxL)}" cy="${r3(Y(269))}" r="${r3(243 * k)}" fill="none" stroke="${T.azul}" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="6 7"/>`,
-    `<circle cx="${r3(cxL)}" cy="${r3(Y(284))}" r="${r3(111 * k)}" fill="none" stroke="${T.pergaminho}" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="5 6"/>`,
+    `<path d="${outerGuide}" fill="none" stroke="${T.pergaminho}" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 7"/>`,
+    `<path d="${innerGuide}" fill="none" stroke="${T.azul}" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="5 6"/>`,
     `<path fill="${T.ouro}" d="${pl.cruz}"/>`,
     `<line x1="${r3(cxL)}" y1="${r3(Y(560))}" x2="${r3(cxL)}" y2="${base + 20}" stroke="${T.azul}" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 6"/>`,
-    `<path d="M${r3(cxL - 243 * k)} ${r3(Y(512) - 34)}H${r3(cxL + 243 * k)}M${r3(cxL - 243 * k)} ${r3(Y(512) - 44)}V${r3(Y(512) - 24)}M${r3(cxL + 243 * k)} ${r3(Y(512) - 44)}V${r3(Y(512) - 24)}" stroke="${T.tintaSuave}" stroke-width="2"/>`,
-    rotulo('486', 20, { cx: cxL, y: Y(512) - 46 }),
-    colchete(cxL - 243 * k, cxL - 111 * k, base + 34),
-    colchete(cxL + 111 * k, cxL + 243 * k, base + 34),
-    colchete(cxL - 111 * k, cxL + 111 * k, base + 34, T.tintaSuave),
-    rotulo('132', 20, { cx: cxL - 177 * k, y: base + 66 }, T.ouro),
-    rotulo('222', 20, { cx: cxL, y: base + 66 }),
-    rotulo('132', 20, { cx: cxL + 177 * k, y: base + 66 }, T.ouro),
-    rotulo('R 243', 18, { x: cxL + 243 * k + 10, y: Y(269) + 6 }),
-    rotulo('Portal (letra) 486 × 512', 24, { cx: cxL, y: base + 112 }, T.tinta),
+    `<path d="M${r3(cxL - R * k)} ${r3(Y(letter.altura) - 34)}H${r3(cxL + R * k)}M${r3(cxL - R * k)} ${r3(Y(letter.altura) - 44)}V${r3(Y(letter.altura) - 24)}M${r3(cxL + R * k)} ${r3(Y(letter.altura) - 44)}V${r3(Y(letter.altura) - 24)}" stroke="${T.tintaSuave}" stroke-width="2"/>`,
+    rotulo('512', 20, { cx: cxL, y: Y(letter.altura) - 46 }),
+    colchete(cxL - R * k, cxL - r * k, base + 34),
+    colchete(cxL + r * k, cxL + R * k, base + 34),
+    colchete(cxL - r * k, cxL + r * k, base + 34, T.tintaSuave),
+    rotulo(String(PORTAL.haste), 20, { cx: cxL - (R + r) / 2 * k, y: base + 66 }, T.ouro),
+    rotulo(String(2 * r), 20, { cx: cxL, y: base + 66 }),
+    rotulo(String(PORTAL.haste), 20, { cx: cxL + (R + r) / 2 * k, y: base + 66 }, T.ouro),
+    rotulo('N/Portal (letra) 512 × 512', 24, { cx: cxL, y: base + 112 }, T.tinta),
     // Porta (ícone)
     `<path fill="${T.azul}" d="${pd.arco}"/>`,
     `<path fill="${T.ouro}" d="${pd.cruz}"/>`,
-    `<path d="M${r3(cxD + 243 * k + 22)} ${r3(Y(666))}V${base}M${r3(cxD + 243 * k + 12)} ${r3(Y(666))}H${r3(cxD + 243 * k + 32)}M${r3(cxD + 243 * k + 12)} ${base}H${r3(cxD + 243 * k + 32)}" stroke="${T.tintaSuave}" stroke-width="2"/>`,
-    rotulo('666', 20, { x: cxD + 243 * k + 30, y: Y(333) + 7 }),
-    rotulo('Porta (ícone) 486 × 666', 24, { cx: cxD, y: base + 112 }, T.tinta),
-    rotulo('Cruz: hastes de 58 · travessão 150 no terço superior · flutua 55 acima da base (letra) / 111 (porta)', 20, { x: 120, y: 60 }),
-    rotulo('Abertura com topo em 395 (letra): espessura de 117 no alto, a mesma compensação óptica dos arcos da Figtree', 20, { x: 120, y: 92 }),
+    `<path d="M${r3(cxD + R * k + 22)} ${r3(Y(door.altura))}V${base}M${r3(cxD + R * k + 12)} ${r3(Y(door.altura))}H${r3(cxD + R * k + 32)}M${r3(cxD + R * k + 12)} ${base}H${r3(cxD + R * k + 32)}" stroke="${T.tintaSuave}" stroke-width="2"/>`,
+    rotulo(String(door.altura), 20, { x: cxD + R * k + 30, y: Y(door.altura / 2) + 7 }),
+    rotulo('Porta (ícone) 512 × 666', 24, { cx: cxD, y: base + 112 }, T.tinta),
+    rotulo('Cruz: haste 52 · travessão 144 · flutua 64 u acima da base; mesma geometria nos tamanhos digitais', 20, { x: 120, y: 60 }),
+    rotulo('Vão 212 u · coroa plana 96/48 u · espessura 150 u · perfil cúbico próprio', 20, { x: 120, y: 92 }),
   ].join('\n');
   return svgDoc(W, H, body, { title: 'Sancta — construção do Portal (unidades da fonte Figtree Bold)' });
 }
@@ -531,6 +527,7 @@ function construcao() {
 function areaProtecao() {
   const s = 0.28;
   const x = 512 * s; // área de proteção = altura do Portal
+  const symbolRatio = (2 * PORTAL.raioExterno) / PORTAL.letra.altura;
   const ox = 60;
   const oy = 60;
   const w = WM.largura * s + 2 * x;
@@ -546,8 +543,8 @@ function areaProtecao() {
     `<rect width="${r3(W)}" height="${r3(H)}" fill="${T.pergaminho}"/>`,
     `<rect x="${ox}" y="${oy}" width="${r3(w)}" height="${r3(h)}" fill="${T.azul}" fill-opacity="0.05" stroke="${T.azul}" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="10 8"/>`,
     `<rect x="${r3(ox + x)}" y="${r3(oy + x)}" width="${r3(WM.largura * s)}" height="${r3(WM.altura * s)}" fill="none" stroke="${T.azul}" stroke-opacity="0.25" stroke-width="1.5"/>`,
-    mini(ox + x / 2 * (486 / 512), oy + x + WM.maxY * s),
-    mini(ox + x + WM.largura * s + x / 2 * (486 / 512) + (x - x * (486 / 512)), oy + x + WM.maxY * s),
+    mini(ox + x / 2 * symbolRatio, oy + x + WM.maxY * s),
+    mini(ox + x + WM.largura * s + x / 2 * symbolRatio + (x - x * symbolRatio), oy + x + WM.maxY * s),
     mini(ox + x + (WM.largura * s) / 2, oy + x),
     mini(ox + x + (WM.largura * s) / 2, oy + h),
     `<path fill="${T.azul}" d="${wp.letras}${wp.arco}"/>`,

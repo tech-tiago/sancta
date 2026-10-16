@@ -1,16 +1,16 @@
 import 'dart:math' as math;
 import 'dart:ui';
 
-/// Proporções do Portal.
+/// Proporções do símbolo Sancta Portal/N.
 enum PortalShape {
-  /// Proporção da letra (486 × 512 u): o Portal que ocupa o lugar do "n" no wordmark.
+  /// Proporção da letra (512 × 512 u): o símbolo que ocupa o lugar do "n" no wordmark.
   letter,
 
-  /// Proporção vertical (486 × 666 u): a "porta" do ícone do app.
+  /// Proporção vertical (512 × 666 u): a porta do ícone do app.
   door,
 }
 
-/// Medidas da cruz (unidades da fonte, eixo y para cima, x centrado no Portal).
+/// Medidas da cruz.
 class PortalCrossSpec {
   const PortalCrossSpec({
     required this.halfWidth,
@@ -21,74 +21,76 @@ class PortalCrossSpec {
     required this.barTop,
   });
 
-  /// Meia espessura da haste vertical (haste = 58 u).
+  /// Meia espessura da haste vertical.
   final double halfWidth;
 
-  /// Pé da haste vertical (a cruz flutua acima da linha de base, como nas imagens aprovadas).
+  /// Pé da haste vertical (a cruz flutua acima da linha de base).
   final double bottom;
 
   /// Topo da haste vertical.
   final double top;
 
-  /// Meia largura do travessão (travessão = 150 u).
+  /// Meia largura do travessão.
   final double armHalfWidth;
 
-  /// Base e topo do travessão (no terço superior da cruz).
+  /// Base e topo do travessão.
   final double barBottom;
   final double barTop;
 }
 
-/// Geometria do símbolo **Portal** — as MESMAS coordenadas do master vetorial
-/// (`brand/source/portal.js` → `brand/symbol/*.svg`, `app/assets/brand/portal_*.svg`).
+/// Geometria do Portal/N — arco vetorial robusto e proprietário, com a cruz como luz no vão.
 ///
-/// Unidades = unidades da fonte Figtree Bold (1000 por em): hastes de 132 u (iguais às do "n"),
-/// arco externo semicircular de raio 243 u com topo no overshoot do n (512 u), abertura em arco de
-/// raio 111 u (topo em 395 u: espessura de 117 u no alto, a compensação óptica dos arcos da Figtree)
-/// e cruz Ouro de 58 u de espessura com o travessão no terço superior.
-///
-/// Todos os métodos devolvem `Path`s já escalados para caber (contain, centralizado) em um [Size],
-/// prontos para `Canvas.drawPath`, `ClipPath` ou animação com `PathMetrics`.
+/// As coordenadas correspondem a `brand/source/portal.js` e são compartilhadas pelos SVGs, ícones,
+/// wordmark e animações. Todos os métodos devolvem `Path`s escalados para caber (contain, centralizado)
+/// em um [Size], prontos para `Canvas.drawPath`, `ClipPath` ou animação com `PathMetrics`.
 class PortalGeometry {
   const PortalGeometry._({required this.height, required this.outerCenterY, required this.innerCenterY, required this.cross});
 
-  /// Espessura das hastes (= haste do "n" da Figtree Bold).
-  static const double stem = 132;
+  /// Raio horizontal externo (metade da largura total).
+  static const double outerRadius = 256;
 
-  /// Raio do arco externo.
-  static const double outerRadius = 243;
+  /// Raio horizontal do vão interno.
+  static const double innerRadius = 106;
 
-  /// Raio da abertura.
-  static const double innerRadius = 111;
+  /// Espessura nominal das hastes laterais.
+  static const double stem = outerRadius - innerRadius;
 
-  /// Largura total do Portal (2 × raio externo).
+  /// Alças das curvas cúbicas da abóbada externa e do vão interno.
+  static const double outerHandle = 144;
+  static const double outerCrownInset = 48;
+  static const double innerSideHandle = 60;
+  static const double innerCrownHandle = 42;
+  static const double innerTopHalf = 24;
+
+  /// Largura total do símbolo.
   static const double width = 2 * outerRadius;
 
-  /// Portal na proporção da letra (wordmark, símbolo, splash).
+  /// Proporção da letra (wordmark, símbolo, splash).
   static const PortalGeometry letter = PortalGeometry._(
     height: 512,
-    outerCenterY: 269,
-    innerCenterY: 284,
-    cross: PortalCrossSpec(halfWidth: 29, bottom: 55, top: 317, armHalfWidth: 75, barBottom: 207, barTop: 265),
+    outerCenterY: 256,
+    innerCenterY: 256,
+    cross: PortalCrossSpec(halfWidth: 26, bottom: 64, top: 314, armHalfWidth: 72, barBottom: 214, barTop: 266),
   );
 
-  /// Portal em proporção vertical (ícone do app): hastes alongadas em 154 u.
+  /// Proporção vertical (ícone do app): laterais alongadas em 154 u.
   static const PortalGeometry door = PortalGeometry._(
     height: 666,
-    outerCenterY: 423,
-    innerCenterY: 438,
-    cross: PortalCrossSpec(halfWidth: 29, bottom: 111, top: 405, armHalfWidth: 75, barBottom: 285, barTop: 343),
+    outerCenterY: 410,
+    innerCenterY: 410,
+    cross: PortalCrossSpec(halfWidth: 26, bottom: 141, top: 391, armHalfWidth: 72, barBottom: 291, barTop: 343),
   );
 
   /// Geometria de uma proporção.
   static PortalGeometry of(PortalShape shape) => shape == PortalShape.door ? door : letter;
 
-  /// Altura total (topo do arco; a base é y = 0).
+  /// Altura total (topo da abóbada; a base é y = 0).
   final double height;
 
-  /// Altura do centro do arco externo (onde as hastes viram arco).
+  /// Altura onde a curva externa começa.
   final double outerCenterY;
 
-  /// Altura do centro do arco da abertura.
+  /// Altura onde o vão interno começa.
   final double innerCenterY;
 
   /// Medidas da cruz.
@@ -97,63 +99,74 @@ class PortalGeometry {
   /// Largura ÷ altura.
   double get aspectRatio => width / height;
 
-  /// Topo da abertura (em unidades).
+  /// Topo do vão interior (em unidades).
   double get openingTop => innerCenterY + innerRadius;
 
   /// Escala (px por unidade) usada para caber em [size].
   double scaleFor(Size size) => math.min(size.width / width, size.height / height);
 
-  /// Espessura da haste em px para [size] (útil para o traço de [centerline]).
+  /// Espessura das hastes em px para [size].
   double stemWidth(Size size) => stem * scaleFor(size);
 
-  /// Retângulo ocupado pelo Portal dentro de [size].
+  /// Retângulo ocupado pelo símbolo dentro de [size].
   Rect bounds(Size size) {
     final f = _Fit.of(this, size);
     return Rect.fromLTWH(f.dx, f.dy, width * f.s, height * f.s);
   }
 
-  /// O arco (forma "∩": contorno externo menos a abertura) — o que se pinta com a cor do arco.
+  /// O arco preenchido (contorno externo menos o vão interno).
   Path arch(Size size) {
     final f = _Fit.of(this, size);
     const r = outerRadius;
     const i = innerRadius;
+    final outerTop = height;
+    final innerTop = openingTop;
     return Path()
       ..moveTo(f.x(-r), f.y(0))
       ..lineTo(f.x(-r), f.y(outerCenterY))
-      ..arcToPoint(Offset(f.x(r), f.y(outerCenterY)), radius: Radius.circular(r * f.s))
+      ..cubicTo(f.x(-r), f.y(outerCenterY + outerHandle), f.x(-outerHandle), f.y(outerTop), f.x(-outerCrownInset), f.y(outerTop))
+      ..lineTo(f.x(outerCrownInset), f.y(outerTop))
+      ..cubicTo(f.x(outerHandle), f.y(outerTop), f.x(r), f.y(outerCenterY + outerHandle), f.x(r), f.y(outerCenterY))
       ..lineTo(f.x(r), f.y(0))
       ..lineTo(f.x(i), f.y(0))
       ..lineTo(f.x(i), f.y(innerCenterY))
-      ..arcToPoint(Offset(f.x(-i), f.y(innerCenterY)), radius: Radius.circular(i * f.s), clockwise: false)
+      ..cubicTo(f.x(i), f.y(innerCenterY + innerSideHandle), f.x(innerCrownHandle), f.y(innerTop), f.x(innerTopHalf), f.y(innerTop))
+      ..lineTo(f.x(-innerTopHalf), f.y(innerTop))
+      ..cubicTo(f.x(-innerCrownHandle), f.y(innerTop), f.x(-i), f.y(innerCenterY + innerSideHandle), f.x(-i), f.y(innerCenterY))
       ..lineTo(f.x(-i), f.y(0))
       ..close();
   }
 
-  /// Contorno externo (silhueta da porta, cheia). Útil para recortes, brilho e o ícone de aba "Hoje".
+  /// Silhueta externa cheia (útil para recortes e brilho).
   Path outline(Size size) {
     final f = _Fit.of(this, size);
     const r = outerRadius;
     return Path()
       ..moveTo(f.x(-r), f.y(0))
       ..lineTo(f.x(-r), f.y(outerCenterY))
-      ..arcToPoint(Offset(f.x(r), f.y(outerCenterY)), radius: Radius.circular(r * f.s))
+      ..cubicTo(f.x(-r), f.y(outerCenterY + outerHandle), f.x(-outerHandle), f.y(height), f.x(-outerCrownInset), f.y(height))
+      ..lineTo(f.x(outerCrownInset), f.y(height))
+      ..cubicTo(f.x(outerHandle), f.y(height), f.x(r), f.y(outerCenterY + outerHandle), f.x(r), f.y(outerCenterY))
       ..lineTo(f.x(r), f.y(0))
       ..close();
   }
 
-  /// A abertura (vão interno em arco) — onde "acende" a luz.
+  /// Vão interno recortado (onde a luz pode aparecer).
   Path opening(Size size) {
     final f = _Fit.of(this, size);
     const i = innerRadius;
+    final top = openingTop;
     return Path()
       ..moveTo(f.x(-i), f.y(0))
       ..lineTo(f.x(-i), f.y(innerCenterY))
-      ..arcToPoint(Offset(f.x(i), f.y(innerCenterY)), radius: Radius.circular(i * f.s))
+      ..cubicTo(f.x(-i), f.y(innerCenterY + innerSideHandle), f.x(-innerCrownHandle), f.y(top), f.x(-innerTopHalf), f.y(top))
+      ..lineTo(f.x(innerTopHalf), f.y(top))
+      ..cubicTo(f.x(innerCrownHandle), f.y(top), f.x(i), f.y(innerCenterY + innerSideHandle), f.x(i), f.y(innerCenterY))
       ..lineTo(f.x(i), f.y(0))
       ..close();
   }
 
-  /// A cruz (haste vertical + travessão), um único polígono.
+  /// Cruz (haste + travessão), um único polígono.
   Path crossPath(Size size) {
     final f = _Fit.of(this, size);
     final c = cross;
@@ -173,16 +186,21 @@ class PortalGeometry {
     ], true);
   }
 
-  /// Linha central do arco (da base da haste esquerda, pelo alto, até a base da direita), para animações
-  /// de "desenho" com `PathMetric.extractPath` + traço de espessura [stemWidth] e pontas retas.
+  /// Linha central da abóbada, equidistante dos contornos externo e interno.
   Path centerline(Size size) {
     final f = _Fit.of(this, size);
     const m = (outerRadius + innerRadius) / 2;
     final cy = (outerCenterY + innerCenterY) / 2;
+    final top = (height + openingTop) / 2;
+    const side = (outerHandle + innerSideHandle) / 2;
+    const crown = (outerHandle + innerCrownHandle) / 2;
+    const topHalf = (outerCrownInset + innerTopHalf) / 2;
     return Path()
       ..moveTo(f.x(-m), f.y(0))
       ..lineTo(f.x(-m), f.y(cy))
-      ..arcToPoint(Offset(f.x(m), f.y(cy)), radius: Radius.circular(m * f.s))
+      ..cubicTo(f.x(-m), f.y(cy + side), f.x(-crown), f.y(top), f.x(-topHalf), f.y(top))
+      ..lineTo(f.x(topHalf), f.y(top))
+      ..cubicTo(f.x(crown), f.y(top), f.x(m), f.y(cy + side), f.x(m), f.y(cy))
       ..lineTo(f.x(m), f.y(0));
   }
 }

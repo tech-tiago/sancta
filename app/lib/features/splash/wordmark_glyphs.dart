@@ -13,8 +13,8 @@ abstract final class WordmarkGlyphs {
   /// Linha de base (y): as letras descem até 724 (overshoot); o Portal pousa em 712.
   static const double baseline = 712;
 
-  /// Canto superior esquerdo do Portal no lugar do "n" (486 × 512, como `PortalGeometry.letter`).
-  static const double portalLeft = 1127.522;
+  /// Canto superior esquerdo do Portal/N no wordmark (512 × 512, como `PortalGeometry.letter`).
+  static const double portalLeft = 1114.522;
   static const double portalTop = 200;
 
   /// Letras: (letra, contorno SVG, lado do Portal: -1 = "Sa" / 1 = "cta", ordem de entrada a partir do Portal).

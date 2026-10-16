@@ -3,13 +3,13 @@
   Splash nativo (Android < 12, e fundo da janela até o primeiro quadro do Flutter): Azul Manto com o
   Portal Pergaminho + cruz Ouro centralizado, com 110 dp de altura — exatamente o mesmo tamanho e
   posição do Portal de sancta_portal_splash.xml (Android 12+) e do primeiro quadro da abertura em
-  Flutter (lib/features/splash). 104.41 dp = 110 × 486 / 512 (proporção da letra).
+  Flutter (lib/features/splash). O N/Portal é quadrado (512 × 512), então ocupa 110 × 110 dp.
   Dono: Motion (docs/design/MOTION.md).
 -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/sancta_splash_background" />
     <item
-        android:width="104.41dp"
+        android:width="110dp"
         android:height="110dp"
         android:drawable="@drawable/sancta_portal"
         android:gravity="center" />

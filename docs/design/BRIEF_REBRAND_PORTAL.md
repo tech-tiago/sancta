@@ -14,10 +14,10 @@ plataforma Android, backend, QA e segurança). **Leia inteiro antes de começar.
 
 ## 1. Identidade "Portal"
 
-**Ideia:** Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo é a **porta de um
-santuário**, com a **cruz como a luz lá dentro**. O arco nasce da letra **n da Figtree Bold** (mesma haste,
-mesma curva) — por isso o símbolo mora dentro do próprio nome: `Sa[portal]cta`. No app, **o arco vira
-moldura** para imagens e orações: a marca está em cada tela.
+**Ideia:** Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo une um **n desenhado para
+a marca** à porta de um santuário, com a **cruz como a luz lá dentro**. A Figtree Bold inspira a estrutura, mas
+a curva e o peso são próprios do Sancta: coroa plana curta, ombros suaves e hastes reforçadas. Assim, o símbolo
+mora dentro do nome (`Sa[portal]cta`). No app, **o arco vira moldura** para imagens e orações: a marca está em cada tela.
 
 ### Cores (tokens oficiais — não invente outras como cor de marca)
 | Token | Hex | Uso |
@@ -44,8 +44,9 @@ validada no Flutter) nas configurações de leitura. ⚠️ Cormorant Garamond �
 Valide acentuação (ê, ç, ã, õ, é, ú) no Flutter com um teste de renderização.
 
 ### Símbolo e logotipo
-- **Portal**: arco com hastes iguais às do n da Figtree Bold; abertura interna em arco; **cruz Ouro**
-  centrada na abertura (haste vertical até a linha de base, travessão no terço superior).
+- **N/Portal** (master atual): corpo 512 × 512 u, haste de 150 u, coroa externa plana de 96 u, vão de 212 u
+  com coroa plana de 48 u; ombros cúbicos. **Cruz Ouro** com haste de 52 u e travessão de 144 u, flutuando
+  64 u acima da base. A porta do ícone é 512 × 666 u e reposiciona a cruz para o centro óptico do vão alto.
 - **Wordmark**: "Sa" + Portal + "cta" em Figtree Bold (texto convertido em curvas). Versões: Pergaminho
   sobre azul; Azul Manto sobre claro; monocromáticas (branca/escura, cruz vazada ou na mesma cor).
 - **Ícone do app**: a mesma porta em proporção vertical. Padrão (fundo Azul Manto), Escuro (fundo
@@ -166,7 +167,8 @@ As dependências Flutter `flutter_svg`, `home_widget`, `flutter_local_notificati
 6. Downloads só de fontes oficiais e confiáveis (github.com/google/fonts, fonts.gstatic.com, registro npm
    oficial). Nada de executáveis. Nenhuma publicação externa, nenhum e-mail real, nenhuma conta criada em
    serviços de terceiros.
-7. Sem `git commit`/push (o projeto não é repositório). Snapshot de segurança já feito antes do rebrand.
+7. O projeto está versionado em `tech-tiago/sancta`; trabalhe em branch e mantenha as alterações de marca
+   sincronizadas em `brand/source/portal.js`, `PortalGeometry`, exports Android/web e testes.
 8. Não edite `.env` com segredos; novas variáveis vão para `.env.example` (e, se precisar localmente, no
    `.env` com valores de teste documentados).
 9. Ao terminar, devolva um resumo: o que mudou (por arquivo/área), testes executados e resultado,

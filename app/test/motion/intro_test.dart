@@ -220,7 +220,7 @@ void main() {
       expect(v31, contains('@drawable/sancta_portal_splash'));
       final splash = File('android/app/src/main/res/drawable/sancta_portal_splash.xml').readAsStringSync();
       // Portal de 110 dp de altura (de y = 89 a 199) centrado no ícone de 288 dp.
-      expect(splash, contains('M91.793 199V141.207A52.207 52.207'));
+      expect(splash, contains('M89 199V144C89 113.063 113.063 89 133.688 89H154.313'));
     });
 
     test('parser de contornos: letras com as caixas esperadas', () {

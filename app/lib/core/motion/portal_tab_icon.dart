@@ -116,7 +116,7 @@ class PortalTabPainter extends CustomPainter {
 
 /// O arco do Portal (proporção da letra) em qualquer espessura: [fill] 0 = contorno fino de
 /// [strokeWidth] px (a mesma silhueta externa), 1 = o arco oficial (`PortalGeometry.letter.arch`).
-/// A abertura encolhe do contorno externo até o arco interno de raio 111 u, sem mudar a silhueta.
+/// A abertura encolhe do contorno externo até a coroa Bézier interna de 106 u, sem mudar a silhueta.
 Path portalArchAt(Size size, double fill, {double strokeWidth = 2}) {
   const g = PortalGeometry.letter;
   const r = PortalGeometry.outerRadius;
@@ -126,17 +126,33 @@ Path portalArchAt(Size size, double fill, {double strokeWidth = 2}) {
   double x(double u) => dx + (u + r) * s;
   double y(double u) => dy + (g.height - u) * s;
 
+  final progress = fill.clamp(0.0, 1.0);
   final thin = (r - strokeWidth / s).clamp(PortalGeometry.innerRadius, r);
-  final i = ui.lerpDouble(thin, PortalGeometry.innerRadius, fill.clamp(0.0, 1.0))!;
-  final iy = ui.lerpDouble(g.outerCenterY, g.innerCenterY, fill.clamp(0.0, 1.0))!;
+  final i = ui.lerpDouble(thin, PortalGeometry.innerRadius, progress)!;
+  final iy = ui.lerpDouble(g.outerCenterY, g.innerCenterY, progress)!;
+  final side = ui.lerpDouble(PortalGeometry.outerHandle * i / r, PortalGeometry.innerSideHandle, progress)!;
+  final crown = ui.lerpDouble(PortalGeometry.outerHandle * i / r, PortalGeometry.innerCrownHandle, progress)!;
+  final topHalf = ui.lerpDouble(PortalGeometry.outerCrownInset * i / r, PortalGeometry.innerTopHalf, progress)!;
+  final innerTop = iy + i;
   return Path()
     ..moveTo(x(-r), y(0))
     ..lineTo(x(-r), y(g.outerCenterY))
-    ..arcToPoint(Offset(x(r), y(g.outerCenterY)), radius: Radius.circular(r * s))
+    ..cubicTo(
+      x(-r),
+      y(g.outerCenterY + PortalGeometry.outerHandle),
+      x(-PortalGeometry.outerHandle),
+      y(g.height),
+      x(-PortalGeometry.outerCrownInset),
+      y(g.height),
+    )
+    ..lineTo(x(PortalGeometry.outerCrownInset), y(g.height))
+    ..cubicTo(x(PortalGeometry.outerHandle), y(g.height), x(r), y(g.outerCenterY + PortalGeometry.outerHandle), x(r), y(g.outerCenterY))
     ..lineTo(x(r), y(0))
     ..lineTo(x(i), y(0))
     ..lineTo(x(i), y(iy))
-    ..arcToPoint(Offset(x(-i), y(iy)), radius: Radius.circular(i * s), clockwise: false)
+    ..cubicTo(x(i), y(iy + side), x(crown), y(innerTop), x(topHalf), y(innerTop))
+    ..lineTo(x(-topHalf), y(innerTop))
+    ..cubicTo(x(-crown), y(innerTop), x(-i), y(iy + side), x(-i), y(iy))
     ..lineTo(x(-i), y(0))
     ..close();
 }

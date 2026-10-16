@@ -1,4 +1,4 @@
-# Manual da marca Sancta — "Portal"
+# Manual da marca Sancta — "N/Portal"
 
 > Vitrine visual de todos os assets: `brand/index.html` (sirva a raiz do projeto, por exemplo
 > `php -S 127.0.0.1:8010 -t .`, e abra `/brand/index.html`). Todos os arquivos são gerados por
@@ -6,10 +6,10 @@
 
 ## 1. Ideia
 
-Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo é a **porta de um santuário**,
-com a **cruz como a luz lá dentro**. O arco nasce do **"n" da Figtree Bold** — mesma haste, mesma curva —
-por isso o símbolo mora dentro do próprio nome: `Sa[portal]cta`. No app, **o arco vira moldura** para
-imagens e orações: a marca está em cada tela.
+Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo combina um **"n" desenhado para a marca**
+com a **porta de um santuário**; a cruz de Ouro é a luz lá dentro. A letra inspira a estrutura, mas a geometria
+é redesenhada para ter mais presença, peso e assinatura própria. Assim, o símbolo mora dentro do nome:
+`Sa[portal]cta`. No app, **o arco vira moldura** para imagens e orações: a marca está em cada tela.
 
 ## 2. Construção do Portal
 
@@ -19,20 +19,19 @@ Unidades = unidades da fonte Figtree Bold (1000 por em). Linha de base em 0, alt
 
 | Elemento | Medida | Origem |
 |---|---|---|
-| Hastes | 132 u | iguais às hastes do "n" (57→189 e 388→520) |
-| Arco externo | semicírculo de raio 243 u (largura 486 u), centro em 269 u | topo no overshoot do "n" (512 u) |
-| Abertura | semicírculo de raio 111 u (vão de 222 u), centro em 284 u, topo em 395 u | espessura no alto = 117 u (89% da haste): a mesma compensação óptica dos arcos da Figtree (no "n": 124 u) |
-| Cruz (Ouro) | hastes de 58 u; travessão de 150 u entre 207 e 265 u; vertical de 55 a 317 u | travessão no terço superior; a cruz flutua 55 u acima da base, como nas imagens aprovadas |
-| Porta (ícone) | mesmo arco com as hastes alongadas 154 u → 486 × 666 u; cruz de 111 a 405 u, travessão 285–343 u | proporção vertical do mockup |
+| Hastes | 150 u | peso reforçado em relação ao "n" tipográfico, para legibilidade e presença em escala pequena |
+| Abóbada externa | 512 × 512 u; alça externa de 144 u; coroa plana de 96 u | ombros cúbicos suaves e topo no overshoot do "n"; assinatura própria sem detalhe decorativo |
+| Vão interno | 212 u de largura, topo em 362 u; coroa plana de 48 u; alças de 60 u nas laterais e 42 u na coroa | espessura de 150 u no alto e nas hastes; espaço livre para a cruz |
+| Cruz (Ouro) | haste de 52 u; travessão de 144 u entre 214 e 266 u; vertical de 64 a 314 u | proporção geométrica; flutua 64 u acima da base |
+| Porta (ícone) | mesma curva com as hastes alongadas 154 u → 512 × 666 u; cruz de 141 a 391 u, travessão 291–343 u | proporção vertical do app; cruz centrada no vão mais alto |
 | No wordmark | o Portal ocupa o lugar do "n", centrado no olho do n | ajuste óptico medido na referência: S→a −18 u, c→t −18 u, t→a −15 u (além do kerning da fonte) |
 
 As mesmas coordenadas estão em `brand/source/portal.js` (masters SVG/Android) e em
 `app/lib/core/brand/portal_geometry.dart` (`PortalGeometry`) — um teste (`app/test/brand_test.dart`)
 garante que continuam iguais.
 
-> Decisão: o brief pedia "haste vertical até a linha de base", mas as imagens aprovadas pelo cliente
-> mostram a cruz flutuando ~1 espessura acima da base. Seguimos as imagens aprovadas: a cruz solta lê
-> melhor como "luz dentro da porta" e não divide a abertura em duas frestas nos tamanhos pequenos.
+> Decisão: manter a cruz flutuando, como luz dentro da porta. A folga de 64 u preserva o vão aberto e
+> impede que a cruz divida o símbolo em duas frestas nos tamanhos pequenos.
 
 ## 3. Área de proteção e tamanhos mínimos
 
@@ -42,10 +41,10 @@ garante que continuam iguais.
   do símbolo isolado.
 - **Tamanhos mínimos**
   - Wordmark: 16 px de altura (≈ 67 px de largura) na tela; 5 mm de altura impresso.
-  - Símbolo (Portal): 16 px de altura. Em fundos claros abaixo de 24 px, prefira a versão mono (a cruz
+  - Símbolo (N/Portal): 16 px de altura. Em fundos claros abaixo de 24 px, prefira a versão mono (a cruz
     Ouro tem pouco contraste sobre Pergaminho).
-  - Ícone do app: validado em 29 px (ajustes). Favicons 16/32/48 px têm desenho próprio alinhado à grade
-    de pixels (Portal maior no quadro e cruz mais encorpada).
+  - Ícone do app: validado em 29 px (ajustes). Favicons 16/32/48 px usam a mesma curva do master, apenas
+    escalada — não há uma segunda geometria que possa divergir da marca.
   - Notificação: 24 dp, desenhada na grade de 24 com área útil de 20 dp.
 
 ## 4. Cores
@@ -111,7 +110,7 @@ de marca para interface.
 
 ## 7. Ícone do app
 
-- A mesma porta em **proporção vertical** (486 × 666 u), com 59,5% da altura do quadro, centrada.
+- A mesma porta em **proporção vertical** (512 × 666 u), com 59,5% da altura do quadro, centrada.
 - Versões: **Padrão** (fundo Azul Manto), **Escuro** (fundo Tinta), **Tingido** (cinzas `#111/#DADADA/#9B9B9B`).
   Masters 1024 px em quadrado cheio (`brand/app-icon/`): as plataformas aplicam a máscara.
 - **Android**
@@ -122,14 +121,12 @@ de marca para interface.
     como o "Tingido").
   - Legado (API < 26): `mipmap-*/ic_launcher.png` (quadrado arredondado) e `ic_launcher_round.png` (círculo),
     48/72/96/144/192 px.
-  - `mipmap-*/ic_launcher_foreground.png` foi mantido com a arte nova só porque os estilos de splash v31 ainda
-    apontam para `@mipmap/ic_launcher_foreground` (Motion deve trocar para `@drawable/sancta_portal_splash`).
   - Notificação: `drawable/ic_notification.xml` (vetor branco 24 dp; o sistema aplica a cor de destaque —
     use Azul Manto `#1F3D9C`). Os PNG antigos `drawable-*/ic_notification.png` foram removidos.
   - Splash/widget: `drawable/sancta_portal.xml` (Pergaminho + Ouro), `drawable/sancta_portal_mono.xml`
-    (branco, tingível com `android:tint`), `drawable/sancta_portal_splash.xml` (288 dp para
-    `windowSplashScreenAnimatedIcon`, Portal de 110 dp dentro do círculo de 192 dp) e `drawable/splash_logo.png`
-    (mesmo nome usado por `launch_background.xml`, arte nova).
+    (branco, tingível com `android:tint`) e `drawable/sancta_portal_splash.xml` (288 dp para
+    `windowSplashScreenAnimatedIcon`, N/Portal de 110 dp dentro do círculo de 192 dp). O splash legado e o
+    v31 usam esses vetores; PNGs de foreground/splash sem referência foram removidos.
 - **Web**: `favicon.svg` e `favicon-16/32/48.png` (desenho alinhado à grade), `/favicon.ico` (16+32+48),
   `apple-touch-icon.png` 180 (quadrado cheio), `icon-192/512.png` (cantos arredondados), `icon-maskable-512.png`
   (quadrado cheio, conteúdo dentro da zona segura de 80%), `/site.webmanifest`.

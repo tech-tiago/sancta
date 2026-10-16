@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/brand/editorial_art.dart';
 import '../../core/models/models.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/common.dart';
@@ -34,6 +35,7 @@ class JourneyCard extends StatelessWidget {
             children: [
               ArchCover(
                 url: j.coverUrl,
+                assetPath: EditorialArt.forJourney(j.title, j.slug),
                 scene: skyFor(j.slug),
                 aspectRatio: 1.3,
                 child: j.isPremium ? const Stack(children: [Positioned(left: 10, bottom: 10, child: PremiumBadge(compact: true))]) : null,
@@ -74,7 +76,7 @@ class JourneyWideCard extends StatelessWidget {
           padding: const EdgeInsets.all(14),
           child: Row(
             children: [
-              ArchThumb(url: j.coverUrl, scene: skyFor(j.slug), width: 56),
+              ArchThumb(url: j.coverUrl, assetPath: EditorialArt.forJourney(j.title, j.slug), scene: skyFor(j.slug), width: 56),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(

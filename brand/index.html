@@ -58,6 +58,10 @@
     .tipo { display: grid; gap: 12px; }
     .tipo p { margin: 0; }
     .ceus { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .editorial-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+    .editorial-card { overflow: hidden; border: 1px solid var(--linha); border-radius: 18px; background: #fff; box-shadow: 0 12px 28px rgba(14, 26, 58, .08); }
+    .editorial-card img { width: 100%; height: 250px; object-fit: cover; }
+    .editorial-card p { margin: 0; padding: 12px 14px 14px; font-size: 14px; font-weight: 600; }
     .arco { border-radius: 999px 999px 0 0; overflow: hidden; }
     .arco img { width: 100%; }
     .retratos { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
@@ -198,6 +202,23 @@
   </section>
 
   <section class="claro">
+    <h2>Arte editorial — oração, santos e leitura</h2>
+    <p class="sub">Uma família de ilustrações em papel recortado e gravura impressa, criada para dar presença às jornadas do dia sem substituir a identidade Portal.</p>
+    <div class="editorial-grid">
+      <article class="editorial-card"><img src="../backend/public/images/editorial/sancta-hero-marian.webp" alt="Colagem editorial mariana para o destaque principal" loading="lazy" decoding="async"><p>Hero mariano · site</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/sao-carlo-acutis.webp" alt="Retrato editorial de São Carlo Acutis" loading="lazy" decoding="async"><p>São Carlo Acutis</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/nossa-senhora-aparecida.webp" alt="Ilustração devocional de Nossa Senhora Aparecida" loading="lazy" decoding="async"><p>Nossa Senhora Aparecida</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/sao-jose.webp" alt="Retrato editorial de São José" loading="lazy" decoding="async"><p>São José</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/sao-francisco.webp" alt="Retrato editorial de São Francisco de Assis" loading="lazy" decoding="async"><p>São Francisco</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/oracao-manha.webp" alt="Cena de oração ao amanhecer" loading="lazy" decoding="async"><p>Oração da manhã</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/oracao-noite.webp" alt="Bíblia, terço e vela à noite" loading="lazy" decoding="async"><p>Oração da noite</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/leitura-biblica.webp" alt="Bíblia aberta à luz da janela" loading="lazy" decoding="async"><p>Leitura bíblica</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/jornada-rosario.webp" alt="Colagem mariana com um rosário" loading="lazy" decoding="async"><p>Jornada do Rosário</p></article>
+      <article class="editorial-card"><img src="../backend/public/images/editorial/fundo-acesso.webp" alt="Interior de capela com uma porta aberta e luz entrando" loading="lazy" decoding="async"><p>Fundo de acesso · site e app</p></article>
+    </div>
+  </section>
+
+  <section class="claro">
     <h2>Posturas litúrgicas</h2>
     <p class="sub">Uma cor só (o app tinge com a cor primária). PNG 256 px com os nomes de sempre + SVG.</p>
     <div class="posturas">
@@ -225,18 +246,22 @@
       <li><code>brand/logo/</code> wordmark, lockups com slogan, Sancta Gestão</li>
       <li><code>brand/app-icon/</code> ícones padrão, escuro, tingido (1024)</li>
       <li><code>brand/illustrations/</code> céus em paisagem e retrato</li>
+      <li><code>brand/editorial/</code> masters PNG das ilustrações de oração e santos</li>
       <li><code>brand/icons/posturas/</code> posturas litúrgicas</li>
       <li><code>brand/play-store/</code> ícone 512 e feature graphic</li>
       <li><code>brand/social/</code> imagem de compartilhamento</li>
       <li><code>brand/android/</code> prévias dos vetores Android</li>
       <li><code>brand/docs/</code> diagramas do manual</li>
       <li><code>brand/source/</code> gerador (Node) de todos os assets</li>
+      <li><code>docs/design/KIT-EDITORIAL-SANCTA.md</code> guia visual e brief para futuras artes</li>
       <li><code>backend/public/images/brand/</code> logos, favicons e ícones do site</li>
+      <li><code>backend/public/images/editorial/</code> capas WebP otimizadas do site</li>
       <li><code>backend/public/fonts/</code> Figtree WOFF2 + <code>figtree.css</code></li>
       <li><code>app/assets/brand/</code> SVGs usados pelo app</li>
+      <li><code>app/assets/images/editorial/</code> capas WebP otimizadas do app</li>
       <li><code>app/lib/core/brand/</code> primitivas Flutter</li>
     </ul>
-    <p class="sub">Manual completo: <code>docs/design/MARCA.md</code>.</p>
+    <p class="sub">Manual da marca: <code>docs/design/MARCA.md</code> · Kit editorial e futuras artes: <code>docs/design/KIT-EDITORIAL-SANCTA.md</code>.</p>
   </section>
 
   <footer>Sancta · Sua jornada de fé, todos os dias.</footer>

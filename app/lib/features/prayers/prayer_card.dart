@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/brand/brand.dart';
+import '../../core/brand/editorial_art.dart';
 import '../../core/models/models.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/common.dart';
@@ -34,6 +35,7 @@ class PrayerCard extends StatelessWidget {
             children: [
               ArchCover(
                 url: prayer.coverUrl,
+                assetPath: EditorialArt.forPrayer(prayer.title, prayer.slug),
                 scene: skyFor(prayer.categoryName ?? prayer.slug),
                 aspectRatio: .8,
                 child: Stack(
@@ -70,14 +72,15 @@ class _CoverChip extends StatelessWidget {
 
 /// Miniatura em arco para listas.
 class ArchThumb extends StatelessWidget {
-  const ArchThumb({super.key, this.url, this.scene, this.width = 44});
+  const ArchThumb({super.key, this.url, this.assetPath, this.scene, this.width = 44});
 
   final String? url;
+  final String? assetPath;
   final SkyScene? scene;
   final double width;
 
   @override
-  Widget build(BuildContext context) => ArchCover(url: url, scene: scene, width: width, aspectRatio: .82, bottomRadius: 8);
+  Widget build(BuildContext context) => ArchCover(url: url, assetPath: assetPath, scene: scene, width: width, aspectRatio: .82, bottomRadius: 8);
 }
 
 /// Linha de lista (biblioteca, favoritos).
@@ -96,7 +99,7 @@ class PrayerTile extends StatelessWidget {
     return SanctaTile(
       card: card,
       onTap: () => context.push('/oracao/${prayer.slug}'),
-      leading: ArchThumb(url: prayer.coverUrl, scene: skyFor(prayer.categoryName ?? prayer.slug)),
+      leading: ArchThumb(url: prayer.coverUrl, assetPath: EditorialArt.forPrayer(prayer.title, prayer.slug), scene: skyFor(prayer.categoryName ?? prayer.slug)),
       title: prayer.title,
       subtitle: subtitle,
       subtitleMaxLines: 1,

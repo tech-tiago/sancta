@@ -87,6 +87,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/editorial/
     # Marca "Portal": wordmark, símbolo, céus e posturas em SVG (ver docs/design/MARCA.md)
     - assets/brand/
     # Licenças OFL das fontes embutidas (registradas no LicenseRegistry por registerBrandFontLicenses)

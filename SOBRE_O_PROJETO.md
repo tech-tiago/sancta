@@ -88,7 +88,7 @@ Orações guiadas premium (texto e áudio) · todas as jornadas e planos de leit
 
 ## 6. Identidade visual
 
-Identidade **"Portal"** (outubro/2026) — manual completo em [`docs/design/MARCA.md`](docs/design/MARCA.md); movimento em [`docs/design/MOTION.md`](docs/design/MOTION.md).
+Identidade **"Portal"** (outubro/2026) — manual completo em [`docs/design/MARCA.md`](docs/design/MARCA.md), movimento em [`docs/design/MOTION.md`](docs/design/MOTION.md) e sistema de arte editorial em [`docs/design/KIT-EDITORIAL-SANCTA.md`](docs/design/KIT-EDITORIAL-SANCTA.md).
 
 - **Ideia:** Sancta é o lugar onde a pessoa entra para rezar, todos os dias. O símbolo é a **porta de um santuário** com a **cruz como a luz lá dentro**; o arco nasce do "n" da Figtree Bold, por isso mora dentro do nome (`Sa[portal]cta`). No app, o arco vira moldura para imagens e orações.
 - **Cores:** Azul Manto `#1F3D9C` (principal), Noite `#132760` (fundos escuros), Tinta `#0E1A3A` (texto), Ouro `#E3B65B` (só a cruz e destaques), Pergaminho `#FBF6EC` (fundos claros).

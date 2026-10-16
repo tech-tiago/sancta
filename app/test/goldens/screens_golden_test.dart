@@ -18,6 +18,8 @@ void main() {
   for (final s in screens) {
     testWidgets('golden ${s.name}', (tester) async {
       await pumpApp(tester, location: s.location, dark: s.dark, loggedIn: s.loggedIn);
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 500)));
+      await tester.pump();
       expect(tester.takeException(), isNull);
       await expectLater(find.byType(MaterialApp), matchesGoldenFile('png/${s.name}.png'));
     });

@@ -533,11 +533,12 @@ class NetImage extends StatelessWidget {
   }
 }
 
-/// Capa em arco (o arco como moldura): imagem da API ou céu da marca.
+/// Capa em arco: imagem da API, asset editorial local ou céu da marca, nessa ordem.
 class ArchCover extends StatelessWidget {
-  const ArchCover({super.key, this.url, this.scene, this.aspectRatio = 3 / 4, this.width, this.bottomRadius = 14, this.child});
+  const ArchCover({super.key, this.url, this.assetPath, this.scene, this.aspectRatio = 3 / 4, this.width, this.bottomRadius = 14, this.child});
 
   final String? url;
+  final String? assetPath;
   final SkyScene? scene;
   final double aspectRatio;
   final double? width;
@@ -555,7 +556,12 @@ class ArchCover extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          NetImage(url, scene: scene),
+          if (url != null && url!.startsWith('http'))
+            NetImage(url, scene: scene)
+          else if (assetPath != null)
+            Image.asset(assetPath!, fit: BoxFit.cover, cacheWidth: width != null ? (width! * 3).round() : 1200)
+          else
+            NetImage(url, scene: scene),
           ?child,
         ],
       ),
